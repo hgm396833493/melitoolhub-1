@@ -1,202 +1,1134 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文章标题 - MeliToolHub拉美跨境电商平台</title>
-  <meta name="description" content="文章描述，120-155字符，包含关键词">
-  <meta name="keywords" content="关键词1,关键词2,关键词3">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://melitoolhub.com/article-xxx.html">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <style>
-    :root{--primary:#1a3a5c;--accent:#f0b429;--bg:#f5f7fa;--card:#ffffff;--text:#333;--sub:#666;--radius:12px;--shadow:0 4px 18px rgba(0,0,0,.08);}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;}
-    a{text-decoration:none;color:inherit;}
-    input,select,textarea{font-size:16px;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .lang-bar{background:var(--primary);color:#fff;padding:6px 24px;display:flex;justify-content:flex-end;align-items:center;gap:8px;font-size:.8rem;}
-    .lang-bar a{color:rgba(255,255,255,.7);padding:2px 8px;border-radius:4px;border:1px solid rgba(255,255,255,.2);transition:.2s;}
-    .lang-bar a.active,.lang-bar a:hover{color:#fff;background:var(--accent);border-color:var(--accent);}
+    <!-- ========== TODO: 替换为文章标题 ========== -->
+    <title>文章标题 - 网站名称</title>
+    <!-- TODO: 替换为文章描述 -->
+    <meta name="description" content="文章描述占位符，替换为实际内容">
+    <!-- TODO: 替换为文章关键词 -->
+    <meta name="keywords" content="关键词1, 关键词2, 关键词3">
+    <!-- TODO: 替换为作者名称 -->
+    <meta name="author" content="作者名称">
 
-    nav{background:var(--primary);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:999;}
-    .nav-logo{color:#fff;font-size:1.3rem;font-weight:700;letter-spacing:1px;padding:14px 0;}
-    .nav-logo span{color:var(--accent);}
-    .nav-links{display:flex;gap:4px;flex-wrap:wrap;}
-    .nav-links a{color:rgba(255,255,255,.82);font-size:.88rem;padding:8px 13px;border-radius:6px;transition:.2s;}
-    .nav-links a:hover{background:rgba(255,255,255,.12);color:#fff;}
+    <!-- ========== hreflang 多语言标注 ========== -->
+    <link rel="alternate" hreflang="zh" href="https://example.com/article-zh.html">
+    <link rel="alternate" hreflang="en" href="https://example.com/article-en.html">
+    <link rel="alternate" hreflang="es" href="https://example.com/article-es.html">
+    <link rel="alternate" hreflang="pt" href="https://example.com/article-pt.html">
+    <link rel="alternate" hreflang="ru" href="https://example.com/article-ru.html">
+    <link rel="alternate" hreflang="fr" href="https://example.com/article-fr.html">
+    <link rel="alternate" hreflang="de" href="https://example.com/article-de.html">
+    <link rel="alternate" hreflang="it" href="https://example.com/article-it.html">
+    <link rel="alternate" hreflang="ar" href="https://example.com/article-ar.html">
+    <link rel="alternate" hreflang="tr" href="https://example.com/article-tr.html">
+    <link rel="alternate" hreflang="vi" href="https://example.com/article-vi.html">
+    <link rel="alternate" hreflang="th" href="https://example.com/article-th.html">
+    <link rel="alternate" hreflang="id" href="https://example.com/article-id.html">
+    <link rel="alternate" hreflang="ms" href="https://example.com/article-ms.html">
+    <link rel="alternate" hreflang="ko" href="https://example.com/article-ko.html">
+    <link rel="alternate" hreflang="ja" href="https://example.com/article-ja.html">
+    <link rel="alternate" hreflang="pl" href="https://example.com/article-pl.html">
+    <link rel="alternate" hreflang="nl" href="https://example.com/article-nl.html">
+    <link rel="alternate" hreflang="x-default" href="https://example.com/article-en.html">
 
-    .article-hero{background:linear-gradient(135deg,var(--primary) 0%,#2d6a9f 100%);color:#fff;padding:48px 24px 40px;text-align:center;}
-    .article-hero h1{font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;margin-bottom:12px;line-height:1.3;}
-    .article-meta{font-size:.88rem;opacity:.8;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    <!-- ========== Open Graph ========== -->
+    <!-- TODO: 替换为文章标题 -->
+    <meta property="og:title" content="文章标题占位符">
+    <!-- TODO: 替换为文章描述 -->
+    <meta property="og:description" content="文章描述占位符，替换为实际内容">
+    <!-- TODO: 替换为文章URL -->
+    <meta property="og:url" content="https://example.com/article.html">
+    <!-- TODO: 替换为文章封面图URL -->
+    <meta property="og:image" content="https://example.com/images/og-cover.jpg">
+    <meta property="og:type" content="article">
+    <!-- TODO: 替换为网站名称 -->
+    <meta property="og:site_name" content="网站名称">
+    <!-- TODO: 替换为发布时间（ISO 8601） -->
+    <meta property="article:published_time" content="2025-01-01T00:00:00+08:00">
+    <!-- TODO: 替换为修改时间（ISO 8601） -->
+    <meta property="article:modified_time" content="2025-01-01T00:00:00+08:00">
+    <!-- TODO: 替换为文章标签 -->
+    <meta property="article:tag" content="标签1, 标签2">
 
-    .article-content{max-width:800px;margin:0 auto;padding:40px 24px 60px;}
-    .article-content h2{font-size:1.4rem;font-weight:700;color:var(--primary);margin:32px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--accent);}
-    .article-content h3{font-size:1.15rem;font-weight:700;color:var(--primary);margin:24px 0 10px;}
-    .article-content p{font-size:.95rem;color:var(--text);margin-bottom:16px;line-height:1.8;}
-    .article-content ul,.article-content ol{margin-bottom:16px;padding-left:24px;}
-    .article-content li{font-size:.95rem;margin-bottom:8px;line-height:1.7;}
-    .article-content blockquote{border-left:4px solid var(--accent);background:rgba(240,180,41,.08);padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0;font-style:italic;color:var(--sub);}
-    .article-content code{background:#f0f2f6;padding:2px 6px;border-radius:4px;font-size:.88rem;}
-    .article-content pre{background:#1e293b;color:#e2e8f0;padding:20px;border-radius:8px;margin:16px 0;overflow-x:auto;font-size:.88rem;line-height:1.6;}
-    .article-content img{max-width:100%;height:auto;border-radius:8px;margin:16px 0;loading="lazy";}
+    <!-- ========== Twitter Card ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- TODO: 替换为文章标题 -->
+    <meta name="twitter:title" content="文章标题占位符">
+    <!-- TODO: 替换为文章描述 -->
+    <meta name="twitter:description" content="文章描述占位符">
+    <!-- TODO: 替换为文章封面图URL -->
+    <meta name="twitter:image" content="https://example.com/images/og-cover.jpg">
+    <!-- TODO: 替换为Twitter账号 -->
+    <meta name="twitter:site" content="@youraccount">
 
-    .article-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
-    .article-tag{display:inline-block;padding:3px 12px;border-radius:20px;font-size:.76rem;font-weight:600;border:1px solid;}
-    .tag-blue{color:#1a5276;background:#eaf4fb;border-color:#aed6f1;}
-    .tag-green{color:#1e8449;background:#eafaf1;border-color:#a9dfbf;}
-    .tag-orange{color:#b7770d;background:#fef9e7;border-color:#f9e79f;}
+    <!-- ========== Canonical URL ========== -->
+    <!-- TODO: 替换为文章规范URL -->
+    <link rel="canonical" href="https://example.com/article.html">
 
-    .back-btn{display:inline-block;padding:12px 28px;background:var(--primary);color:#fff;border-radius:8px;font-weight:600;margin:20px 24px 40px;transition:.2s;}
-    .back-btn:hover{background:#2d6a9f;transform:translateY(-2px);}
-
-    .article-cta{text-align:center;background:var(--primary);color:#fff;padding:40px 24px;margin-top:40px;border-radius:var(--radius);}
-    .article-cta h2{margin-bottom:12px;font-size:1.3rem;}
-    .article-cta p{opacity:.85;margin-bottom:20px;font-size:.95rem;}
-    .article-cta a{display:inline-block;padding:12px 32px;background:var(--accent);color:var(--primary);border-radius:8px;font-weight:700;transition:.2s;}
-    .article-cta a:hover{background:#e0a020;transform:translateY(-2px);}
-
-    .wechat-float{position:fixed;right:20px;bottom:120px;z-index:1500;display:flex;flex-direction:column;align-items:center;gap:0;}
-    .wechat-float-btn{width:52px;height:52px;background:#07c160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(7,193,96,.4);transition:.25s;border:none;outline:none;}
-    .wechat-float-btn:hover{transform:scale(1.1);}
-    .wechat-float-btn svg{width:28px;height:28px;fill:#fff;}
-    .wechat-float-label{background:rgba(0,0,0,.65);color:#fff;font-size:.7rem;padding:2px 7px;border-radius:10px;margin-top:4px;white-space:nowrap;}
-
-    @media(max-width:768px){
-      .article-content{padding:28px 16px 40px;}
-      .article-hero{padding:36px 16px 28px;}
-      .article-hero h1{font-size:1.3rem;}
-      .article-content h2{font-size:1.2rem;}
-      .article-content h3{font-size:1.05rem;}
-      .article-content p,.article-content li{font-size:.9rem;}
-      .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,58,92,.97);z-index:1900;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:24px;}
-      .nav-links.open{display:flex;}
-      .nav-links a{color:#fff;font-size:1.15rem;padding:14px 32px;border-radius:10px;width:100%;text-align:center;}
-      .nav-hamburger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;border-radius:6px;}
-      .nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:.25s;}
+    <!-- ========== Schema.org Article JSON-LD ========== -->
+    <!-- TODO: 替换所有占位内容为实际文章数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "文章标题占位符，替换为实际内容",
+        "description": "文章描述占位符，替换为实际内容",
+        "image": "https://example.com/images/og-cover.jpg",
+        "datePublished": "2025-01-01T00:00:00+08:00",
+        "dateModified": "2025-01-01T00:00:00+08:00",
+        "author": {
+            "@type": "Person",
+            "name": "作者名称"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "网站名称",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://example.com/article.html"
+        },
+        "inLanguage": ["zh","en","es","pt","ru","fr","de","it","ar","tr","vi","th","id","ms","ko","ja","pl","nl"]
     }
-    @media(max-width:400px){
-      html{font-size:14px;}
-      .article-content{padding:20px 12px 30px;}
-      .wechat-float{right:10px;bottom:70px;}
-      .wechat-float-btn{width:44px;height:44px;}
-    }
-  </style>
+    </script>
 
-  <!-- Structured Data for Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "文章标题",
-    "description": "文章描述",
-    "image": "https://melitoolhub.com/og-image.jpg",
-    "author": {"@type": "Organization", "name": "MeliToolHub"},
-    "publisher": {"@type": "Organization", "name": "MeliToolHub", "logo": {"@type": "ImageObject", "url": "https://melitoolhub.com/logo.png"}},
-    "datePublished": "2025-06-03",
-    "dateModified": "2025-06-03",
-    "mainEntityOfPage": "https://melitoolhub.com/article-xxx.html"
-  }
-  </script>
+    <!-- ========== Google AdSense ========== -->
+    <!-- TODO: 替换为实际AdSense代码 -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+    <style>
+        /* ========== CSS Variables ========== */
+        :root {
+            --p: #1a3a5c;
+            --a: #f0b429;
+            --bg: #f5f7fa;
+            --c: #fff;
+            --t: #333;
+            --s: #666;
+            --r: 12px;
+        }
+
+        /* ========== Reset & Base ========== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "Noto Sans", sans-serif;
+            color: var(--t);
+            background: var(--bg);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        a { color: var(--p); text-decoration: none; transition: color .2s; }
+        a:hover { color: var(--a); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ========== Navigation ========== */
+        .navbar {
+            background: var(--p);
+            color: var(--c);
+            padding: 0 24px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,.12);
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--c);
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .navbar-logo:hover { color: var(--a); }
+        .navbar-logo svg { width: 32px; height: 32px; }
+        .navbar-right { display: flex; align-items: center; gap: 16px; }
+        .navbar-home {
+            color: var(--c);
+            font-size: 14px;
+            text-decoration: none;
+            opacity: .85;
+            transition: opacity .2s;
+        }
+        .navbar-home:hover { opacity: 1; color: var(--a); }
+
+        /* ========== Language Selector ========== */
+        .lang-select {
+            padding: 6px 10px;
+            border: 1px solid rgba(255,255,255,.3);
+            border-radius: 6px;
+            background: rgba(255,255,255,.1);
+            color: var(--c);
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+        }
+        .lang-select option { color: var(--t); background: var(--c); }
+
+        /* ========== Breadcrumb ========== */
+        .breadcrumb-wrap {
+            background: var(--c);
+            border-bottom: 1px solid #e8ecf0;
+            padding: 12px 24px;
+        }
+        .breadcrumb {
+            max-width: 860px;
+            margin: 0 auto;
+            font-size: 13px;
+            color: var(--s);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: center;
+        }
+        .breadcrumb a { color: var(--s); }
+        .breadcrumb a:hover { color: var(--p); }
+        .breadcrumb-sep { margin: 0 4px; opacity: .5; }
+        .breadcrumb-current { color: var(--t); font-weight: 500; }
+
+        /* ========== Article Container ========== */
+        .article-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+
+        /* ========== Article Header ========== */
+        .article-header { margin-bottom: 32px; }
+        .article-h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--p);
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--s);
+            margin-bottom: 12px;
+        }
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .article-meta-item svg { width: 16px; height: 16px; opacity: .6; }
+        .meta-lang-tag {
+            background: var(--a);
+            color: var(--p);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .article-tag {
+            background: #e8ecf0;
+            color: var(--s);
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            transition: background .2s;
+        }
+        .article-tag:hover { background: #d0d6dc; color: var(--t); }
+
+        /* ========== Ad Slot ========== */
+        .ad-slot {
+            background: #f0f2f5;
+            border: 1px dashed #ccc;
+            border-radius: var(--r);
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 13px;
+            margin: 28px 0;
+        }
+
+        /* ========== Article Body ========== */
+        .article-body { margin-top: 36px; }
+        .article-body h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--p);
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--a);
+        }
+        .article-body h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--t);
+            margin: 28px 0 12px;
+        }
+        .article-body p {
+            margin-bottom: 18px;
+            color: var(--t);
+            line-height: 1.85;
+        }
+        .article-body ul, .article-body ol {
+            margin: 0 0 18px 24px;
+            color: var(--t);
+        }
+        .article-body li { margin-bottom: 8px; line-height: 1.75; }
+
+        /* ========== Related Articles ========== */
+        .related-section {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 2px solid #e8ecf0;
+        }
+        .related-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--p);
+            margin-bottom: 20px;
+        }
+        .related-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .related-card {
+            background: var(--c);
+            border: 1px solid #e8ecf0;
+            border-radius: var(--r);
+            padding: 20px;
+            transition: box-shadow .2s, transform .2s;
+        }
+        .related-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,.08);
+            transform: translateY(-2px);
+        }
+        .related-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--p);
+            margin-bottom: 8px;
+        }
+        .related-card-desc {
+            font-size: 14px;
+            color: var(--s);
+            line-height: 1.6;
+        }
+
+        /* ========== Footer ========== */
+        .footer {
+            background: var(--p);
+            color: var(--c);
+            padding: 40px 24px;
+            margin-top: 0;
+        }
+        .footer-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,.75);
+            font-size: 14px;
+            transition: color .2s;
+        }
+        .footer-links a:hover { color: var(--a); }
+        .footer-copy {
+            font-size: 13px;
+            opacity: .6;
+        }
+
+        /* ========== Responsive: Tablet (768px) ========== */
+        @media (max-width: 768px) {
+            .article-h1 { font-size: 26px; }
+            .article-body h2 { font-size: 20px; }
+            .article-body h3 { font-size: 16px; }
+            .navbar { padding: 0 16px; }
+            .breadcrumb-wrap { padding: 10px 16px; }
+            .article-wrap { padding: 28px 16px 40px; }
+            .related-list { grid-template-columns: 1fr; }
+        }
+
+        /* ========== Responsive: Large Phone (576px) ========== */
+        @media (max-width: 576px) {
+            .article-h1 { font-size: 22px; }
+            .article-meta { gap: 10px; font-size: 13px; }
+            .article-body h2 { font-size: 18px; margin: 28px 0 12px; }
+            .article-body p { font-size: 15px; }
+            .navbar-logo { font-size: 17px; }
+            .navbar-logo svg { width: 26px; height: 26px; }
+            .lang-select { font-size: 12px; padding: 4px 6px; }
+        }
+
+        /* ========== Responsive: Small Phone (375px) ========== */
+        @media (max-width: 375px) {
+            .article-h1 { font-size: 20px; }
+            .article-wrap { padding: 20px 12px 32px; }
+            .article-meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+            .footer-links { flex-direction: column; align-items: center; gap: 10px; }
+            .navbar-home { display: none; }
+        }
+
+        /* ========== RTL Support (Arabic) ========== */
+        [dir="rtl"] .article-body { direction: rtl; text-align: right; }
+        [dir="rtl"] .breadcrumb { direction: rtl; }
+    </style>
 </head>
 <body>
 
-<!-- 语言栏 -->
-<div class="lang-bar">
-  <span>🌐</span>
-  <a href="index.html" class="active">中文</a>
-  <a href="index.html?lang=en">English</a>
-  <a href="index.html?lang=es">Español</a>
-  <a href="index.html?lang=pt">Português</a>
-</div>
+    <!-- ========== Navigation Bar ========== -->
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">
+            <!-- TODO: 替换为实际Logo SVG -->
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="6" fill="#f0b429"/>
+                <text x="16" y="22" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a3a5c">M</text>
+            </svg>
+            <span data-i18n="siteName">网站名称</span>
+        </a>
+        <div class="navbar-right">
+            <a href="/" class="navbar-home" data-i18n="navHome">返回首页</a>
+            <select class="lang-select" id="langSwitch" aria-label="Language">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="pt">Português</option>
+                <option value="ru">Русский</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="ar">العربية</option>
+                <option value="tr">Türkçe</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="th">ไทย</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="ko">한국어</option>
+                <option value="ja">日本語</option>
+                <option value="pl">Polski</option>
+                <option value="nl">Nederlands</option>
+            </select>
+        </div>
+    </nav>
 
-<!-- 导航 -->
-<nav role="navigation" aria-label="主导航">
-  <a href="index.html" class="nav-logo">Meli<span>ToolHub</span></a>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html#tools">工具库</a>
-    <a href="index.html#calc">费率计算</a>
-    <a href="index.html#articles">原创文章</a>
-    <a href="index.html#partners">合作伙伴</a>
-    <a href="index.html#about">关于我们</a>
-  </div>
-  <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="菜单">☰</button>
-</nav>
+    <!-- ========== Breadcrumb ========== -->
+    <div class="breadcrumb-wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <!-- TODO: 替换面包屑路径为实际栏目 -->
+            <a href="/" data-i18n="bcHome">首页</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="/category/" data-i18n="bcCategory">栏目名称</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current" data-i18n="bcCurrent">文章标题</span>
+        </nav>
+    </div>
 
-<!-- 文章头部 -->
-<section class="article-hero">
-  <h1>文章标题写在这里</h1>
-  <div class="article-meta">
-    <span>📅 2025-06-03</span>
-    <span>✍️ MeliToolHub</span>
-    <span>⏱️ 阅读约 5 分钟</span>
-  </div>
-  <div class="article-tags">
-    <span class="article-tag tag-blue">Mercado Libre</span>
-    <span class="article-tag tag-green">跨境运营</span>
-    <span class="article-tag tag-orange">拉美市场</span>
-  </div>
-</section>
+    <!-- ========== Article Area ========== -->
+    <main class="article-wrap">
+        <article>
+            <!-- Article Header -->
+            <header class="article-header">
+                <!-- TODO: 替换为文章标题 -->
+                <h1 class="article-h1" data-i18n="h1">文章标题占位符，替换为实际内容</h1>
 
-<!-- 文章正文 -->
-<article class="article-content">
+                <!-- Meta Info -->
+                <div class="article-meta">
+                    <span class="article-meta-item">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 12.5a5.5 5.5 0 110-11 5.5 5.5 0 010 11zm.5-7V5h-1v2H5v1h2.5v2.5h1V8H11V7H8.5z"/></svg>
+                        <!-- TODO: 替换为发布日期 -->
+                        <span data-i18n="pubDate">2025-01-01</span>
+                    </span>
+                    <span class="article-meta-item">
+                        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 10.5h-1v-1h1v1zm1-3.5c0 .83-.67 1.5-1.5 1.5v-1a.5.5 0 00.5-.5V6a.5.5 0 00-.5-.5H7a.5.5 0 00-.5.5v.5h-1V6a1.5 1.5 0 011.5-1.5h1A1.5 1.5 0 019.5 6v2z"/></svg>
+                        <!-- TODO: 替换为阅读时间 -->
+                        <span data-i18n="readTime">8 min read</span>
+                    </span>
+                    <span class="meta-lang-tag" id="currentLangTag">ZH</span>
+                </div>
 
-  <h2>一、章节标题</h2>
-  <p>正文内容写在这里。每段建议不超过 4-5 行，保持阅读舒适度。文章总字数建议 800-2000 中文字（400-1000 英文词），确保内容原创且有实际价值。</p>
+                <!-- Tags -->
+                <!-- TODO: 替换为实际文章标签 -->
+                <div class="article-tags">
+                    <span class="article-tag" data-i18n="tag1">标签1</span>
+                    <span class="article-tag" data-i18n="tag2">标签2</span>
+                    <span class="article-tag" data-i18n="tag3">标签3</span>
+                </div>
+            </header>
 
-  <h3>1.1 子标题</h3>
-  <p>子标题内容。可以使用 <strong>加粗</strong> 强调关键词，但不要过度使用。</p>
+            <!-- AdSense Top Ad Placeholder -->
+            <!-- TODO: 替换为实际AdSense广告代码 -->
+            <div class="ad-slot" id="ad-top">
+                <span>Ad Slot - Top (替换为实际广告代码)</span>
+            </div>
 
-  <ul>
-    <li>要点一</li>
-    <li>要点二</li>
-    <li>要点三</li>
-  </ul>
+            <!-- Article Body -->
+            <!-- TODO: 替换所有段落内容为实际文章内容 -->
+            <div class="article-body">
+                <h2 data-i18n="h2_1">第一节标题，替换为实际内容</h2>
+                <p data-i18n="p_1">第一段正文内容，替换为实际内容。此处为段落占位文本，用于展示模板结构和排版效果。实际使用时请将此文本替换为文章的真实内容。</p>
 
-  <blockquote>
-    💡 提示或重要信息可以放在引用框中，便于读者快速获取关键信息。
-  </blockquote>
+                <h2 data-i18n="h2_2">第二节标题，替换为实际内容</h2>
+                <p data-i18n="p_2">第二段正文内容，替换为实际内容。此处为段落占位文本，用于展示模板结构和排版效果。</p>
 
-  <h2>二、第二章节</h2>
-  <p>继续写正文内容...</p>
+                <h2 data-i18n="h2_3">第三节标题，替换为实际内容</h2>
+                <p data-i18n="p_3">第三段正文内容，替换为实际内容。此处为段落占位文本。</p>
+                <h3 data-i18n="h3_1">子标题1，替换为实际内容</h3>
+                <p data-i18n="p_4">子标题下的段落内容，替换为实际内容。</p>
 
-  <h3>2.1 数据对比</h3>
-  <p>如有数据表格或对比，建议用文字清晰描述，避免复杂表格影响移动端阅读。</p>
+                <h2 data-i18n="h2_4">第四节标题，替换为实际内容</h2>
+                <p data-i18n="p_5">第四段正文内容，替换为实际内容。</p>
 
-  <h2>三、总结与建议</h2>
-  <p>在文章结尾给出明确的行动建议或总结。</p>
+                <h2 data-i18n="h2_5">第五节标题，替换为实际内容</h2>
+                <p data-i18n="p_6">第五段正文内容，替换为实际内容。</p>
 
-</article>
+                <h2 data-i18n="h2_6">第六节标题，替换为实际内容</h2>
+                <p data-i18n="p_7">第六段正文内容，替换为实际内容。</p>
 
-<!-- CTA推荐区（可放联盟链接） -->
-<div class="article-cta" style="max-width:800px;margin:0 auto 40px;">
-  <h2>🚀 推荐工具</h2>
-  <p>使用以下工具可以大幅提升你的拉美跨境电商运营效率</p>
-  <a href="index.html#partners">查看所有推荐工具 →</a>
-</div>
+                <h2 data-i18n="h2_7">第七节标题，替换为实际内容</h2>
+                <p data-i18n="p_8">第七段正文内容，替换为实际内容。</p>
 
-<!-- 返回首页 -->
-<a href="index.html" class="back-btn">← 返回首页</a>
+                <h2 data-i18n="h2_8">第八节标题，替换为实际内容</h2>
+                <p data-i18n="p_9">第八段正文内容，替换为实际内容。</p>
+            </div>
 
-<!-- 微信悬浮球 -->
-<div class="wechat-float" id="wechatFloat">
-  <button class="wechat-float-btn" aria-label="微信联系 hgm123002">
-    <svg viewBox="0 0 24 24"><path d="M8.5 13.5l2.5 3 3.5-4.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.36 5.22 3.5 6.84V22l3.72-2.04c.9.25 1.83.38 2.78.38 5.52 0 10-4.04 10-9s-4.48-9-10-9z" fill="#fff"/></svg>
-  </button>
-  <div class="wechat-float-label">微信咨询</div>
-</div>
+            <!-- AdSense Bottom Ad Placeholder -->
+            <!-- TODO: 替换为实际AdSense广告代码 -->
+            <div class="ad-slot" id="ad-bottom">
+                <span>Ad Slot - Bottom (替换为实际广告代码)</span>
+            </div>
 
-<script>
-// 汉堡菜单点击外部关闭
-document.addEventListener('click', function(e){
-  var nav = document.getElementById('navLinks');
-  var btn = document.querySelector('.nav-hamburger');
-  if(nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)){
-    nav.classList.remove('open');
-  }
-});
-</script>
+            <!-- Related Articles -->
+            <!-- TODO: 替换为实际推荐文章链接和描述 -->
+            <section class="related-section">
+                <h2 class="related-title" data-i18n="relatedTitle">相关推荐</h2>
+                <div class="related-list">
+                    <a href="/article-1.html" class="related-card">
+                        <div class="related-card-title" data-i18n="related1Title">推荐文章1标题，替换为实际内容</div>
+                        <div class="related-card-desc" data-i18n="related1Desc">推荐文章1描述，替换为实际内容</div>
+                    </a>
+                    <a href="/article-2.html" class="related-card">
+                        <div class="related-card-title" data-i18n="related2Title">推荐文章2标题，替换为实际内容</div>
+                        <div class="related-card-desc" data-i18n="related2Desc">推荐文章2描述，替换为实际内容</div>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- ========== Footer ========== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-links">
+                <!-- TODO: 替换为实际页脚链接 -->
+                <a href="/privacy.html" data-i18n="footerPrivacy">隐私政策</a>
+                <a href="/terms.html" data-i18n="footerTerms">服务条款</a>
+                <a href="/cooperation.html" data-i18n="footerCoop">合作说明</a>
+                <a href="/contact.html" data-i18n="footerContact">联系我们</a>
+            </div>
+            <p class="footer-copy" data-i18n="footerCopy">&copy; 2025 网站名称. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== i18n Data & Logic ========== -->
+    <script>
+    // ================================================================
+    // i18n 多语言数据
+    // 使用方法：每个语言对象包含与 data-i18n 属性对应的 key
+    // TODO: 替换所有占位内容为实际文章翻译内容
+    // ================================================================
+    const i18n = {
+        zh: {
+            siteName: "网站名称",
+            navHome: "返回首页",
+            bcHome: "首页",
+            bcCategory: "栏目名称",
+            bcCurrent: "文章标题",
+            h1: "文章标题占位符，替换为实际内容",
+            pubDate: "2025-01-01",
+            readTime: "8 分钟阅读",
+            tag1: "标签1",
+            tag2: "标签2",
+            tag3: "标签3",
+            h2_1: "第一节标题，替换为实际内容",
+            p_1: "第一段正文内容，替换为实际内容。此处为段落占位文本，用于展示模板结构和排版效果。实际使用时请将此文本替换为文章的真实内容。",
+            h2_2: "第二节标题，替换为实际内容",
+            p_2: "第二段正文内容，替换为实际内容。此处为段落占位文本，用于展示模板结构和排版效果。",
+            h2_3: "第三节标题，替换为实际内容",
+            p_3: "第三段正文内容，替换为实际内容。此处为段落占位文本。",
+            h3_1: "子标题1，替换为实际内容",
+            p_4: "子标题下的段落内容，替换为实际内容。",
+            h2_4: "第四节标题，替换为实际内容",
+            p_5: "第四段正文内容，替换为实际内容。",
+            h2_5: "第五节标题，替换为实际内容",
+            p_6: "第五段正文内容，替换为实际内容。",
+            h2_6: "第六节标题，替换为实际内容",
+            p_7: "第六段正文内容，替换为实际内容。",
+            h2_7: "第七节标题，替换为实际内容",
+            p_8: "第七段正文内容，替换为实际内容。",
+            h2_8: "第八节标题，替换为实际内容",
+            p_9: "第八段正文内容，替换为实际内容。",
+            relatedTitle: "相关推荐",
+            related1Title: "推荐文章1标题，替换为实际内容",
+            related1Desc: "推荐文章1描述，替换为实际内容",
+            related2Title: "推荐文章2标题，替换为实际内容",
+            related2Desc: "推荐文章2描述，替换为实际内容",
+            footerPrivacy: "隐私政策",
+            footerTerms: "服务条款",
+            footerCoop: "合作说明",
+            footerContact: "联系我们",
+            footerCopy: "\u00A9 2025 网站名称. All rights reserved."
+        },
+        en: {
+            siteName: "Site Name",
+            navHome: "Home",
+            bcHome: "Home",
+            bcCategory: "Category",
+            bcCurrent: "Article Title",
+            h1: "Article title placeholder, replace with actual content",
+            pubDate: "2025-01-01",
+            readTime: "8 min read",
+            tag1: "Tag1",
+            tag2: "Tag2",
+            tag3: "Tag3",
+            h2_1: "Section 1 Title, replace with actual content",
+            p_1: "First paragraph content, replace with actual content. This is placeholder text for template structure demonstration.",
+            h2_2: "Section 2 Title, replace with actual content",
+            p_2: "Second paragraph content, replace with actual content. This is placeholder text.",
+            h2_3: "Section 3 Title, replace with actual content",
+            p_3: "Third paragraph content, replace with actual content.",
+            h3_1: "Subheading 1, replace with actual content",
+            p_4: "Paragraph under subheading, replace with actual content.",
+            h2_4: "Section 4 Title, replace with actual content",
+            p_5: "Fourth paragraph content, replace with actual content.",
+            h2_5: "Section 5 Title, replace with actual content",
+            p_6: "Fifth paragraph content, replace with actual content.",
+            h2_6: "Section 6 Title, replace with actual content",
+            p_7: "Sixth paragraph content, replace with actual content.",
+            h2_7: "Section 7 Title, replace with actual content",
+            p_8: "Seventh paragraph content, replace with actual content.",
+            h2_8: "Section 8 Title, replace with actual content",
+            p_9: "Eighth paragraph content, replace with actual content.",
+            relatedTitle: "Related Articles",
+            related1Title: "Related article 1 title, replace with actual content",
+            related1Desc: "Related article 1 description, replace with actual content",
+            related2Title: "Related article 2 title, replace with actual content",
+            related2Desc: "Related article 2 description, replace with actual content",
+            footerPrivacy: "Privacy Policy",
+            footerTerms: "Terms of Service",
+            footerCoop: "Cooperation",
+            footerContact: "Contact Us",
+            footerCopy: "\u00A9 2025 Site Name. All rights reserved."
+        },
+        es: {
+            siteName: "Nombre del Sitio",
+            navHome: "Inicio",
+            bcHome: "Inicio",
+            bcCategory: "Categor\u00EDa",
+            bcCurrent: "T\u00EDtulo del Art\u00EDculo",
+            h1: "T\u00EDtulo del art\u00EDculo, reemplazar con contenido real",
+            pubDate: "2025-01-01",
+            readTime: "8 min de lectura",
+            tag1: "Etiqueta1",
+            tag2: "Etiqueta2",
+            tag3: "Etiqueta3",
+            h2_1: "Secci\u00F3n 1, reemplazar con contenido real",
+            p_1: "Contenido del primer p\u00E1rrafo, reemplazar con contenido real.",
+            h2_2: "Secci\u00F3n 2, reemplazar con contenido real",
+            p_2: "Contenido del segundo p\u00E1rrafo, reemplazar con contenido real.",
+            h2_3: "Secci\u00F3n 3, reemplazar con contenido real",
+            p_3: "Contenido del tercer p\u00E1rrafo, reemplazar con contenido real.",
+            h3_1: "Subt\u00EDtulo 1, reemplazar con contenido real",
+            p_4: "Contenido bajo subt\u00EDtulo, reemplazar con contenido real.",
+            h2_4: "Secci\u00F3n 4, reemplazar con contenido real",
+            p_5: "Contenido del cuarto p\u00E1rrafo, reemplazar con contenido real.",
+            h2_5: "Secci\u00F3n 5, reemplazar con contenido real",
+            p_6: "Contenido del quinto p\u00E1rrafo, reemplazar con contenido real.",
+            h2_6: "Secci\u00F3n 6, reemplazar con contenido real",
+            p_7: "Contenido del sexto p\u00E1rrafo, reemplazar con contenido real.",
+            h2_7: "Secci\u00F3n 7, reemplazar con contenido real",
+            p_8: "Contenido del s\u00E9ptimo p\u00E1rrafo, reemplazar con contenido real.",
+            h2_8: "Secci\u00F3n 8, reemplazar con contenido real",
+            p_9: "Contenido del octavo p\u00E1rrafo, reemplazar con contenido real.",
+            relatedTitle: "Art\u00EDculos Relacionados",
+            related1Title: "Art\u00EDculo relacionado 1, reemplazar con contenido real",
+            related1Desc: "Descripci\u00F3n del art\u00EDculo 1, reemplazar con contenido real",
+            related2Title: "Art\u00EDculo relacionado 2, reemplazar con contenido real",
+            related2Desc: "Descripci\u00F3n del art\u00EDculo 2, reemplazar con contenido real",
+            footerPrivacy: "Pol\u00EDtica de Privacidad",
+            footerTerms: "T\u00E9rminos de Servicio",
+            footerCoop: "Cooperaci\u00F3n",
+            footerContact: "Cont\u00E1ctenos",
+            footerCopy: "\u00A9 2025 Nombre del Sitio. Todos los derechos reservados."
+        },
+        pt: {
+            siteName: "Nome do Site",
+            navHome: "In\u00EDcio",
+            bcHome: "In\u00EDcio",
+            bcCategory: "Categoria",
+            bcCurrent: "T\u00EDtulo do Artigo",
+            h1: "T\u00EDtulo do artigo, substituir pelo conte\u00FAdo real",
+            pubDate: "2025-01-01",
+            readTime: "8 min de leitura",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Se\u00E7\u00E3o 1, substituir pelo conte\u00FAdo real",
+            p_1: "Conte\u00FAdo do primeiro par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h2_2: "Se\u00E7\u00E3o 2, substituir pelo conte\u00FAdo real",
+            p_2: "Conte\u00FAdo do segundo par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h2_3: "Se\u00E7\u00E3o 3, substituir pelo conte\u00FAdo real",
+            p_3: "Conte\u00FAdo do terceiro par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h3_1: "Subt\u00EDtulo 1, substituir pelo conte\u00FAdo real",
+            p_4: "Conte\u00FAdo sob subt\u00EDtulo, substituir pelo conte\u00FAdo real.",
+            h2_4: "Se\u00E7\u00E3o 4, substituir pelo conte\u00FAdo real",
+            p_5: "Conte\u00FAdo do quarto par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h2_5: "Se\u00E7\u00E3o 5, substituir pelo conte\u00FAdo real",
+            p_6: "Conte\u00FAdo do quinto par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h2_6: "Se\u00E7\u00E3o 6, substituir pelo conte\u00FAdo real",
+            p_7: "Conte\u00FAdo do sexto par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h2_7: "Se\u00E7\u00E3o 7, substituir pelo conte\u00FAdo real",
+            p_8: "Conte\u00FAdo do s\u00E9timo par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            h2_8: "Se\u00E7\u00E3o 8, substituir pelo conte\u00FAdo real",
+            p_9: "Conte\u00FAdo do oitavo par\u00E1grafo, substituir pelo conte\u00FAdo real.",
+            relatedTitle: "Artigos Relacionados",
+            related1Title: "Artigo relacionado 1, substituir",
+            related1Desc: "Descri\u00E7\u00E3o do artigo 1, substituir",
+            related2Title: "Artigo relacionado 2, substituir",
+            related2Desc: "Descri\u00E7\u00E3o do artigo 2, substituir",
+            footerPrivacy: "Pol\u00EDtica de Privacidade",
+            footerTerms: "Termos de Servi\u00E7o",
+            footerCoop: "Coopera\u00E7\u00E3o",
+            footerContact: "Fale Conosco",
+            footerCopy: "\u00A9 2025 Nome do Site. Todos os direitos reservados."
+        },
+        ru: {
+            siteName: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0441\u0430\u0439\u0442\u0430",
+            navHome: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F",
+            bcHome: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F",
+            bcCategory: "\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F",
+            bcCurrent: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0441\u0442\u0430\u0442\u044C\u0438",
+            h1: "\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A \u0441\u0442\u0430\u0442\u044C\u0438, \u0437\u0430\u043C\u0435\u043D\u0438\u0442\u044C \u043D\u0430 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435",
+            pubDate: "2025-01-01",
+            readTime: "8 \u043C\u0438\u043D \u0447\u0442\u0435\u043D\u0438\u044F",
+            tag1: "\u0422\u0435\u04331", tag2: "\u0422\u0435\u04332", tag3: "\u0422\u0435\u04333",
+            h2_1: "\u0420\u0430\u0437\u0434\u0435\u043B 1, \u0437\u0430\u043C\u0435\u043D\u0438\u0442\u044C \u043D\u0430 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0435",
+            p_1: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u043F\u0435\u0440\u0432\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430, \u0437\u0430\u043C\u0435\u043D\u0438\u0442\u044C \u043D\u0430 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0435.",
+            h2_2: "\u0420\u0430\u0437\u0434\u0435\u043B 2, \u0437\u0430\u043C\u0435\u043D\u0438\u0442\u044C",
+            p_2: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u0432\u0442\u043E\u0440\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            h2_3: "\u0420\u0430\u0437\u0434\u0435\u043B 3", p_3: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u0442\u0440\u0435\u0442\u044C\u0435\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            h3_1: "\u041F\u043E\u0434\u0437\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A 1", p_4: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u043F\u043E\u0434 \u043F\u043E\u0434\u0437\u0430\u0433\u043E\u043B\u043E\u0432\u043A\u043E\u043C.",
+            h2_4: "\u0420\u0430\u0437\u0434\u0435\u043B 4", p_5: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u0447\u0435\u0442\u0432\u0451\u0440\u0442\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            h2_5: "\u0420\u0430\u0437\u0434\u0435\u043B 5", p_6: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u043F\u044F\u0442\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            h2_6: "\u0420\u0430\u0437\u0434\u0435\u043B 6", p_7: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u0448\u0435\u0441\u0442\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            h2_7: "\u0420\u0430\u0437\u0434\u0435\u043B 7", p_8: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u0441\u0435\u0434\u044C\u043C\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            h2_8: "\u0420\u0430\u0437\u0434\u0435\u043B 8", p_9: "\u0421\u043E\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0435 \u0432\u043E\u0441\u044C\u043C\u043E\u0433\u043E \u0430\u0431\u0437\u0430\u0446\u0430.",
+            relatedTitle: "\u041F\u043E\u0445\u043E\u0436\u0438\u0435 \u0441\u0442\u0430\u0442\u044C\u0438",
+            related1Title: "\u0421\u0442\u0430\u0442\u044C\u044F 1, \u0437\u0430\u043C\u0435\u043D\u0438\u0442\u044C",
+            related1Desc: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u0441\u0442\u0430\u0442\u044C\u0438 1",
+            related2Title: "\u0421\u0442\u0430\u0442\u044C\u044F 2, \u0437\u0430\u043C\u0435\u043D\u0438\u0442\u044C",
+            related2Desc: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u0441\u0442\u0430\u0442\u044C\u0438 2",
+            footerPrivacy: "\u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0430 \u043A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438",
+            footerTerms: "\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F",
+            footerCoop: "\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u043E",
+            footerContact: "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B",
+            footerCopy: "\u00A9 2025 \u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0441\u0430\u0439\u0442\u0430. \u0412\u0441\u0435 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043D\u044B."
+        },
+        fr: {
+            siteName: "Nom du Site",
+            navHome: "Accueil",
+            bcHome: "Accueil", bcCategory: "Cat\u00E9gorie", bcCurrent: "Titre de l'article",
+            h1: "Titre de l'article, remplacer par le contenu r\u00E9el",
+            pubDate: "2025-01-01", readTime: "8 min de lecture",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Section 1, remplacer par le contenu r\u00E9el",
+            p_1: "Contenu du premier paragraphe, remplacer par le contenu r\u00E9el.",
+            h2_2: "Section 2", p_2: "Contenu du deuxi\u00E8me paragraphe.",
+            h2_3: "Section 3", p_3: "Contenu du troisi\u00E8me paragraphe.",
+            h3_1: "Sous-titre 1", p_4: "Contenu sous le sous-titre.",
+            h2_4: "Section 4", p_5: "Contenu du quatri\u00E8me paragraphe.",
+            h2_5: "Section 5", p_6: "Contenu du cinqui\u00E8me paragraphe.",
+            h2_6: "Section 6", p_7: "Contenu du sixi\u00E8me paragraphe.",
+            h2_7: "Section 7", p_8: "Contenu du septi\u00E8me paragraphe.",
+            h2_8: "Section 8", p_9: "Contenu du huiti\u00E8me paragraphe.",
+            relatedTitle: "Articles Connexes",
+            related1Title: "Article connexe 1, remplacer", related1Desc: "Description de l'article 1",
+            related2Title: "Article connexe 2, remplacer", related2Desc: "Description de l'article 2",
+            footerPrivacy: "Politique de Confidentialit\u00E9",
+            footerTerms: "Conditions d'Utilisation",
+            footerCoop: "Coop\u00E9ration", footerContact: "Contactez-nous",
+            footerCopy: "\u00A9 2025 Nom du Site. Tous droits r\u00E9serv\u00E9s."
+        },
+        de: {
+            siteName: "Seitenname",
+            navHome: "Startseite",
+            bcHome: "Startseite", bcCategory: "Kategorie", bcCurrent: "Artikeltitel",
+            h1: "Artikeltitel, durch tats\u00E4chlichen Inhalt ersetzen",
+            pubDate: "2025-01-01", readTime: "8 Min. Lesezeit",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Abschnitt 1, durch tats\u00E4chlichen Inhalt ersetzen",
+            p_1: "Inhalt des ersten Absatzes, durch tats\u00E4chlichen Inhalt ersetzen.",
+            h2_2: "Abschnitt 2", p_2: "Inhalt des zweiten Absatzes.",
+            h2_3: "Abschnitt 3", p_3: "Inhalt des dritten Absatzes.",
+            h3_1: "Unter\u00FCberschrift 1", p_4: "Inhalt unter Unter\u00FCberschrift.",
+            h2_4: "Abschnitt 4", p_5: "Inhalt des vierten Absatzes.",
+            h2_5: "Abschnitt 5", p_6: "Inhalt des f\u00FCnften Absatzes.",
+            h2_6: "Abschnitt 6", p_7: "Inhalt des sechsten Absatzes.",
+            h2_7: "Abschnitt 7", p_8: "Inhalt des siebten Absatzes.",
+            h2_8: "Abschnitt 8", p_9: "Inhalt des achten Absatzes.",
+            relatedTitle: "Verwandte Artikel",
+            related1Title: "Verwandter Artikel 1, ersetzen", related1Desc: "Beschreibung Artikel 1",
+            related2Title: "Verwandter Artikel 2, ersetzen", related2Desc: "Beschreibung Artikel 2",
+            footerPrivacy: "Datenschutzrichtlinie",
+            footerTerms: "Nutzungsbedingungen",
+            footerCoop: "Zusammenarbeit", footerContact: "Kontaktieren Sie uns",
+            footerCopy: "\u00A9 2025 Seitenname. Alle Rechte vorbehalten."
+        },
+        it: {
+            siteName: "Nome del Sito",
+            navHome: "Home",
+            bcHome: "Home", bcCategory: "Categoria", bcCurrent: "Titolo dell'Articolo",
+            h1: "Titolo dell'articolo, sostituire con contenuto reale",
+            pubDate: "2025-01-01", readTime: "8 min di lettura",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Sezione 1, sostituire con contenuto reale",
+            p_1: "Contenuto del primo paragrafo, sostituire con contenuto reale.",
+            h2_2: "Sezione 2", p_2: "Contenuto del secondo paragrafo.",
+            h2_3: "Sezione 3", p_3: "Contenuto del terzo paragrafo.",
+            h3_1: "Sottotitolo 1", p_4: "Contenuto sotto il sottotitolo.",
+            h2_4: "Sezione 4", p_5: "Contenuto del quarto paragrafo.",
+            h2_5: "Sezione 5", p_6: "Contenuto del quinto paragrafo.",
+            h2_6: "Sezione 6", p_7: "Contenuto del sesto paragrafo.",
+            h2_7: "Sezione 7", p_8: "Contenuto del settimo paragrafo.",
+            h2_8: "Sezione 8", p_9: "Contenuto dell'ottavo paragrafo.",
+            relatedTitle: "Articoli Correlati",
+            related1Title: "Articolo correlato 1, sostituire", related1Desc: "Descrizione articolo 1",
+            related2Title: "Articolo correlato 2, sostituire", related2Desc: "Descrizione articolo 2",
+            footerPrivacy: "Informativa sulla Privacy",
+            footerTerms: "Termini di Servizio",
+            footerCoop: "Cooperazione", footerContact: "Contattaci",
+            footerCopy: "\u00A9 2025 Nome del Sito. Tutti i diritti riservati."
+        },
+        ar: {
+            siteName: "\u0627\u0633\u0645 \u0627\u0644\u0645\u0648\u0642\u0639",
+            navHome: "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629",
+            bcHome: "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629", bcCategory: "\u0627\u0644\u0641\u0626\u0629", bcCurrent: "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u0642\u0627\u0644",
+            h1: "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u0642\u0627\u0644\u060C \u0627\u0633\u062A\u0628\u062F\u0644 \u0628\u0627\u0644\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0639\u0644\u064A",
+            pubDate: "2025-01-01", readTime: "8 \u062F\u0642\u0627\u0626\u0642 \u0642\u0631\u0627\u0621\u0629",
+            tag1: "\u0648\u0633\u06451", tag2: "\u0648\u0633\u06452", tag3: "\u0648\u0633\u06453",
+            h2_1: "\u0627\u0644\u0642\u0633\u0645 1\u060C \u0627\u0633\u062A\u0628\u062F\u0644 \u0628\u0627\u0644\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0639\u0644\u064A",
+            p_1: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649\u060C \u0627\u0633\u062A\u0628\u062F\u0644 \u0628\u0627\u0644\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0639\u0644\u064A.",
+            h2_2: "\u0627\u0644\u0642\u0633\u0645 2", p_2: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u062B\u0627\u0646\u064A\u0629.",
+            h2_3: "\u0627\u0644\u0642\u0633\u0645 3", p_3: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u062B\u0627\u0644\u062B\u0629.",
+            h3_1: "\u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0641\u0631\u0639\u064A 1", p_4: "\u0645\u062D\u062A\u0648\u0649 \u062A\u062D\u062A \u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0641\u0631\u0639\u064A.",
+            h2_4: "\u0627\u0644\u0642\u0633\u0645 4", p_5: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u0631\u0627\u0628\u0639\u0629.",
+            h2_5: "\u0627\u0644\u0642\u0633\u0645 5", p_6: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u062E\u0627\u0645\u0633\u0629.",
+            h2_6: "\u0627\u0644\u0642\u0633\u0645 6", p_7: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u0633\u0627\u062F\u0633\u0629.",
+            h2_7: "\u0627\u0644\u0642\u0633\u0645 7", p_8: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u0633\u0627\u0628\u0639\u0629.",
+            h2_8: "\u0627\u0644\u0642\u0633\u0645 8", p_9: "\u0645\u062D\u062A\u0648\u0649 \u0627\u0644\u0641\u0642\u0631\u0629 \u0627\u0644\u062B\u0627\u0645\u0646\u0629.",
+            relatedTitle: "\u0645\u0642\u0627\u0644\u0627\u062A \u0630\u0627\u062A \u0635\u0644\u0629",
+            related1Title: "\u0627\u0644\u0645\u0642\u0627\u0644 \u0627\u0644\u0630\u064A \u064A\u062A\u0635\u0644 1", related1Desc: "\u0648\u0635\u0641 \u0627\u0644\u0645\u0642\u0627\u0644 1",
+            related2Title: "\u0627\u0644\u0645\u0642\u0627\u0644 \u0627\u0644\u0630\u064A \u064A\u062A\u0635\u0644 2", related2Desc: "\u0648\u0635\u0641 \u0627\u0644\u0645\u0642\u0627\u0644 2",
+            footerPrivacy: "\u0633\u064A\u0627\u0633\u0629 \u0627\u0644\u062E\u0635\u0648\u0635\u064A\u0629",
+            footerTerms: "\u0634\u0631\u0648\u0637 \u0627\u0644\u062E\u062F\u0645\u0629",
+            footerCoop: "\u0627\u0644\u062A\u0639\u0627\u0648\u0646", footerContact: "\u0627\u062A\u0635\u0644 \u0628\u0646\u0627",
+            footerCopy: "\u00A9 2025 \u0627\u0633\u0645 \u0627\u0644\u0645\u0648\u0642\u0639. \u062C\u0645\u064A\u0639 \u0627\u0644\u062D\u0642\u0648\u0642 \u0645\u062D\u0641\u0648\u0638\u0629."
+        },
+        tr: {
+            siteName: "Site Ad\u0131",
+            navHome: "Ana Sayfa",
+            bcHome: "Ana Sayfa", bcCategory: "Kategori", bcCurrent: "Makale Ba\u015Fl\u0131\u011F\u0131",
+            h1: "Makale ba\u015Fl\u0131\u011F\u0131, ger\u00E7ek i\u00E7erikle de\u011Fi\u015Ftirin",
+            pubDate: "2025-01-01", readTime: "8 dk okuma",
+            tag1: "Etiket1", tag2: "Etiket2", tag3: "Etiket3",
+            h2_1: "B\u00F6l\u00FCm 1, ger\u00E7ek i\u00E7erikle de\u011Fi\u015Ftirin",
+            p_1: "\u0130lk paragraf i\u00E7eri\u011Fi, ger\u00E7ek i\u00E7erikle de\u011Fi\u015Ftirin.",
+            h2_2: "B\u00F6l\u00FCm 2", p_2: "\u0130kinci paragraf i\u00E7eri\u011Fi.",
+            h2_3: "B\u00F6l\u00FCm 3", p_3: "\u00DC\u00E7\u00FCnc\u00FC paragraf i\u00E7eri\u011Fi.",
+            h3_1: "Alt Ba\u015Fl\u0131k 1", p_4: "Alt ba\u015Fl\u0131k alt\u0131ndaki i\u00E7erik.",
+            h2_4: "B\u00F6l\u00FCm 4", p_5: "D\u00F6rd\u00FCnc\u00FC paragraf i\u00E7eri\u011Fi.",
+            h2_5: "B\u00F6l\u00FCm 5", p_6: "Be\u015Finci paragraf i\u00E7eri\u011Fi.",
+            h2_6: "B\u00F6l\u00FCm 6", p_7: "Alt\u0131nc\u0131 paragraf i\u00E7eri\u011Fi.",
+            h2_7: "B\u00F6l\u00FCm 7", p_8: "Yedinci paragraf i\u00E7eri\u011Fi.",
+            h2_8: "B\u00F6l\u00FCm 8", p_9: "Sekizinci paragraf i\u00E7eri\u011Fi.",
+            relatedTitle: "\u0130lgili Makaleler",
+            related1Title: "\u0130lgili makale 1, de\u011Fi\u015Ftirin", related1Desc: "Makale 1 a\u00E7\u0131klamas\u0131",
+            related2Title: "\u0130lgili makale 2, de\u011Fi\u015Ftirin", related2Desc: "Makale 2 a\u00E7\u0131klamas\u0131",
+            footerPrivacy: "Gizlilik Politikas\u0131",
+            footerTerms: "Kullan\u0131m Ko\u015Fullar\u0131",
+            footerCoop: "\u0130\u015FBirli\u011Fi", footerContact: "\u0130leti\u015Fim",
+            footerCopy: "\u00A9 2025 Site Ad\u0131. T\u00FCm haklar\u0131 sakl\u0131d\u0131r."
+        },
+        vi: {
+            siteName: "T\u00EAn trang web",
+            navHome: "Trang ch\u1EE7",
+            bcHome: "Trang ch\u1EE7", bcCategory: "Danh m\u1EE5c", bcCurrent: "Ti\u00EAu \u0111\u1EC1 b\u00E0i vi\u1EBFt",
+            h1: "Ti\u00EAu \u0111\u1EC1 b\u00E0i vi\u1EBFt, thay th\u1EBF b\u1EB1ng n\u1ED9i dung th\u1EF1c t\u1EBF",
+            pubDate: "2025-01-01", readTime: "8 ph\u00FAt \u0111\u1ECDc",
+            tag1: "Th\u1EBB1", tag2: "Th\u1EBB2", tag3: "Th\u1EBB3",
+            h2_1: "Ph\u1EA7n 1, thay th\u1EBF b\u1EB1ng n\u1ED9i dung th\u1EF1c t\u1EBF",
+            p_1: "N\u1ED9i dung \u0111o\u1EA1n \u0111\u1EA7u ti\u00EAn, thay th\u1EBF b\u1EB1ng n\u1ED9i dung th\u1EF1c t\u1EBF.",
+            h2_2: "Ph\u1EA7n 2", p_2: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 hai.",
+            h2_3: "Ph\u1EA7n 3", p_3: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 ba.",
+            h3_1: "Ti\u00EAu \u0111\u1EC1 ph\u1EE5 1", p_4: "N\u1ED9i dung d\u01B0\u1EDBi ti\u00EAu \u0111\u1EC1 ph\u1EE5.",
+            h2_4: "Ph\u1EA7n 4", p_5: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 t\u01B0.",
+            h2_5: "Ph\u1EA7n 5", p_6: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 n\u0103m.",
+            h2_6: "Ph\u1EA7n 6", p_7: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 s\u00E1u.",
+            h2_7: "Ph\u1EA7n 7", p_8: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 b\u1EA3y.",
+            h2_8: "Ph\u1EA7n 8", p_9: "N\u1ED9i dung \u0111o\u1EA1n th\u1EE9 t\u00E1m.",
+            relatedTitle: "B\u00E0i vi\u1EBFt li\u00EAn quan",
+            related1Title: "B\u00E0i vi\u1EBFt li\u00EAn quan 1", related1Desc: "M\u00F4 t\u1EA3 b\u00E0i vi\u1EBFt 1",
+            related2Title: "B\u00E0i vi\u1EBFt li\u00EAn quan 2", related2Desc: "M\u00F4 t\u1EA3 b\u00E0i vi\u1EBFt 2",
+            footerPrivacy: "Ch\u00EDnh s\u00E1ch B\u1EA3o m\u1EADt",
+            footerTerms: "\u0110i\u1EC1u kho\u1EA3n S\u1EED d\u1EE5ng",
+            footerCoop: "H\u1EE3p t\u00E1c", footerContact: "Li\u00EAn h\u1EC7",
+            footerCopy: "\u00A9 2025 T\u00EAn trang web. B\u1EA3n quy\u1EC1n \u0111\u00E3 \u0111\u0103ng k\u00FD."
+        },
+        th: {
+            siteName: "\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E27\u0E47\u0E1A\u0E44\u0E0B\u0E15\u0E4C",
+            navHome: "\u0E2B\u0E19\u0E49\u0E32\u0E41\u0E23\u0E01",
+            bcHome: "\u0E2B\u0E19\u0E49\u0E32\u0E41\u0E23\u0E01", bcCategory: "\u0E2B\u0E21\u0E27\u0E14", bcCurrent: "\u0E0A\u0E37\u0E48\u0E2D\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21",
+            h1: "\u0E0A\u0E37\u0E48\u0E2D\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21, \u0E41\u0E17\u0E19\u0E17\u0E35\u0E48\u0E14\u0E49\u0E27\u0E22\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E08\u0E23\u0E34\u0E07",
+            pubDate: "2025-01-01", readTime: "8 \u0E19\u0E32\u0E17\u0E35\u0E2D\u0E48\u0E32\u0E19",
+            tag1: "\u0E41\u0E17\u0E47\u0E011", tag2: "\u0E41\u0E17\u0E47\u0E012", tag3: "\u0E41\u0E17\u0E47\u0E013",
+            h2_1: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 1, \u0E41\u0E17\u0E19\u0E17\u0E35\u0E48\u0E14\u0E49\u0E27\u0E22\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E08\u0E23\u0E34\u0E07",
+            p_1: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E41\u0E23\u0E01, \u0E41\u0E17\u0E19\u0E17\u0E35\u0E48\u0E14\u0E49\u0E27\u0E22\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E08\u0E23\u0E34\u0E07.",
+            h2_2: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 2", p_2: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E2A\u0E2D\u0E07.",
+            h2_3: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 3", p_3: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E2A\u0E32\u0E21.",
+            h3_1: "\u0E2B\u0E31\u0E27\u0E02\u0E49\u0E2D\u0E22\u0E48\u0E2D\u0E22 1", p_4: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E43\u0E15\u0E49\u0E2B\u0E31\u0E27\u0E02\u0E49\u0E2D\u0E22\u0E48\u0E2D\u0E22.",
+            h2_4: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 4", p_5: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E2A\u0E35\u0E48.",
+            h2_5: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 5", p_6: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E2B\u0E49\u0E32\u0E21.",
+            h2_6: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 6", p_7: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E2B\u0E01.",
+            h2_7: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 7", p_8: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E40\u0E08\u0E47\u0E14.",
+            h2_8: "\u0E2A\u0E48\u0E27\u0E19\u0E17\u0E35\u0E48 8", p_9: "\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E22\u0E48\u0E2D\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E41\u0E1B\u0E14.",
+            relatedTitle: "\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E17\u0E35\u0E48\u0E40\u0E01\u0E35\u0E48\u0E22\u0E27\u0E02\u0E49\u0E2D\u0E07",
+            related1Title: "\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E17\u0E35\u0E48\u0E40\u0E01\u0E35\u0E48\u0E22\u0E27\u0E02\u0E49\u0E2D\u0E07 1", related1Desc: "\u0E04\u0E33\u0E2D\u0E18\u0E34\u0E1A\u0E32\u0E22\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21 1",
+            related2Title: "\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21\u0E17\u0E35\u0E48\u0E40\u0E01\u0E35\u0E48\u0E22\u0E27\u0E02\u0E49\u0E2D\u0E07 2", related2Desc: "\u0E04\u0E33\u0E2D\u0E18\u0E34\u0E1A\u0E32\u0E22\u0E1A\u0E17\u0E04\u0E27\u0E32\u0E21 2",
+            footerPrivacy: "\u0E19\u0E42\u0E22\u0E1A\u0E32\u0E22\u0E04\u0E27\u0E32\u0E21\u0E40\u0E1B\u0E47\u0E19\u0E2A\u0E48\u0E27\u0E19\u0E15\u0E31\u0E27",
+            footerTerms: "\u0E02\u0E49\u0E2D\u0E15\u0E01\u0E25\u0E32\u0E07\u0E01\u0E32\u0E23\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19",
+            footerCoop: "\u0E04\u0E27\u0E32\u0E21\u0E23\u0E48\u0E27\u0E21\u0E21\u0E37\u0E2D", footerContact: "\u0E15\u0E34\u0E14\u0E15\u0E48\u0E2D\u0E40\u0E23\u0E32",
+            footerCopy: "\u00A9 2025 \u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E27\u0E47\u0E1A\u0E44\u0E0B\u0E15\u0E4C. \u0E2A\u0E07\u0E27\u0E19\u0E25\u0E34\u0E02\u0E2A\u0E34\u0E17\u0E18\u0E34\u0E4C."
+        },
+        id: {
+            siteName: "Nama Situs",
+            navHome: "Beranda",
+            bcHome: "Beranda", bcCategory: "Kategori", bcCurrent: "Judul Artikel",
+            h1: "Judul artikel, ganti dengan konten aktual",
+            pubDate: "2025-01-01", readTime: "8 menit baca",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Bagian 1, ganti dengan konten aktual",
+            p_1: "Konten paragraf pertama, ganti dengan konten aktual.",
+            h2_2: "Bagian 2", p_2: "Konten paragraf kedua.",
+            h2_3: "Bagian 3", p_3: "Konten paragraf ketiga.",
+            h3_1: "Subjudul 1", p_4: "Konten di bawah subjudul.",
+            h2_4: "Bagian 4", p_5: "Konten paragraf keempat.",
+            h2_5: "Bagian 5", p_6: "Konten paragraf kelima.",
+            h2_6: "Bagian 6", p_7: "Konten paragraf keenam.",
+            h2_7: "Bagian 7", p_8: "Konten paragraf ketujuh.",
+            h2_8: "Bagian 8", p_9: "Konten paragraf kedelapan.",
+            relatedTitle: "Artikel Terkait",
+            related1Title: "Artikel terkait 1, ganti", related1Desc: "Deskripsi artikel 1",
+            related2Title: "Artikel terkait 2, ganti", related2Desc: "Deskripsi artikel 2",
+            footerPrivacy: "Kebijakan Privasi",
+            footerTerms: "Ketentuan Layanan",
+            footerCoop: "Kerja Sama", footerContact: "Hubungi Kami",
+            footerCopy: "\u00A9 2025 Nama Situs. Hak cipta dilindungi."
+        },
+        ms: {
+            siteName: "Nama Laman",
+            navHome: "Utama",
+            bcHome: "Utama", bcCategory: "Kategori", bcCurrent: "Tajuk Artikel",
+            h1: "Tajuk artikel, ganti dengan kandungan sebenar",
+            pubDate: "2025-01-01", readTime: "8 min baca",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Seksyen 1, ganti dengan kandungan sebenar",
+            p_1: "Kandungan perenggan pertama, ganti dengan kandungan sebenar.",
+            h2_2: "Seksyen 2", p_2: "Kandungan perenggan kedua.",
+            h2_3: "Seksyen 3", p_3: "Kandungan perenggan ketiga.",
+            h3_1: "Subtajuk 1", p_4: "Kandungan di bawah subtajuk.",
+            h2_4: "Seksyen 4", p_5: "Kandungan perenggan keempat.",
+            h2_5: "Seksyen 5", p_6: "Kandungan perenggan kelima.",
+            h2_6: "Seksyen 6", p_7: "Kandungan perenggan keenam.",
+            h2_7: "Seksyen 7", p_8: "Kandungan perenggan ketujuh.",
+            h2_8: "Seksyen 8", p_9: "Kandungan perenggan kelapan.",
+            relatedTitle: "Artikel Berkaitan",
+            related1Title: "Artikel berkaitan 1, ganti", related1Desc: "Penerangan artikel 1",
+            related2Title: "Artikel berkaitan 2, ganti", related2Desc: "Penerangan artikel 2",
+            footerPrivacy: "Dasar Privasi",
+            footerTerms: "Terma Perkhidmatan",
+            footerCoop: "Kerjasama", footerContact: "Hubungi Kami",
+            footerCopy: "\u00A9 2025 Nama Laman. Hak cipta terpelihara."
+        },
+        ko: {
+            siteName: "\uC0AC\uC774\uD2B8 \uC774\uB984",
+            navHome: "\uD648",
+            bcHome: "\uD648", bcCategory: "\uCE74\uD14C\uACE0\uB9AC", bcCurrent: "\uAE00 \uC81C\uBAA9",
+            h1: "\uAE00 \uC81C\uBAA9, \uC2E4\uC81C \uB0B4\uC6A9\uC73C\uB85C \uAD50\uCCB4\uD558\uC138\uC694",
+            pubDate: "2025-01-01", readTime: "8\uBD84 \uC77D\uAE30",
+            tag1: "\uD0DC\uADF81", tag2: "\uD0DC\uADF82", tag3: "\uD0DC\uADF83",
+            h2_1: "\uC139\uC158 1, \uC2E4\uC81C \uB0B4\uC6A9\uC73C\uB85C \uAD50\uCCB4\uD558\uC138\uC694",
+            p_1: "\uCCAB\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9, \uC2E4\uC81C \uB0B4\uC6A9\uC73C\uB85C \uAD50\uCCB4\uD558\uC138\uC694.",
+            h2_2: "\uC139\uC158 2", p_2: "\uB450\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            h2_3: "\uC139\uC158 3", p_3: "\uC138\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            h3_1: "\uC18C\uC81C\uBAA9 1", p_4: "\uC18C\uC81C\uBAA9 \uC544\uB798 \uB0B4\uC6A9.",
+            h2_4: "\uC139\uC158 4", p_5: "\uB124\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            h2_5: "\uC139\uC158 5", p_6: "\uB2E4\uC12F\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            h2_6: "\uC139\uC158 6", p_7: "\uC5EC\uC12F\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            h2_7: "\uC139\uC158 7", p_8: "\uC77C\uACF1\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            h2_8: "\uC139\uC158 8", p_9: "\uC5EC\uB35F\uBC88\uC9F8 \uB2E8\uB77D \uB0B4\uC6A9.",
+            relatedTitle: "\uAD00\uB828 \uAE00",
+            related1Title: "\uAD00\uB828 \uAE00 1, \uAD50\uCCB4\uD558\uC138\uC694", related1Desc: "\uAE00 1 \uC124\uBA85",
+            related2Title: "\uAD00\uB828 \uAE00 2, \uAD50\uCCB4\uD558\uC138\uC694", related2Desc: "\uAE00 2 \uC124\uBA85",
+            footerPrivacy: "\uAC1C\uC778\uC815\uBCF4 \uCC98\uB9AC\uBC29\uCE68",
+            footerTerms: "\uC774\uC6A9\uC57D\uAD00",
+            footerCoop: "\uD611\uB825", footerContact: "\uBB38\uC758",
+            footerCopy: "\u00A9 2025 \uC0AC\uC774\uD2B8 \uC774\uB984. \uBAA8\uB4E0 \uAD8C\uB9AC \uBCF4\uC720."
+        },
+        ja: {
+            siteName: "\u30B5\u30A4\u30C8\u540D",
+            navHome: "\u30DB\u30FC\u30E0",
+            bcHome: "\u30DB\u30FC\u30E0", bcCategory: "\u30AB\u30C6\u30B4\u30EA", bcCurrent: "\u8A18\u4E8B\u30BF\u30A4\u30C8\u30EB",
+            h1: "\u8A18\u4E8B\u30BF\u30A4\u30C8\u30EB\u3001\u5B9F\u969B\u306E\u30B3\u30F3\u30C6\u30F3\u30C4\u306B\u7F6E\u304D\u63DB\u3048\u3066\u304F\u3060\u3055\u3044",
+            pubDate: "2025-01-01", readTime: "8\u5206\u8AAD\u307F",
+            tag1: "\u30BF\u30B01", tag2: "\u30BF\u30B02", tag3: "\u30BF\u30B03",
+            h2_1: "\u30BB\u30AF\u30B7\u30E7\u30F3 1\u3001\u5B9F\u969B\u306E\u30B3\u30F3\u30C6\u30F3\u30C4\u306B\u7F6E\u304D\u63DB\u3048\u3066\u304F\u3060\u3055\u3044",
+            p_1: "\u6700\u521D\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4\u3001\u5B9F\u969B\u306E\u30B3\u30F3\u30C6\u30F3\u30C4\u306B\u7F6E\u304D\u63DB\u3048\u3066\u304F\u3060\u3055\u3044.",
+            h2_2: "\u30BB\u30AF\u30B7\u30E7\u30F3 2", p_2: "2\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h2_3: "\u30BB\u30AF\u30B7\u30E7\u30F3 3", p_3: "3\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h3_1: "\u30B5\u30D6\u898B\u51FA\u3057 1", p_4: "\u30B5\u30D6\u898B\u51FA\u3057\u4E0B\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h2_4: "\u30BB\u30AF\u30B7\u30E7\u30F3 4", p_5: "4\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h2_5: "\u30BB\u30AF\u30B7\u30E7\u30F3 5", p_6: "5\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h2_6: "\u30BB\u30AF\u30B7\u30E7\u30F3 6", p_7: "6\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h2_7: "\u30BB\u30AF\u30B7\u30E7\u30F3 7", p_8: "7\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            h2_8: "\u30BB\u30AF\u30B7\u30E7\u30F3 8", p_9: "8\u756A\u76EE\u306E\u6BB5\u843D\u306E\u30B3\u30F3\u30C6\u30F3\u30C4.",
+            relatedTitle: "\u95A2\u9023\u8A18\u4E8B",
+            related1Title: "\u95A2\u9023\u8A18\u4E8B 1\u3001\u7F6E\u304D\u63DB\u3048", related1Desc: "\u8A18\u4E8B 1 \u306E\u8AAC\u660E",
+            related2Title: "\u95A2\u9023\u8A18\u4E8B 2\u3001\u7F6E\u304D\u63DB\u3048", related2Desc: "\u8A18\u4E8B 2 \u306E\u8AAC\u660E",
+            footerPrivacy: "\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC\u30DD\u30EA\u30B7\u30FC",
+            footerTerms: "\u5229\u7528\u898F\u7D04",
+            footerCoop: "\u63D0\u643A", footerContact: "\u304A\u554F\u5408\u305B",
+            footerCopy: "\u00A9 2025 \u30B5\u30A4\u30C8\u540D. All rights reserved."
+        },
+        pl: {
+            siteName: "Nazwa Strony",
+            navHome: "Strona g\u0142\u00F3wna",
+            bcHome: "Strona g\u0142\u00F3wna", bcCategory: "Kategoria", bcCurrent: "Tytu\u0142 Artyku\u0142u",
+            h1: "Tytu\u0142 artyku\u0142u, zamie\u0144 na rzeczywist\u0105 tre\u015B\u0107",
+            pubDate: "2025-01-01", readTime: "8 min czytania",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Sekcja 1, zamie\u0144 na rzeczywist\u0105 tre\u015B\u0107",
+            p_1: "Tre\u015B\u0107 pierwszego akapitu, zamie\u0144 na rzeczywist\u0105 tre\u015B\u0107.",
+            h2_2: "Sekcja 2", p_2: "Tre\u015B\u0107 drugiego akapitu.",
+            h2_3: "Sekcja 3", p_3: "Tre\u015B\u0107 trzeciego akapitu.",
+            h3_1: "Podtytu\u0142 1", p_4: "Tre\u015B\u0107 pod podtytu\u0142em.",
+            h2_4: "Sekcja 4", p_5: "Tre\u015B\u0107 czwartego akapitu.",
+            h2_5: "Sekcja 5", p_6: "Tre\u015B\u0107 pi\u0105tego akapitu.",
+            h2_6: "Sekcja 6", p_7: "Tre\u015B\u0107 sz\u00F3stego akapitu.",
+            h2_7: "Sekcja 7", p_8: "Tre\u015B\u0107 si\u00F3dmego akapitu.",
+            h2_8: "Sekcja 8", p_9: "Tre\u015B\u0107 \u00F3smego akapitu.",
+            relatedTitle: "Powi\u0105zane Artyku\u0142y",
+            related1Title: "Powi\u0105zany artyku\u0142 1, zamie\u0144", related1Desc: "Opis artyku\u0142u 1",
+            related2Title: "Powi\u0105zany artyku\u0142 2, zamie\u0144", related2Desc: "Opis artyku\u0142u 2",
+            footerPrivacy: "Polityka Prywatno\u015Bci",
+            footerTerms: "Warunki U\u017Cytkowania",
+            footerCoop: "Wsp\u00F3\u0142praca", footerContact: "Kontakt",
+            footerCopy: "\u00A9 2025 Nazwa Strony. Wszelkie prawa zastrze\u017Cone."
+        },
+        nl: {
+            siteName: "Sitenaam",
+            navHome: "Home",
+            bcHome: "Home", bcCategory: "Categorie", bcCurrent: "Artikeltitel",
+            h1: "Artikeltitel, vervang door werkelijke inhoud",
+            pubDate: "2025-01-01", readTime: "8 min lezen",
+            tag1: "Tag1", tag2: "Tag2", tag3: "Tag3",
+            h2_1: "Sectie 1, vervang door werkelijke inhoud",
+            p_1: "Inhoud van de eerste alinea, vervang door werkelijke inhoud.",
+            h2_2: "Sectie 2", p_2: "Inhoud van de tweede alinea.",
+            h2_3: "Sectie 3", p_3: "Inhoud van de derde alinea.",
+            h3_1: "Subtitel 1", p_4: "Inhoud onder de subtitel.",
+            h2_4: "Sectie 4", p_5: "Inhoud van de vierde alinea.",
+            h2_5: "Sectie 5", p_6: "Inhoud van de vijfde alinea.",
+            h2_6: "Sectie 6", p_7: "Inhoud van de zesde alinea.",
+            h2_7: "Sectie 7", p_8: "Inhoud van de zevende alinea.",
+            h2_8: "Sectie 8", p_9: "Inhoud van de achtste alinea.",
+            relatedTitle: "Gerelateerde Artikelen",
+            related1Title: "Gerelateerd artikel 1, vervang", related1Desc: "Beschrijving artikel 1",
+            related2Title: "Gerelateerd artikel 2, vervang", related2Desc: "Beschrijving artikel 2",
+            footerPrivacy: "Privacybeleid",
+            footerTerms: "Gebruiksvoorwaarden",
+            footerCoop: "Samenwerking", footerContact: "Contact",
+            footerCopy: "\u00A9 2025 Sitenaam. Alle rechten voorbehouden."
+        }
+    };
+
+    // ================================================================
+    // 语言切换逻辑
+    // ================================================================
+    const langSwitch = document.getElementById('langSwitch');
+    const currentLangTag = document.getElementById('currentLangTag');
+
+    function applyLang(lang) {
+        const data = i18n[lang];
+        if (!data) return;
+
+        // 更新所有 data-i18n 元素
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (data[key] !== undefined) {
+                el.textContent = data[key];
+            }
+        });
+
+        // 更新 html lang 属性
+        document.documentElement.lang = lang;
+
+        // 更新语言标签显示
+        currentLangTag.textContent = lang.toUpperCase();
+
+        // 阿拉伯语 RTL 支持
+        if (lang === 'ar') {
+            document.documentElement.dir = 'rtl';
+        } else {
+            document.documentElement.dir = 'ltr';
+        }
+    }
+
+    langSwitch.addEventListener('change', function() {
+        applyLang(this.value);
+    });
+
+    // 初始化：检测浏览器语言或使用默认中文
+    (function() {
+        const browserLang = (navigator.language || navigator.userLanguage || 'zh').split('-')[0];
+        const supportedLangs = ['zh','en','es','pt','ru','fr','de','it','ar','tr','vi','th','id','ms','ko','ja','pl','nl'];
+        const initLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+        langSwitch.value = initLang;
+        applyLang(initLang);
+    })();
+    </script>
 
 </body>
 </html>

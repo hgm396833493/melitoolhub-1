@@ -1,186 +1,168 @@
-# MeliToolHub 一键更新指南
+# GlobalTrade Hub 更新指南
 
-## 📌 快速流程（发布新文章只需 3 步）
+## 项目信息
+- 仓库: https://github.com/hgm396833493/melitoolhub
+- 域名: melitoolhub.com
+- 技术栈: 单文件HTML + CSS + JS，无框架
+- 语言: 18语种（zh/en/es/pt/ru/fr/de/it/ar/tr/vi/th/id/ms/ko/ja/pl/nl）
+- 响应式: 4断点（1024/768/680/480px）
+- 变现: Google AdSense + 多平台官方联盟佣金 + 中国采购代办服务
 
+## 文件结构
 ```
-第1步：复制模板创建文章 → 第2步：提交到Git → 第3步：推送到GitHub
+├── index.html                    # 主首页（18语种、5大栏目）
+├── privacy.html                  # 隐私政策（18语种+GDPR合规）
+├── cooperation.html              # 合作与结算说明（18语种）
+├── tools.html                    # 跨境工具专区（汇率+费率计算器）
+├── sourcing.html                 # 中国采购代办服务页
+├── article-meli-es.html          # 美客多开店教程（西语+17语种）
+├── article-latam-logistics-es.html # 拉美物流对比（西语+17语种）
+├── article-brazil-market.html    # 巴西市场准入指南
+├── article-mexico-customs.html   # 墨西哥海关指南
+├── article-payment-comparison.html # 跨境支付费率对比
+├── article-template.html         # 通用文章模板（18语种）
+├── policy-template.html          # 政策资讯模板（18语种）
+├── news1.html                    # 政策资讯1
+├── news2.html                    # 政策资讯2
+├── robots.txt                    # 搜索引擎爬虫规则
+├── sitemap.xml                   # 站点地图
+└── UPDATE_GUIDE.md               # 本文件
 ```
 
 ---
 
-## 一、发布新文章
+## 一、语言系统说明
 
-### 1. 复制模板
+### i18n架构
+每个页面使用内嵌的 `I18N` JavaScript对象存储18种语言翻译，通过 `data-i18n` 属性绑定DOM元素。
+
+### 语言代码对照
+| 代码 | 语言 | 代码 | 语言 |
+|------|------|------|------|
+| zh | 中文 | tr | 土耳其语 |
+| en | 英文 | vi | 越南语 |
+| es | 西班牙语 | th | 泰语 |
+| pt | 葡萄牙语 | id | 印尼语 |
+| ru | 俄语 | ms | 马来语 |
+| fr | 法语 | ko | 韩语 |
+| de | 德语 | ja | 日语 |
+| it | 意大利语 | pl | 波兰语 |
+| ar | 阿拉伯语 | nl | 荷兰语 |
+
+---
+
+## 二、发布新文章（复制模板三步法）
+
+### 第1步：复制模板
 ```bash
 cp article-template.html article-新文章名.html
 ```
 
-### 2. 编辑文章内容
-打开 `article-新文章名.html`，修改以下内容：
+### 第2步：修改内容
+在 `article-新文章名.html` 中搜索 `<!-- TODO`，逐一替换：
 
-| 位置 | 修改内容 |
-|------|----------|
-| `<title>` | 文章标题 - MeliToolHub拉美跨境电商平台（50-60字符） |
-| `<meta description>` | 文章描述（120-155字符） |
-| `<meta keywords>` | 3-5个精准关键词 |
-| `<link rel="canonical">` | 改为新文章的URL |
-| JSON-LD `headline` | 文章标题 |
-| JSON-LD `description` | 文章描述 |
-| JSON-LD `datePublished` | 发布日期 YYYY-MM-DD |
-| `<h1>` | 文章标题 |
-| `<span>📅` | 发布日期 |
-| `<span>⏱️` | 预计阅读时间 |
-| `.article-tags` | 文章标签 |
-| `<article>` 正文 | 文章内容（800-2000中文字） |
+| 占位符 | 替换内容 | 示例 |
+|--------|----------|------|
+| `<!-- TODO: 替换标题 -->` | 文章标题（50-60字符） | 墨西哥NOM认证完整指南 |
+| `<!-- TODO: 替换描述 -->` | 文章描述（120-155字） | 详解墨西哥NOM认证... |
+| `<!-- TODO: 替换关键词 -->` | 3-5个精准关键词 | 墨西哥,NOM认证,清关 |
+| `<!-- TODO: 替换canonical -->` | 新文章URL | ...article-mexico-nom.html |
+| `<!-- TODO: 日期 -->` | YYYY-MM-DD | 2026-06-15 |
+| `<!-- TODO: 阅读时间 -->` | X分钟 | 8分钟 |
 
-### 3. SEO规范要求
-- ✅ H1唯一且只有一个
-- ✅ H标签层级：H1 → H2 → H3（不能跳级）
-- ✅ 每段不超过4-5行
-- ✅ 原创内容，不复制粘贴
-- ✅ 图片加 alt 属性和 loading="lazy"
-- ✅ 关键词自然分布，不堆砌
-- ✅ 文章末尾有明确的行动建议
+### 第3步：填写i18n内容
+在 `I18N` 对象中填写18语种的译文。**至少填写 zh/en/es/pt/ru/fr/de/it/ar 9种核心语言**，其余语言会自动fallback到英文。
 
-### 4. 在首页添加文章链接
-编辑 `index.html`，找到文章列表区域（搜索 `<!-- ===== 已发布`），在最新文章后面添加：
+### 第4步：在首页添加文章链接
+编辑 `index.html`，在 `articles` 数组末尾添加：
+```javascript
+{n:序号, url:'article-新文章名.html', lang:'zh', 
+ title:{zh:'中文标题', en:'English Title', es:'Título en Español', /*...其他语言*/},
+ excerpt:{zh:'中文摘要30-50字', en:'English excerpt', /*...其他语言*/},
+ date:'2026-06-15'}
+```
 
+---
+
+## 三、发布新政策资讯
+
+### 使用 policy-template.html
+```bash
+cp policy-template.html news3.html
+```
+然后按模板内的 `<!-- TODO -->` 注释修改内容，填写18语种译文。
+
+---
+
+## 四、AdSense 配置
+
+### 1. 申请Google AdSense
+访问 https://adsense.google.com 注册，获取发布商ID（格式：`ca-pub-XXXXXXXXXX`）
+
+### 2. 替换广告代码
+在所有HTML文件中搜索 `<div class="ad-ph">`，替换为：
 ```html
-<div class="article-list-item">
-  <div class="art-num">11</div>
-  <div class="art-info">
-    <a href="article-新文章名.html" class="art-title-link">文章标题</a>
-    <span class="art-excerpt">文章简介，30-50字</span>
-  </div>
-  <div class="art-badge-cell">
-    <span class="badge badge-zh">ZH</span>
-  </div>
-  <div class="art-date">2025-06-03</div>
-</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="YYYYYYYYYY" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 ```
 
 ---
 
-## 二、添加/更新推荐链接（联盟营销）
-
-### 修改推荐链接
-1. 编辑 `index.html`
-2. 搜索 `data-pid="xxx"` 找到对应工具卡片
-3. 修改 `<a href="...">` 为你的专属推荐链接
-4. 修改佣金描述 `partner-commission`
-
-### 添加新推荐工具
-复制一个 `partner-card` 的 HTML 结构，修改：
-- `data-pid`：唯一标识
-- `.partner-logo`：图标emoji
-- `.partner-name`：工具名称（4个语言都要改）
-- `.partner-desc`：描述（4个语言都要改）
-- `.partner-tags`：分类标签
-- `.partner-commission`：佣金/奖励说明
-- `<a href="...">`：你的专属推荐链接
-- `rel="noopener noreferrer sponsored"`：标注为赞助链接（SEO要求）
-
-### i18n多语言
-在每个语言的翻译对象中添加对应的key：
-- `p13_name`, `p13_desc`, `p13_comm`, `p13_btn`（以此类推）
-
----
-
-## 三、Git 一键更新推送
-
-### 基本命令
-```bash
-cd D:\workspace
-
-# 查看修改了哪些文件
-git status
-
-# 添加所有修改
-git add -A
-
-# 提交（写清楚改了什么）
-git commit -m "新增文章：xxx - 描述"
-
-# 推送到GitHub
-git push origin main
-```
-
-### 批量更新多条命令
-```bash
-cd D:\workspace && git add -A && git commit -m "更新内容" && git push origin main
-```
-
-### GitHub Pages 自动更新
-推送后约1-3分钟，网站自动更新。访问：
-- https://hgm396833493.github.io/melitoolhub/
-
----
-
-## 四、Google Search Console 设置
+## 五、Google Search Console 配置
 
 ### 1. 验证网站
 1. 打开 https://search.google.com/search-console
 2. 添加资源 → 输入 `https://hgm396833493.github.io/melitoolhub/`
-3. 选择 "HTML标签" 验证方式
-4. 复制验证码（格式：`xxxxxxx`）
-5. 编辑 `index.html`，找到 `google-site-verification` meta标签
-6. 将 `YOUR_VERIFICATION_CODE` 替换为你的验证码
-7. 保存并推送到GitHub
-8. 点击验证
+3. 选择"HTML标签"验证方式
+4. 复制验证码，替换 `index.html` 中的 `YOUR_VERIFICATION_CODE`
+5. 推送并验证
 
 ### 2. 提交Sitemap
-验证成功后：
-1. 进入 Search Console → 站点地图
-2. 输入 `sitemap.xml`
-3. 点击提交
+验证成功后 → 站点地图 → 输入 `sitemap.xml` → 提交
 
-### 3. 请求索引（新文章）
-每次发布新文章后：
-1. Search Console → URL检查
-2. 输入文章URL
-3. 点击 "请求编入索引"
+### 3. 请求索引
+每次发布新文章后在GSC中：URL检查 → 输入文章URL → 请求编入索引
 
 ---
 
-## 五、联盟推广链接获取方式
+## 六、Git 更新推送
 
-| 平台 | 联盟计划 | 注册地址 |
-|------|----------|----------|
-| Mercado Libre | Programa de Afiliados | https://www.mercadolibre.com/afiliados |
-| 万里汇 WorldFirst | 推荐计划 | 注册后在后台获取专属链接 |
-| PingPong | 推荐计划 | 注册后在后台获取专属链接 |
-| 空中云汇 Airwallex | 推荐计划 | https://www.airwallex.com/referral |
-| 紫鸟浏览器 | 推荐计划 | https://www.ziniao.com 注册后获取 |
-| 智赢ERP | 推荐计划 | 注册后联系客服获取 |
-| 妙手ERP | 推荐计划 | https://www.miaoshou.com 注册后获取 |
-| 店小秘ERP | 推荐计划 | https://www.dianxiaomi.com 注册后获取 |
-| Helium 10 | Affiliate Program | https://h10.me/affiliate |
-
-> ⚠️ 以上链接为官方网站，获取你的专属推荐链接后替换 index.html 中的 href 即可。
-
----
-
-## 六、自定义域名绑定（可选）
-
-如果购买了 `melitoolhub.com` 域名：
-
-### 1. 创建CNAME文件
 ```bash
-echo "melitoolhub.com" > CNAME
-git add CNAME && git commit -m "Add CNAME" && git push origin main
+cd D:\workspace
+git add -A
+git commit -m "更新内容描述"
+git push origin main
 ```
 
-### 2. GitHub Pages设置
-1. 仓库 Settings → Pages
-2. Custom domain 填入 `melitoolhub.com`
-3. 勾选 Enforce HTTPS
+推送后1-3分钟自动部署到 GitHub Pages。
 
-### 3. 域名DNS配置
-在域名商后台添加：
-| 类型 | 名称 | 值 |
-|------|------|-----|
-| CNAME | www | hgm396833493.github.io |
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
+---
+
+## 七、联盟推广链接
+
+| 平台 | 联盟计划 | 获取方式 |
+|------|----------|----------|
+| Mercado Libre | Programa de Afiliados | mercadolibre.com/afiliados |
+| Amazon | Amazon Associates | affiliate-program.amazon.com |
+| Shopee | AMS联盟 | shopee.com 注册后获取 |
+| OZON | 官方联盟 | ozon.ru 注册后获取 |
+| 万里汇 WorldFirst | 推荐计划 | 后台获取专属链接 |
+| PingPong | 推荐计划 | 注册后后台获取 |
+| Airwallex | 推荐计划 | airwallex.com/referral |
+| 紫鸟浏览器 | 推荐计划 | ziniao.com 注册后获取 |
+| 智赢ERP | 推荐计划 | https://www.zying.net/ |
+| 妙手ERP | 推荐计划 | https://erp.91miaoshou.com/ |
+
+> 获取专属推荐链接后，在 index.html 的 `partners` 数组中替换 `url` 字段。
+
+---
+
+## 八、合规注意事项
+
+1. **严禁**在页面展示个人收款码、私人账号、线下转账方式
+2. **严禁**自动弹窗骚扰用户（Cookie弹窗仅首次访问展示一次）
+3. **严禁**堆砌广告链接，广告位与主体内容物理分区
+4. **必须**保持全站原创内容，不可搬运、抄袭
+5. **必须**每个新页面在sitemap.xml中注册
+6. AdSense申请前确保隐私政策页完整、Cookie弹窗就绪

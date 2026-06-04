@@ -1,45 +1,857 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" id="html-root">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>隐私政策 | MeliToolHub</title>
-  <meta name="description" content="MeliToolHub隐私政策，说明网站如何收集、使用、保护用户信息。">
-  <link rel="canonical" href="https://melitoolhub.com/privacy.html">
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title data-i18n="seo_title">隐私政策 | MeliToolHub 拉美跨境电商平台</title>
+<meta name="description" data-i18n-attrib="seo_desc" content="MeliToolHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://melitoolhub.com/privacy.html">
+
+<link rel="alternate" hreflang="zh-CN" href="https://melitoolhub.com/privacy.html">
+<link rel="alternate" hreflang="en"    href="https://melitoolhub.com/privacy.html?lang=en">
+<link rel="alternate" hreflang="es"    href="https://melitoolhub.com/privacy.html?lang=es">
+<link rel="alternate" hreflang="pt"    href="https://melitoolhub.com/privacy.html?lang=pt">
+<link rel="alternate" hreflang="ru"    href="https://melitoolhub.com/privacy.html?lang=ru">
+<link rel="alternate" hreflang="fr"    href="https://melitoolhub.com/privacy.html?lang=fr">
+<link rel="alternate" hreflang="de"    href="https://melitoolhub.com/privacy.html?lang=de">
+<link rel="alternate" hreflang="it"    href="https://melitoolhub.com/privacy.html?lang=it">
+<link rel="alternate" hreflang="ar"    href="https://melitoolhub.com/privacy.html?lang=ar">
+<link rel="alternate" hreflang="tr"    href="https://melitoolhub.com/privacy.html?lang=tr">
+<link rel="alternate" hreflang="vi"    href="https://melitoolhub.com/privacy.html?lang=vi">
+<link rel="alternate" hreflang="th"    href="https://melitoolhub.com/privacy.html?lang=th">
+<link rel="alternate" hreflang="id"    href="https://melitoolhub.com/privacy.html?lang=id">
+<link rel="alternate" hreflang="ms"    href="https://melitoolhub.com/privacy.html?lang=ms">
+<link rel="alternate" hreflang="ko"    href="https://melitoolhub.com/privacy.html?lang=ko">
+<link rel="alternate" hreflang="ja"    href="https://melitoolhub.com/privacy.html?lang=ja">
+<link rel="alternate" hreflang="pl"    href="https://melitoolhub.com/privacy.html?lang=pl">
+<link rel="alternate" hreflang="nl"    href="https://melitoolhub.com/privacy.html?lang=nl">
+<link rel="alternate" hreflang="x-default" href="https://melitoolhub.com/privacy.html">
+
+<meta property="og:title"       content="隐私政策 | MeliToolHub" data-i18n-attrib="og_title">
+<meta property="og:description" content="了解 MeliToolHub 如何收集、使用和保护您的个人信息。遵守 GDPR 及国际隐私保护标准。" data-i18n-attrib="og_desc">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://melitoolhub.com/privacy.html">
+<meta property="og:site_name"   content="MeliToolHub">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<style>
+:root{--p:#1a3a5c;--a:#f0b429;--bg:#f5f7fa;--c:#fff;--t:#333;--s:#666;--r:12px;--sh:0 4px 18px rgba(0,0,0,.08);--border:#edf0f5;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.7;min-height:100vh;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;display:block;}
+
+/* Nav */
+nav{background:var(--p);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.2);gap:16px;}
+.nav-left{display:flex;align-items:center;gap:16px;}
+.nav-logo{color:var(--c);font-size:1.3rem;font-weight:700;letter-spacing:1px;white-space:nowrap;}
+.nav-logo span{color:var(--a);}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.nav-back{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.8);font-size:.88rem;padding:7px 14px;border-radius:6px;transition:.2s;white-space:nowrap;}
+.nav-back:hover{background:rgba(255,255,255,.12);color:var(--c);}
+
+/* Language select */
+.lang-select-wrap{position:relative;}
+.lang-select{appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.1);color:var(--c);border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:7px 32px 7px 12px;font-size:.82rem;cursor:pointer;outline:none;transition:.2s;min-width:120px;}
+.lang-select:hover,.lang-select:focus{border-color:var(--a);background:rgba(255,255,255,.18);}
+.lang-select option{background:var(--p);color:var(--c);}
+.lang-select-arrow{position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:rgba(255,255,255,.6);font-size:.65rem;}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--p) 0%,#2d6a9f 60%,#1a5276 100%);color:var(--c);padding:72px 24px 56px;text-align:center;}
+.hero h1{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:700;margin-bottom:12px;letter-spacing:.5px;}
+.hero h1 span{color:var(--a);}
+.hero p{font-size:1rem;opacity:.88;max-width:640px;margin:0 auto;}
+.hero-date{display:inline-block;margin-top:16px;padding:6px 18px;background:rgba(255,255,255,.12);border-radius:20px;font-size:.82rem;opacity:.85;}
+
+/* Breadcrumb */
+.breadcrumb{background:var(--c);border-bottom:1px solid var(--border);padding:10px 24px;}
+.breadcrumb-inner{max-width:880px;margin:0 auto;font-size:.82rem;color:var(--s);display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.breadcrumb a{color:var(--p);transition:.15s;}
+.breadcrumb a:hover{color:var(--a);}
+
+/* Main */
+.main-content{max-width:880px;margin:0 auto;padding:48px 24px 64px;}
+
+/* Privacy chapters */
+.privacy-card{background:var(--c);border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--border);padding:28px 30px;margin-bottom:22px;}
+.privacy-card h2{font-size:1.2rem;font-weight:700;color:var(--p);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--a);display:inline-block;}
+.privacy-card p{font-size:.88rem;color:var(--s);line-height:1.85;text-align:justify;}
+
+/* Contact CTA */
+.contact-cta{background:linear-gradient(135deg,var(--p),#2d6a9f);color:var(--c);border-radius:var(--r);padding:40px 32px;text-align:center;margin:36px 0;}
+.contact-cta h2{font-size:1.3rem;font-weight:700;margin-bottom:10px;}
+.contact-cta p{font-size:.9rem;opacity:.85;max-width:520px;margin:0 auto 22px;}
+.contact-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;background:var(--a);color:var(--p);border-radius:8px;font-weight:700;font-size:.95rem;transition:.25s;border:none;cursor:pointer;}
+.contact-btn:hover{background:#e0a020;transform:translateY(-2px);box-shadow:0 6px 20px rgba(240,180,41,.35);}
+
+/* Footer */
+footer{background:var(--p);color:var(--c);padding:36px 24px 24px;text-align:center;margin-top:48px;}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:18px;}
+.footer-links a{color:rgba(255,255,255,.7);font-size:.84rem;transition:.2s;}
+.footer-links a:hover{color:var(--c);}
+.footer-copy{font-size:.78rem;color:rgba(255,255,255,.4);}
+
+/* Responsive */
+@media(max-width:768px){
+  .main-content{padding:32px 18px 48px;}
+  .hero{padding:52px 18px 40px;}
+  nav{padding:0 16px;height:52px;}
+  .nav-logo{font-size:1.15rem;}
+  .lang-select{min-width:100px;font-size:.78rem;padding:6px 28px 6px 10px;}
+  .privacy-card{padding:22px 20px;margin-bottom:18px;}
+  .privacy-card h2{font-size:1.1rem;}
+  .contact-cta{padding:32px 22px;}
+}
+@media(max-width:640px){
+  nav{flex-wrap:wrap;height:auto;padding:10px 14px;gap:8px;}
+  .nav-left,.nav-right{width:100%;justify-content:space-between;}
+  .lang-select{min-width:90px;font-size:.76rem;}
+  .hero h1{font-size:1.3rem;}
+  .hero p{font-size:.9rem;}
+  .privacy-card{padding:18px 16px;}
+  .privacy-card h2{font-size:1.05rem;}
+  .privacy-card p{font-size:.84rem;}
+  .footer-links{gap:16px;}
+}
+@media(max-width:480px){
+  .main-content{padding:24px 12px 36px;}
+  .hero{padding:36px 14px 30px;}
+  .hero h1{font-size:1.15rem;}
+  .hero p{font-size:.82rem;}
+  .breadcrumb{padding:8px 14px;}
+  .breadcrumb-inner{font-size:.76rem;}
+  .privacy-card{padding:16px 14px;margin-bottom:14px;}
+  .privacy-card h2{font-size:1rem;}
+  .privacy-card p{font-size:.82rem;line-height:1.75;}
+  .contact-cta{padding:28px 16px;margin:28px 0;}
+  .contact-btn{padding:12px 24px;font-size:.88rem;width:100%;justify-content:center;}
+  .nav-logo{font-size:1.05rem;}
+  .nav-back{font-size:.82rem;padding:6px 10px;}
+  .lang-select{min-width:85px;font-size:.74rem;padding:5px 26px 5px 8px;}
+}
+@media(max-width:360px){
+  .hero h1{font-size:1.05rem;}
+  .hero p{font-size:.78rem;}
+  .privacy-card h2{font-size:.93rem;}
+  .privacy-card p{font-size:.78rem;}
+  .nav-logo{font-size:.95rem;}
+  .lang-select{min-width:75px;font-size:.7rem;}
+  .contact-cta h2{font-size:1.15rem;}
+}
+
+/* Cookie Consent */
+.cookie-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--p);color:#fff;z-index:10000;padding:16px 24px;box-shadow:0 -4px 20px rgba(0,0,0,.25);align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.cookie-bar.show{display:flex}
+.cookie-bar p{font-size:.88rem;max-width:700px;margin:0}
+.cookie-bar-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cookie-bar-btns button{border:none;padding:10px 20px;border-radius:6px;font-size:.85rem;font-weight:600;cursor:pointer;transition:.2s;white-space:nowrap}
+.cookie-btn-accept{background:var(--a);color:var(--p)}
+.cookie-btn-accept:hover{background:#e0a020}
+.cookie-btn-reject{background:rgba(255,255,255,.15);color:#fff}
+.cookie-btn-reject:hover{background:rgba(255,255,255,.25)}
+.cookie-btn-policy{background:transparent;color:#fff;text-decoration:underline;padding:10px 12px}
+.cookie-btn-policy:hover{color:var(--a)}
+@media(max-width:768px){.cookie-bar{flex-direction:column;text-align:center;padding:14px 16px}.cookie-bar p{font-size:.82rem}}
+
+/* RTL (Arabic) */
+html[dir="rtl"]{direction:rtl;text-align:right}
+html[dir="rtl"] .nav-left,html[dir="rtl"] .nav-right{direction:rtl}
+html[dir="rtl"] .privacy-card p{text-align:right}
+html[dir="rtl"] .lang-select{direction:rtl}
+</style>
 </head>
-<body class="bg-gray-5 text-gray-800">
-  <div class="container mx-auto px-4 py-10 max-w-3xl">
-    <h1 class="text-3xl font-bold mb-6">隐私政策</h1>
-    <p class="text-sm text-gray-500 mb-6">生效日期：2026年6月1日</p>
+<body>
 
-    <p class="mb-4">MeliToolHub（以下简称“我们”）尊重您的隐私。本政策说明我们如何收集、使用、共享和保护您的个人信息。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 我们收集的信息</h2>
-    <ul class="list-disc pl-5 mb-4">
-      <li>联系表单：姓名、微信、邮箱</li>
-      <li>网站自动收集：IP、浏览器、访问页面</li>
-      <li>广告：Google AdSense自动Cookie用于投放广告</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 信息用途</h2>
-    <ul class="list-disc pl-5 mb-4">
-      <li>回复咨询、提供服务</li>
-      <li>网站运营与改进</li>
-      <li>投放个性化广告（AdSense）</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. Cookie</h2>
-    <p class="mb-4">本站使用Cookie用于用户体验和Google AdSense广告投放。您可在浏览器关闭Cookie。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 信息保护</h2>
-    <p class="mb-4">我们采取行业标准安全措施保护您的信息，不对外出售。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">5. 第三方广告</h2>
-    <p class="mb-4">本站使用Google AdSense，其<a href="https://policies.google.com/privacy" class="text-blue-600">隐私政策</a>适用。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">6. 联系我们</h2>
-    <p>邮箱：hgm123002@outlook.com</p>
+<!-- Nav -->
+<nav role="navigation" aria-label="主导航">
+  <div class="nav-left">
+    <div class="nav-logo">Meli<span>Tool</span>Hub</div>
   </div>
+  <div class="nav-right">
+    <div class="lang-select-wrap">
+      <select class="lang-select" id="lang-select" aria-label="选择语言">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="ar">العربية</option>
+        <option value="tr">Türkçe</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="th">ภาษาไทย</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="ko">한국어</option>
+        <option value="ja">日本語</option>
+        <option value="pl">Polski</option>
+        <option value="nl">Nederlands</option>
+      </select>
+      <span class="lang-select-arrow">▼</span>
+    </div>
+    <a href="index.html" class="nav-back" data-i18n="nav_back">← 返回首页</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1><span data-i18n="hero_title">隐私政策</span></h1>
+  <p data-i18n="hero_desc">我们重视您的隐私。本政策说明了我们如何收集、使用和保护您的个人信息。</p>
+  <div class="hero-date" data-i18n="hero_date">生效日期：2026年6月1日</div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb" aria-label="面包屑导航">
+  <div class="breadcrumb-inner">
+    <a href="index.html" data-i18n="bread_home">首页</a>
+    <span>/</span>
+    <span data-i18n="bread_current">隐私政策</span>
+  </div>
+</div>
+
+<!-- Main -->
+<main class="main-content" aria-label="隐私政策内容">
+
+  <!-- Chapter 1: Information Collection -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch1_title">一、信息收集</h2>
+    <p data-i18n="ch1_text">我们仅在以下情形收集您的个人信息：当您通过邮件联系我们（hgm123002@outlook.com）或提交合作请求时，我们可能会收集您的姓名、邮箱地址及您自愿提供的相关信息。同时，我们通过 Google Analytics 等工具自动收集非个人可识别的访客数据，包括：IP 地址、浏览器类型与版本、操作系统、访问时间与页面、引荐来源 URL、页面停留时间等。这些数据用于分析网站流量趋势并优化用户体验。本站不会主动收集身份证号、银行账号等敏感个人信息。我们不会通过本网站直接索取或处理任何支付信息。</p>
+  </div>
+
+  <!-- Chapter 2: Information Use -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch2_title">二、信息使用</h2>
+    <p data-i18n="ch2_text">我们使用收集到的信息用于以下目的：（1）回复您的邮件咨询和合作请求；（2）分析网站流量，优化网站内容和用户体验；（3）通过 Google AdSense 向您展示相关广告（如已启用）；（4）通过联盟链接（如 Mercado Libre、万里汇等）追踪推荐来源和转化，以支持本站的内容运营；（5）遵守法律义务和回应监管请求。我们不会将您的个人信息用于与上述目的无关的用途，也不会将数据用于自动化决策或用户画像分析。</p>
+  </div>
+
+  <!-- Chapter 3: Security & Storage -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch3_title">三、信息安全与存储</h2>
+    <p data-i18n="ch3_text">我们采取合理的技术和管理措施保护您的个人信息安全，包括：使用 HTTPS 加密传输所有网站流量；定期更新网站系统和安全补丁；对存储的邮箱联系记录进行访问权限控制。您的个人数据存储在安全的服务器上，仅在实现收集目的所需的最短期限内保留。我们不会保留不必要的个人数据。尽管我们尽力保护您的个人信息，但互联网传输并非绝对安全，我们无法保证数据在传输过程中的绝对安全。</p>
+  </div>
+
+  <!-- Chapter 4: Third-Party Disclosure -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch4_title">四、第三方披露</h2>
+    <p data-i18n="ch4_text">我们不会出售、交易或以其他方式向第三方转让您的个人可识别信息。以下为本网站涉及的第三方服务及其隐私政策链接：（1）Google AdSense：用于广告投放，Google 可能使用 Cookie 展示个性化广告。请参阅 Google 隐私政策 https://policies.google.com/privacy ；（2）Google Analytics：用于网站流量分析，收集匿名的访客行为数据；（3）联盟平台：Mercado Libre、万里汇 WorldFirst、PingPong、Airwallex、连连支付等——当您通过本站联盟链接访问这些平台时，他们的隐私政策将适用；（4）法律要求：在法律要求或为了保护本站合法权益的情况下，我们可能需要披露信息。本网站嵌入的第三方工具（如 Google Fonts 等，如有）亦有独立的隐私政策。</p>
+  </div>
+
+  <!-- Chapter 5: Cookies -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch5_title">五、Cookie 使用</h2>
+    <p data-i18n="ch5_text">本站使用 Cookie 以提升用户体验，主要包括以下类型：（1）必要 Cookie：用于记住您的语言偏好设置（localStorage），以确保浏览体验连续性，不涉及个人身份信息；（2）分析 Cookie：Google Analytics 设置的 Cookie，用于统计页面访问量、用户行为等匿名数据；（3）广告 Cookie：如启用 Google AdSense，Google 可能通过 DoubleClick Cookie 展示基于兴趣的广告。您可以通过浏览器设置禁用 Cookie，或访问 http://www.aboutads.info/choices 管理广告偏好。禁用 Cookie 不会影响本站核心功能的正常使用，但可能影响语言偏好记忆等功能。</p>
+  </div>
+
+  <!-- Chapter 6: Children's Protection -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch6_title">六、未成年人保护</h2>
+    <p data-i18n="ch6_text">本站内容面向跨境电商从业者，不针对 13 岁以下儿童。我们遵守美国儿童在线隐私保护法（COPPA）及相关国际未成年人保护法规，不会有意收集 13 岁以下儿童的个人信息。如果我们发现无意中收集了 13 岁以下儿童的个人信息，我们将立即从服务器中删除相关数据。如果您是家长或监护人并发现您的孩子向我们提供了个人信息，请通过 hgm123002@outlook.com 联系我们，我们将及时删除相关信息。</p>
+  </div>
+
+  <!-- Chapter 7: User Rights -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch7_title">七、用户权利</h2>
+    <p data-i18n="ch7_text">根据适用的数据保护法律（如 GDPR、CCPA 等），您享有以下权利：（1）访问权：您有权请求我们提供我们所持有的关于您的个人信息副本；（2）更正权：如果您的个人信息不准确或不完整，您有权要求更正；（3）删除权：在特定条件下，您有权请求删除您的个人数据；（4）反对权：您有权反对我们将您的数据用于直接营销目的；（5）数据可携带权：您有权以结构化、常用的格式获取您的数据。如需行使上述权利或提出隐私相关问题，请发送邮件至 hgm123002@outlook.com，我们将在 30 天内回复您的请求。</p>
+  </div>
+
+  <!-- Chapter 8: Policy Updates -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch8_title">八、政策更新</h2>
+    <p data-i18n="ch8_text">我们可能不时更新本隐私政策以反映我们的信息处理实践的变化或法律的更新。更新后的政策将在本页面发布，并在页面顶部注明生效日期。我们建议您定期查看本页面，以了解我们如何保护您的信息。对于重大变更，我们可能通过网站公告或邮件方式提供额外通知。您在本政策更新后继续使用本网站，即表示您接受修订后的隐私政策。如您不同意更新后的政策，请停止使用本网站。</p>
+  </div>
+
+  <!-- Chapter 9: Cross-Border Data Transfer -->
+  <div class="privacy-card">
+    <h2 data-i18n="ch9_title">九、数据跨境传输</h2>
+    <p data-i18n="ch9_text">作为拉美跨境电商平台，本网站的数据处理可能涉及跨境传输。具体说明如下：（1）服务器位置：本网站托管在美国服务器上，您的数据可能被传输到美国及其他国家；（2）传输目的：为实现网站运营、内容分发和技术支持，数据在不同地区间流转；（3）法律保障：我们确保跨境数据传输符合适用数据保护法律（如GDPR的标准合同条款SCC、中国《个人信息保护法》第38条规定的安全评估/标准合同等）；（4）保护措施：我们采取加密传输、访问控制、数据最小化等适当的技术和管理措施保护数据在传输和存储过程中的安全；（5）您的权利：您有权了解数据跨境传输的相关信息并提出异议。如需了解更多关于跨境数据传输的信息，请联系我们 hgm123002@outlook.com。</p>
+  </div>
+
+  <!-- Extra Section 1: 18-Language Adaptation Notes -->
+  <div class="privacy-card">
+    <h2 data-i18n="extra1_title">十、18语种适配说明</h2>
+    <p data-i18n="extra1_text">本隐私政策页面提供18种语言版本，以服务全球跨境卖家用户。支持的语种包括：中文（简体）、English、Español、Português、Русский、Français、Deutsch、Italiano、العربية、Türkçe、Tiếng Việt、ภาษาไทย、Bahasa Indonesia、Bahasa Melayu、한국어、日本語、Polski、Nederlands。其中前9种语言已提供完整翻译，后9种语言将以英文版本作为备用显示。如需获取特定语言的隐私政策原文，请使用页面顶部的语言切换器选择您的语言。如发现翻译不尽准确之处，欢迎通过 hgm123002@outlook.com 提出反馈，我们将持续改进多语种适配。</p>
+  </div>
+
+  <!-- Extra Section 2: Cookie Consent Popup Supplement -->
+  <div class="privacy-card">
+    <h2 data-i18n="extra2_title">附：Cookie Consent 弹窗说明</h2>
+    <p data-i18n="extra2_text">本网站使用Cookie Consent弹窗以获取用户对Cookie使用的授权。具体机制如下：（1）弹窗触发：首次访问本网站或清除浏览器数据后，页面底部将显示Cookie同意弹窗；（2）用户选择：您可以选择「同意授权」接受所有Cookie（包括分析和广告Cookie），或选择「拒绝」仅保留必要的功能Cookie（语言偏好localStorage）；（3）持久记录：您的选择将保存在localStorage中，有效期为后续访问期间，弹窗不会重复弹出；（4）撤回同意：您可随时清除浏览器缓存或localStorage数据以重新显示弹窗并更改您的选择；（5）影响说明：选择「拒绝」后，本站不会加载Google AdSense广告脚本和Google Analytics追踪代码，您的浏览行为将不会被统计和分析。</p>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="contact-cta">
+    <h2 data-i18n="contact_title">有隐私方面的疑问？</h2>
+    <p data-i18n="contact_desc">如果您对本隐私政策有任何疑问、建议或希望行使您的数据权利，欢迎通过邮件与我们联系。我们将在 30 天内回复您的请求。</p>
+    <a href="mailto:hgm123002@outlook.com" class="contact-btn">
+      <span>✉️</span>
+      <span data-i18n="contact_btn">联系隐私团队：hgm123002@outlook.com</span>
+    </a>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html" data-i18n="footer_home">首页</a>
+      <a href="index.html#tools" data-i18n="footer_tools">工具库</a>
+      <a href="index.html#articles" data-i18n="footer_articles">原创文章</a>
+      <a href="index.html#partners" data-i18n="footer_partners">合作伙伴</a>
+      <a href="cooperation.html" data-i18n="footer_coop">合作与结算</a>
+      <a href="sitemap.xml">Sitemap</a>
+      <a href="mailto:hgm123002@outlook.com" data-i18n="footer_contact">联系我们</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer_copy">© 2026 MeliToolHub. All Rights Reserved. 本站遵守 Google AdSense 广告政策及国际隐私保护法规。</p>
+  </div>
+</footer>
+
+<!-- ===== Cookie Consent Bar ===== -->
+<div class="cookie-bar" id="cookie-bar">
+  <p data-i18n="cookie_text">本站使用Cookie和本地缓存技术，用于语言记忆、体验优化和广告个性化展示。继续浏览即表示您同意我们的隐私政策。</p>
+  <div class="cookie-bar-btns">
+    <button class="cookie-btn-accept" id="cookie-accept" data-i18n="cookie_accept">同意授权</button>
+    <button class="cookie-btn-reject" id="cookie-reject" data-i18n="cookie_reject">拒绝</button>
+  </div>
+</div>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"隐私政策",
+  "url":"https://melitoolhub.com/privacy.html",
+  "description":"MeliToolHub 隐私政策：信息收集、使用、存储、第三方披露、Cookie、未成年人保护及用户权利说明",
+  "isPartOf":{"@type":"WebSite","name":"MeliToolHub","url":"https://melitoolhub.com"},
+  "breadcrumb":{
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"首页","item":"https://melitoolhub.com"},
+      {"@type":"ListItem","position":2,"name":"隐私政策","item":"https://melitoolhub.com/privacy.html"}
+    ]
+  }
+}
+</script>
+
+<!-- i18n + Language Switching -->
+<script>
+(function(){
+var T={
+
+/*══════════ 中文 (zh) ══════════*/
+zh:{
+seo_title:"隐私政策 | MeliToolHub 拉美跨境电商平台",
+seo_desc:"MeliToolHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。",
+og_title:"隐私政策 | MeliToolHub",
+og_desc:"了解 MeliToolHub 如何收集、使用和保护您的个人信息。遵守 GDPR 及国际隐私保护标准。",
+nav_back:"← 返回首页",
+hero_title:"隐私政策",
+hero_desc:"我们重视您的隐私。本政策说明了我们如何收集、使用和保护您的个人信息。",
+hero_date:"生效日期：2026年6月1日",
+bread_home:"首页",
+bread_current:"隐私政策",
+ch1_title:"一、信息收集",
+ch1_text:"我们仅在以下情形收集您的个人信息：当您通过邮件联系我们（hgm123002@outlook.com）或提交合作请求时，我们可能会收集您的姓名、邮箱地址及您自愿提供的相关信息。同时，我们通过 Google Analytics 等工具自动收集非个人可识别的访客数据，包括：IP 地址、浏览器类型与版本、操作系统、访问时间与页面、引荐来源 URL、页面停留时间等。这些数据用于分析网站流量趋势并优化用户体验。本站不会主动收集身份证号、银行账号等敏感个人信息。我们不会通过本网站直接索取或处理任何支付信息。",
+ch2_title:"二、信息使用",
+ch2_text:"我们使用收集到的信息用于以下目的：（1）回复您的邮件咨询和合作请求；（2）分析网站流量，优化网站内容和用户体验；（3）通过 Google AdSense 向您展示相关广告（如已启用）；（4）通过联盟链接（如 Mercado Libre、万里汇等）追踪推荐来源和转化，以支持本站的内容运营；（5）遵守法律义务和回应监管请求。我们不会将您的个人信息用于与上述目的无关的用途，也不会将数据用于自动化决策或用户画像分析。",
+ch3_title:"三、信息安全与存储",
+ch3_text:"我们采取合理的技术和管理措施保护您的个人信息安全，包括：使用 HTTPS 加密传输所有网站流量；定期更新网站系统和安全补丁；对存储的邮箱联系记录进行访问权限控制。您的个人数据存储在安全的服务器上，仅在实现收集目的所需的最短期限内保留。我们不会保留不必要的个人数据。尽管我们尽力保护您的个人信息，但互联网传输并非绝对安全，我们无法保证数据在传输过程中的绝对安全。",
+ch4_title:"四、第三方披露",
+ch4_text:"我们不会出售、交易或以其他方式向第三方转让您的个人可识别信息。以下为本网站涉及的第三方服务及其隐私政策链接：（1）Google AdSense：用于广告投放，Google 可能使用 Cookie 展示个性化广告。请参阅 Google 隐私政策 https://policies.google.com/privacy ；（2）Google Analytics：用于网站流量分析，收集匿名的访客行为数据；（3）联盟平台：Mercado Libre、万里汇 WorldFirst、PingPong、Airwallex、连连支付等——当您通过本站联盟链接访问这些平台时，他们的隐私政策将适用；（4）法律要求：在法律要求或为了保护本站合法权益的情况下，我们可能需要披露信息。本网站嵌入的第三方工具（如 Google Fonts 等，如有）亦有独立的隐私政策。",
+ch5_title:"五、Cookie 使用",
+ch5_text:"本站使用 Cookie 以提升用户体验，主要包括以下类型：（1）必要 Cookie：用于记住您的语言偏好设置（localStorage），以确保浏览体验连续性，不涉及个人身份信息；（2）分析 Cookie：Google Analytics 设置的 Cookie，用于统计页面访问量、用户行为等匿名数据；（3）广告 Cookie：如启用 Google AdSense，Google 可能通过 DoubleClick Cookie 展示基于兴趣的广告。您可以通过浏览器设置禁用 Cookie，或访问 http://www.aboutads.info/choices 管理广告偏好。禁用 Cookie 不会影响本站核心功能的正常使用，但可能影响语言偏好记忆等功能。",
+ch6_title:"六、未成年人保护",
+ch6_text:"本站内容面向跨境电商从业者，不针对 13 岁以下儿童。我们遵守美国儿童在线隐私保护法（COPPA）及相关国际未成年人保护法规，不会有意收集 13 岁以下儿童的个人信息。如果我们发现无意中收集了 13 岁以下儿童的个人信息，我们将立即从服务器中删除相关数据。如果您是家长或监护人并发现您的孩子向我们提供了个人信息，请通过 hgm123002@outlook.com 联系我们，我们将及时删除相关信息。",
+ch7_title:"七、用户权利",
+ch7_text:"根据适用的数据保护法律（如 GDPR、CCPA 等），您享有以下权利：（1）访问权：您有权请求我们提供我们所持有的关于您的个人信息副本；（2）更正权：如果您的个人信息不准确或不完整，您有权要求更正；（3）删除权：在特定条件下，您有权请求删除您的个人数据；（4）反对权：您有权反对我们将您的数据用于直接营销目的；（5）数据可携带权：您有权以结构化、常用的格式获取您的数据。如需行使上述权利或提出隐私相关问题，请发送邮件至 hgm123002@outlook.com，我们将在 30 天内回复您的请求。",
+ch8_title:"八、政策更新",
+ch8_text:"我们可能不时更新本隐私政策以反映我们的信息处理实践的变化或法律的更新。更新后的政策将在本页面发布，并在页面顶部注明生效日期。我们建议您定期查看本页面，以了解我们如何保护您的信息。对于重大变更，我们可能通过网站公告或邮件方式提供额外通知。您在本政策更新后继续使用本网站，即表示您接受修订后的隐私政策。如您不同意更新后的政策，请停止使用本网站。",
+ch9_title:"九、数据跨境传输",
+ch9_text:"作为拉美跨境电商平台，本网站的数据处理可能涉及跨境传输。具体说明如下：（1）服务器位置：本网站托管在美国服务器上，您的数据可能被传输到美国及其他国家；（2）传输目的：为实现网站运营、内容分发和技术支持，数据在不同地区间流转；（3）法律保障：我们确保跨境数据传输符合适用数据保护法律（如GDPR的标准合同条款SCC、中国《个人信息保护法》第38条规定的安全评估/标准合同等）；（4）保护措施：我们采取加密传输、访问控制、数据最小化等适当的技术和管理措施保护数据在传输和存储过程中的安全；（5）您的权利：您有权了解数据跨境传输的相关信息并提出异议。如需了解更多关于跨境数据传输的信息，请联系我们 hgm123002@outlook.com。",
+extra1_title:"十、18语种适配说明",
+extra1_text:"本隐私政策页面提供18种语言版本，以服务全球跨境卖家用户。支持的语种包括：中文（简体）、English、Español、Português、Русский、Français、Deutsch、Italiano、العربية、Türkçe、Tiếng Việt、ภาษาไทย、Bahasa Indonesia、Bahasa Melayu、한국어、日本語、Polski、Nederlands。其中前9种语言已提供完整翻译，后9种语言将以英文版本作为备用显示。如需获取特定语言的隐私政策原文，请使用页面顶部的语言切换器选择您的语言。如发现翻译不尽准确之处，欢迎通过 hgm123002@outlook.com 提出反馈，我们将持续改进多语种适配。",
+extra2_title:"附：Cookie Consent 弹窗说明",
+extra2_text:"本网站使用Cookie Consent弹窗以获取用户对Cookie使用的授权。具体机制如下：（1）弹窗触发：首次访问本网站或清除浏览器数据后，页面底部将显示Cookie同意弹窗；（2）用户选择：您可以选择「同意授权」接受所有Cookie（包括分析和广告Cookie），或选择「拒绝」仅保留必要的功能Cookie（语言偏好localStorage）；（3）持久记录：您的选择将保存在localStorage中，有效期为后续访问期间，弹窗不会重复弹出；（4）撤回同意：您可随时清除浏览器缓存或localStorage数据以重新显示弹窗并更改您的选择；（5）影响说明：选择「拒绝」后，本站不会加载Google AdSense广告脚本和Google Analytics追踪代码，您的浏览行为将不会被统计和分析。",
+contact_title:"有隐私方面的疑问？",
+contact_desc:"如果您对本隐私政策有任何疑问、建议或希望行使您的数据权利，欢迎通过邮件与我们联系。我们将在 30 天内回复您的请求。",
+contact_btn:"联系隐私团队：hgm123002@outlook.com",
+cookie_text:"本站使用Cookie和本地缓存技术，用于语言记忆、体验优化和广告个性化展示。继续浏览即表示您同意我们的隐私政策。",
+cookie_accept:"同意授权",
+cookie_reject:"拒绝",
+footer_home:"首页",
+footer_tools:"工具库",
+footer_articles:"原创文章",
+footer_partners:"合作伙伴",
+footer_coop:"合作与结算",
+footer_contact:"联系我们",
+footer_copy:"© 2026 MeliToolHub. All Rights Reserved. 本站遵守 Google AdSense 广告政策及国际隐私保护法规。"
+},
+
+/*══════════ English (en) ══════════*/
+en:{
+seo_title:"Privacy Policy | MeliToolHub Latin America Cross-Border Platform",
+seo_desc:"MeliToolHub Privacy Policy. Learn how we collect, use, and protect your personal information. This site complies with Google AdSense advertising policies and GDPR data protection requirements.",
+og_title:"Privacy Policy | MeliToolHub",
+og_desc:"Learn how MeliToolHub collects, uses, and protects your personal information. GDPR and international privacy standards compliant.",
+nav_back:"← Back to Home",
+hero_title:"Privacy Policy",
+hero_desc:"We value your privacy. This policy explains how we collect, use, and protect your personal information.",
+hero_date:"Effective Date: June 1, 2026",
+bread_home:"Home",
+bread_current:"Privacy Policy",
+ch1_title:"1. Information Collection",
+ch1_text:"We collect your personal information only in the following circumstances: when you contact us via email (hgm123002@outlook.com) or submit a cooperation request, we may collect your name, email address, and any related information you voluntarily provide. Additionally, we automatically collect non-personally identifiable visitor data through tools such as Google Analytics, including: IP address, browser type and version, operating system, visit time and pages, referral source URL, page dwell time, etc. This data is used to analyze website traffic trends and optimize user experience. This site does not actively collect sensitive personal information such as ID numbers or bank account details. We do not request or process any payment information directly through this website.",
+ch2_title:"2. Information Use",
+ch2_text:"We use the collected information for the following purposes: (1) Responding to your email inquiries and cooperation requests; (2) Analyzing website traffic to optimize content and user experience; (3) Displaying relevant advertisements to you via Google AdSense (if enabled); (4) Tracking referral sources and conversions through affiliate links (such as Mercado Libre, WorldFirst, etc.) to support content operations; (5) Complying with legal obligations and responding to regulatory requests. We will not use your personal information for purposes unrelated to those stated above, nor will we use data for automated decision-making or user profiling.",
+ch3_title:"3. Information Security & Storage",
+ch3_text:"We implement reasonable technical and administrative measures to protect your personal information, including: using HTTPS encryption for all website traffic; regularly updating website systems and security patches; implementing access control for stored email correspondence records. Your personal data is stored on secure servers and retained only for the minimum period necessary to fulfill the purposes for which it was collected. We do not retain unnecessary personal data. While we strive to protect your personal information, internet transmission is not absolutely secure, and we cannot guarantee absolute security during data transmission.",
+ch4_title:"4. Third-Party Disclosure",
+ch4_text:"We do not sell, trade, or otherwise transfer your personally identifiable information to third parties. The following are third-party services involved with this website and links to their privacy policies: (1) Google AdSense: Used for advertising placement; Google may use cookies to display personalized ads. Please refer to Google's Privacy Policy at https://policies.google.com/privacy; (2) Google Analytics: Used for website traffic analysis, collecting anonymous visitor behavior data; (3) Affiliate Platforms: Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay, etc. — when you access these platforms through our affiliate links, their privacy policies will apply; (4) Legal Requirements: We may need to disclose information when required by law or to protect our legitimate interests. Third-party tools embedded on this site (such as Google Fonts, if any) also have independent privacy policies.",
+ch5_title:"5. Cookie Usage",
+ch5_text:"This site uses cookies to enhance user experience, primarily including the following types: (1) Essential Cookies: Used to remember your language preference settings (localStorage) for browsing continuity, not involving personal identity; (2) Analytics Cookies: Cookies set by Google Analytics for counting page views and analyzing anonymous user behavior; (3) Advertising Cookies: If Google AdSense is enabled, Google may use DoubleClick cookies to display interest-based ads. You can disable cookies through browser settings or manage ad preferences at http://www.aboutads.info/choices. Disabling cookies will not affect basic site functionality but may impact features such as language preference memory.",
+ch6_title:"6. Children's Protection",
+ch6_text:"This site's content is intended for cross-border e-commerce practitioners and is not directed at children under 13. We comply with the U.S. Children's Online Privacy Protection Act (COPPA) and related international child protection regulations, and do not knowingly collect personal information from children under 13. If we discover that we have inadvertently collected personal information from a child under 13, we will promptly delete such data from our servers. If you are a parent or guardian and discover that your child has provided us with personal information, please contact us at hgm123002@outlook.com and we will promptly delete the relevant information.",
+ch7_title:"7. User Rights",
+ch7_text:"Under applicable data protection laws (such as GDPR, CCPA, etc.), you have the following rights: (1) Right of Access: You have the right to request a copy of the personal information we hold about you; (2) Right to Rectification: If your personal information is inaccurate or incomplete, you have the right to request correction; (3) Right to Erasure: Under certain conditions, you may request deletion of your personal data; (4) Right to Object: You have the right to object to us using your data for direct marketing purposes; (5) Right to Data Portability: You have the right to receive your data in a structured, commonly used format. To exercise these rights or raise privacy-related questions, please email hgm123002@outlook.com. We will respond within 30 days.",
+ch8_title:"8. Policy Updates",
+ch8_text:"We may update this Privacy Policy from time to time to reflect changes in our information handling practices or legal updates. The updated policy will be posted on this page with the effective date noted at the top. We recommend periodically reviewing this page to stay informed about how we protect your information. For significant changes, we may provide additional notice through website announcements or email. Your continued use of this website after policy updates constitutes acceptance of the revised Privacy Policy. If you do not agree with the updated policy, please discontinue use of this website.",
+ch9_title:"9. Cross-Border Data Transfer",
+ch9_text:"As a Latin America cross-border e-commerce platform, data processing on this website may involve cross-border transfers. Specific details are as follows: (1) Server Location: This website is hosted on servers in the United States; your data may be transferred to the U.S. and other countries; (2) Purpose of Transfer: Data flows between regions for website operations, content distribution, and technical support; (3) Legal Safeguards: We ensure cross-border data transfers comply with applicable data protection laws (e.g., GDPR Standard Contractual Clauses SCC, China's Personal Information Protection Law Article 38 security assessment/standard contracts, etc.); (4) Protection Measures: We employ appropriate technical and administrative measures such as encrypted transmission, access controls, and data minimization to protect data security during transfer and storage; (5) Your Rights: You have the right to be informed about cross-border data transfers and to object. For more information about cross-border data transfers, please contact us at hgm123002@outlook.com.",
+extra1_title:"10. 18-Language Adaptation Notes",
+extra1_text:"This Privacy Policy page is available in 18 languages to serve global cross-border sellers. Supported languages include: 中文(Simplified), English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. The first 9 languages have complete translations, while the remaining 9 languages fall back to the English version. Use the language switcher at the top of the page to select your preferred language. If you find any translation inaccuracies, please send feedback to hgm123002@outlook.com — we will continuously improve multilingual adaptation.",
+extra2_title:"Appendix: Cookie Consent Popup Notes",
+extra2_text:"This website uses a Cookie Consent popup to obtain user authorization for cookie usage. The mechanism is as follows: (1) Trigger: The cookie consent bar appears at the bottom of the page on first visit or after clearing browser data; (2) User Choice: You may choose 'Accept' to allow all cookies (including analytics and advertising cookies), or 'Reject' to keep only essential functional cookies (language preference localStorage); (3) Persistent Record: Your choice is saved in localStorage and persists across subsequent visits — the popup will not reappear; (4) Withdraw Consent: You may clear browser cache or localStorage data at any time to reshow the popup and change your selection; (5) Impact: After choosing 'Reject', this site will not load Google AdSense ad scripts or Google Analytics tracking code — your browsing behavior will not be tracked or analyzed.",
+contact_title:"Privacy Questions?",
+contact_desc:"If you have any questions, suggestions, or wish to exercise your data rights regarding this Privacy Policy, please contact us via email. We will respond to your request within 30 days.",
+contact_btn:"Contact Privacy Team: hgm123002@outlook.com",
+cookie_text:"This site uses cookies and local storage for language preferences, experience optimization, and personalized advertising. By continuing, you agree to our Privacy Policy.",
+cookie_accept:"Accept",
+cookie_reject:"Reject",
+footer_home:"Home",
+footer_tools:"Tools",
+footer_articles:"Articles",
+footer_partners:"Partners",
+footer_coop:"Cooperation & Settlement",
+footer_contact:"Contact Us",
+footer_copy:"© 2026 MeliToolHub. All Rights Reserved. This site complies with Google AdSense advertising policies and international privacy protection regulations."
+},
+
+/*══════════ Español (es) ══════════*/
+es:{
+seo_title:"Política de Privacidad | MeliToolHub Plataforma Transfronteriza LATAM",
+seo_desc:"Política de Privacidad de MeliToolHub. Conozca cómo recopilamos, usamos y protegemos su información personal. Cumplimos con las políticas de Google AdSense y los requisitos del GDPR.",
+og_title:"Política de Privacidad | MeliToolHub",
+og_desc:"Conozca cómo MeliToolHub recopila, usa y protege su información personal. Cumple con GDPR y estándares internacionales de privacidad.",
+nav_back:"← Volver al Inicio",
+hero_title:"Política de Privacidad",
+hero_desc:"Valoramos su privacidad. Esta política explica cómo recopilamos, usamos y protegemos su información personal.",
+hero_date:"Fecha de vigencia: 1 de junio de 2026",
+bread_home:"Inicio",
+bread_current:"Política de Privacidad",
+ch1_title:"1. Recopilación de Información",
+ch1_text:"Solo recopilamos su información personal en las siguientes circunstancias: cuando se comunica con nosotros por correo electrónico (hgm123002@outlook.com) o envía una solicitud de cooperación, podemos recopilar su nombre, dirección de correo electrónico y cualquier información relacionada que proporcione voluntariamente. Además, recopilamos automáticamente datos de visitantes no identificables personalmente a través de herramientas como Google Analytics, incluyendo: dirección IP, tipo y versión de navegador, sistema operativo, hora de visita y páginas, URL de referencia, tiempo de permanencia en la página, etc. Estos datos se utilizan para analizar tendencias de tráfico del sitio web y optimizar la experiencia del usuario. Este sitio no recopila activamente información personal sensible como números de identificación o detalles de cuentas bancarias. No solicitamos ni procesamos información de pago directamente a través de este sitio web.",
+ch2_title:"2. Uso de la Información",
+ch2_text:"Utilizamos la información recopilada para los siguientes fines: (1) Responder a sus consultas por correo electrónico y solicitudes de cooperación; (2) Analizar el tráfico del sitio web para optimizar el contenido y la experiencia del usuario; (3) Mostrar anuncios relevantes a través de Google AdSense (si está habilitado); (4) Rastrear fuentes de referencia y conversiones a través de enlaces de afiliados (como Mercado Libre, WorldFirst, etc.) para apoyar las operaciones de contenido; (5) Cumplir con obligaciones legales y responder a solicitudes regulatorias. No utilizaremos su información personal para fines no relacionados con los indicados anteriormente, ni utilizaremos datos para toma de decisiones automatizada o elaboración de perfiles de usuario.",
+ch3_title:"3. Seguridad y Almacenamiento de la Información",
+ch3_text:"Implementamos medidas técnicas y administrativas razonables para proteger su información personal, incluyendo: uso de cifrado HTTPS para todo el tráfico del sitio web; actualización regular de sistemas y parches de seguridad; control de acceso a registros de correspondencia por correo electrónico almacenados. Sus datos personales se almacenan en servidores seguros y se conservan solo durante el período mínimo necesario para cumplir con los fines para los que fueron recopilados. No conservamos datos personales innecesarios. Si bien nos esforzamos por proteger su información personal, la transmisión por Internet no es absolutamente segura, y no podemos garantizar una seguridad absoluta durante la transmisión de datos.",
+ch4_title:"4. Divulgación a Terceros",
+ch4_text:"No vendemos, comercializamos ni transferimos de otro modo su información personal identificable a terceros. Los siguientes son servicios de terceros involucrados con este sitio web y enlaces a sus políticas de privacidad: (1) Google AdSense: utilizado para la colocación de anuncios; Google puede usar cookies para mostrar anuncios personalizados. Consulte la Política de Privacidad de Google en https://policies.google.com/privacy; (2) Google Analytics: utilizado para análisis de tráfico del sitio web, recopilando datos anónimos de comportamiento de visitantes; (3) Plataformas de Afiliados: Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay, etc. — cuando accede a estas plataformas a través de nuestros enlaces de afiliados, se aplicarán sus políticas de privacidad; (4) Requisitos Legales: podemos necesitar divulgar información cuando lo exija la ley o para proteger nuestros intereses legítimos.",
+ch5_title:"5. Uso de Cookies",
+ch5_text:"Este sitio utiliza cookies para mejorar la experiencia del usuario, incluyendo principalmente los siguientes tipos: (1) Cookies Esenciales: utilizadas para recordar sus preferencias de idioma (localStorage) para la continuidad de la navegación, sin involucrar identidad personal; (2) Cookies Analíticas: cookies establecidas por Google Analytics para contar visitas a páginas y analizar comportamiento anónimo del usuario; (3) Cookies Publicitarias: si Google AdSense está habilitado, Google puede usar cookies de DoubleClick para mostrar anuncios basados en intereses. Puede desactivar las cookies a través de la configuración del navegador o gestionar las preferencias de anuncios en http://www.aboutads.info/choices.",
+ch6_title:"6. Protección de Menores",
+ch6_text:"El contenido de este sitio está dirigido a profesionales del comercio electrónico transfronterizo y no está dirigido a menores de 13 años. Cumplimos con la Ley de Protección de la Privacidad Infantil en Línea de EE. UU. (COPPA) y las regulaciones internacionales relacionadas de protección infantil, y no recopilamos a sabiendas información personal de niños menores de 13 años. Si descubrimos que hemos recopilado inadvertidamente información personal de un niño menor de 13 años, eliminaremos dichos datos de nuestros servidores de inmediato. Si usted es padre o tutor y descubre que su hijo nos ha proporcionado información personal, comuníquese con nosotros en hgm123002@outlook.com y eliminaremos la información relevante de inmediato.",
+ch7_title:"7. Derechos del Usuario",
+ch7_text:"Según las leyes de protección de datos aplicables (como GDPR, CCPA, etc.), usted tiene los siguientes derechos: (1) Derecho de Acceso: tiene derecho a solicitar una copia de la información personal que tenemos sobre usted; (2) Derecho de Rectificación: si su información personal es inexacta o incompleta, tiene derecho a solicitar su corrección; (3) Derecho de Supresión: bajo ciertas condiciones, puede solicitar la eliminación de sus datos personales; (4) Derecho de Oposición: tiene derecho a oponerse al uso de sus datos para fines de marketing directo; (5) Derecho a la Portabilidad de Datos: tiene derecho a recibir sus datos en un formato estructurado y de uso común. Para ejercer estos derechos o plantear preguntas relacionadas con la privacidad, envíe un correo electrónico a hgm123002@outlook.com. Responderemos dentro de los 30 días.",
+ch8_title:"8. Actualizaciones de la Política",
+ch8_text:"Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras prácticas de manejo de información o actualizaciones legales. La política actualizada se publicará en esta página con la fecha de vigencia indicada en la parte superior. Recomendamos revisar periódicamente esta página para mantenerse informado sobre cómo protegemos su información. Para cambios significativos, podemos proporcionar un aviso adicional a través de anuncios en el sitio web o por correo electrónico. Su uso continuado de este sitio web después de las actualizaciones de la política constituye la aceptación de la Política de Privacidad revisada. Si no está de acuerdo con la política actualizada, por favor interrumpa el uso de este sitio web.",
+ch9_title:"9. Transferencia Transfronteriza de Datos",
+ch9_text:"Como plataforma de comercio electrónico transfronterizo de América Latina, el procesamiento de datos en este sitio web puede implicar transferencias transfronterizas. Los detalles específicos son los siguientes: (1) Ubicación del Servidor: Este sitio web está alojado en servidores en los Estados Unidos; sus datos pueden ser transferidos a los EE. UU. y otros países; (2) Propósito de la Transferencia: Los datos fluyen entre regiones para operaciones del sitio web, distribución de contenido y soporte técnico; (3) Garantías Legales: Aseguramos que las transferencias transfronterizas de datos cumplan con las leyes de protección de datos aplicables (por ejemplo, las Cláusulas Contractuales Estándar SCC del GDPR, la Ley de Protección de Información Personal de China Artículo 38, evaluación de seguridad/contratos estándar, etc.); (4) Medidas de Protección: Empleamos medidas técnicas y administrativas apropiadas como transmisión encriptada, controles de acceso y minimización de datos para proteger la seguridad de los datos durante la transferencia y el almacenamiento; (5) Sus Derechos: Usted tiene derecho a ser informado sobre las transferencias transfronterizas de datos y a oponerse. Para obtener más información, contáctenos en hgm123002@outlook.com.",
+extra1_title:"10. Notas sobre Adaptación a 18 Idiomas",
+extra1_text:"Esta página de Política de Privacidad está disponible en 18 idiomas para servir a vendedores transfronterizos globales. Idiomas admitidos: 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. Los primeros 9 idiomas tienen traducciones completas; los 9 restantes usan la versión en inglés. Use el selector de idioma en la parte superior para elegir su idioma. Para imprecisiones en la traducción, envíe comentarios a hgm123002@outlook.com.",
+extra2_title:"Anexo: Notas sobre el Popup de Consentimiento de Cookies",
+extra2_text:"Este sitio web utiliza un popup de Consentimiento de Cookies para obtener autorización del usuario. El mecanismo es: (1) Activación: La barra de consentimiento aparece al pie de página en la primera visita o después de borrar datos del navegador; (2) Elección: Puede elegir 'Aceptar' para permitir todas las cookies, o 'Rechazar' para mantener solo las cookies funcionales esenciales (localStorage de idioma); (3) Registro Persistente: Su elección se guarda en localStorage y persiste en visitas posteriores — el popup no reaparecerá; (4) Retirar Consentimiento: Borre la caché del navegador o localStorage para volver a mostrar el popup y cambiar su selección; (5) Impacto: Tras 'Rechazar', este sitio no cargará scripts de Google AdSense ni código de Google Analytics — su navegación no será rastreada ni analizada.",
+contact_title:"¿Preguntas sobre Privacidad?",
+contact_desc:"Si tiene preguntas, sugerencias o desea ejercer sus derechos de datos con respecto a esta Política de Privacidad, contáctenos por correo electrónico. Responderemos a su solicitud dentro de los 30 días.",
+contact_btn:"Contactar al Equipo de Privacidad: hgm123002@outlook.com",
+cookie_text:"Este sitio utiliza cookies y almacenamiento local para preferencias de idioma y publicidad personalizada. Al continuar, acepta nuestra Política de Privacidad.",
+cookie_accept:"Aceptar",
+cookie_reject:"Rechazar",
+footer_home:"Inicio",
+footer_tools:"Herramientas",
+footer_articles:"Artículos",
+footer_partners:"Socios",
+footer_coop:"Cooperación y Liquidación",
+footer_contact:"Contacto",
+footer_copy:"© 2026 MeliToolHub. Todos los derechos reservados. Este sitio cumple con las políticas de Google AdSense y las regulaciones internacionales de protección de privacidad."
+},
+
+/*══════════ Português (pt) ══════════*/
+pt:{
+seo_title:"Política de Privacidade | MeliToolHub Plataforma Transfronteiriça LATAM",
+seo_desc:"Política de Privacidade da MeliToolHub. Saiba como coletamos, usamos e protegemos suas informações pessoais. Em conformidade com as políticas do Google AdSense e requisitos do GDPR.",
+og_title:"Política de Privacidade | MeliToolHub",
+og_desc:"Saiba como a MeliToolHub coleta, usa e protege suas informações pessoais. Em conformidade com GDPR e padrões internacionais de privacidade.",
+nav_back:"← Voltar ao Início",
+hero_title:"Política de Privacidade",
+hero_desc:"Valorizamos sua privacidade. Esta política explica como coletamos, usamos e protegemos suas informações pessoais.",
+hero_date:"Data de Vigência: 1 de junho de 2026",
+bread_home:"Início",
+bread_current:"Política de Privacidade",
+ch1_title:"1. Coleta de Informações",
+ch1_text:"Coletamos suas informações pessoais apenas nas seguintes circunstâncias: quando você entra em contato conosco por e-mail (hgm123002@outlook.com) ou envia uma solicitação de cooperação, podemos coletar seu nome, endereço de e-mail e quaisquer informações relacionadas fornecidas voluntariamente. Além disso, coletamos automaticamente dados de visitantes não identificáveis pessoalmente por meio de ferramentas como o Google Analytics, incluindo: endereço IP, tipo e versão do navegador, sistema operacional, horário de visita e páginas, URL de referência, tempo de permanência na página, etc. Esses dados são usados para analisar tendências de tráfego do site e otimizar a experiência do usuário. Este site não coleta ativamente informações pessoais sensíveis, como números de identidade ou detalhes bancários. Não solicitamos ou processamos informações de pagamento diretamente através deste site.",
+ch2_title:"2. Uso das Informações",
+ch2_text:"Utilizamos as informações coletadas para os seguintes fins: (1) Responder às suas consultas por e-mail e solicitações de cooperação; (2) Analisar o tráfego do site para otimizar o conteúdo e a experiência do usuário; (3) Exibir anúncios relevantes através do Google AdSense (se habilitado); (4) Rastrear fontes de referência e conversões através de links de afiliados (como Mercado Libre, WorldFirst, etc.) para apoiar as operações de conteúdo; (5) Cumprir obrigações legais e responder a solicitações regulatórias. Não usaremos suas informações pessoais para fins não relacionados aos declarados acima, nem usaremos dados para tomada de decisão automatizada ou criação de perfil de usuário.",
+ch3_title:"3. Segurança e Armazenamento de Informações",
+ch3_text:"Implementamos medidas técnicas e administrativas razoáveis para proteger suas informações pessoais, incluindo: uso de criptografia HTTPS para todo o tráfego do site; atualização regular dos sistemas do site e patches de segurança; controle de acesso aos registros de correspondência por e-mail armazenados. Seus dados pessoais são armazenados em servidores seguros e retidos apenas pelo período mínimo necessário para cumprir as finalidades para as quais foram coletados. Não retemos dados pessoais desnecessários. Embora nos esforcemos para proteger suas informações pessoais, a transmissão pela Internet não é absolutamente segura, e não podemos garantir segurança absoluta durante a transmissão de dados.",
+ch4_title:"4. Divulgação a Terceiros",
+ch4_text:"Não vendemos, comercializamos ou transferimos de outra forma suas informações pessoais identificáveis a terceiros. A seguir estão os serviços de terceiros envolvidos com este site e links para suas políticas de privacidade: (1) Google AdSense: usado para veiculação de anúncios; o Google pode usar cookies para exibir anúncios personalizados. Consulte a Política de Privacidade do Google em https://policies.google.com/privacy; (2) Google Analytics: usado para análise de tráfego do site, coletando dados anônimos de comportamento de visitantes; (3) Plataformas de Afiliados: Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay, etc. — quando você acessa essas plataformas através de nossos links de afiliados, suas políticas de privacidade se aplicarão; (4) Requisitos Legais: podemos precisar divulgar informações quando exigido por lei ou para proteger nossos interesses legítimos.",
+ch5_title:"5. Uso de Cookies",
+ch5_text:"Este site usa cookies para melhorar a experiência do usuário, incluindo principalmente os seguintes tipos: (1) Cookies Essenciais: usados para lembrar suas preferências de idioma (localStorage) para continuidade da navegação, sem envolver identidade pessoal; (2) Cookies Analíticos: cookies definidos pelo Google Analytics para contar visualizações de página e analisar comportamento anônimo do usuário; (3) Cookies de Publicidade: se o Google AdSense estiver habilitado, o Google pode usar cookies DoubleClick para exibir anúncios baseados em interesses. Você pode desativar cookies nas configurações do navegador ou gerenciar preferências de anúncios em http://www.aboutads.info/choices.",
+ch6_title:"6. Proteção de Menores",
+ch6_text:"O conteúdo deste site é destinado a profissionais de comércio eletrônico transfronteiriço e não é direcionado a menores de 13 anos. Cumprimos a Lei de Proteção à Privacidade Online das Crianças dos EUA (COPPA) e regulamentações internacionais relacionadas de proteção infantil, e não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se descobrirmos que coletamos inadvertidamente informações pessoais de uma criança menor de 13 anos, excluiremos esses dados de nossos servidores imediatamente. Se você é pai ou responsável e descobrir que seu filho nos forneceu informações pessoais, entre em contato conosco em hgm123002@outlook.com e excluiremos as informações relevantes imediatamente.",
+ch7_title:"7. Direitos do Usuário",
+ch7_text:"De acordo com as leis de proteção de dados aplicáveis (como GDPR, CCPA, etc.), você tem os seguintes direitos: (1) Direito de Acesso: você tem o direito de solicitar uma cópia das informações pessoais que mantemos sobre você; (2) Direito de Retificação: se suas informações pessoais forem imprecisas ou incompletas, você tem o direito de solicitar correção; (3) Direito de Exclusão: sob certas condições, você pode solicitar a exclusão de seus dados pessoais; (4) Direito de Oposição: você tem o direito de se opor ao uso de seus dados para fins de marketing direto; (5) Direito à Portabilidade de Dados: você tem o direito de receber seus dados em um formato estruturado e de uso comum. Para exercer esses direitos ou levantar questões relacionadas à privacidade, envie um e-mail para hgm123002@outlook.com. Responderemos dentro de 30 dias.",
+ch8_title:"8. Atualizações da Política",
+ch8_text:"Podemos atualizar esta Política de Privacidade ocasionalmente para refletir mudanças em nossas práticas de tratamento de informações ou atualizações legais. A política atualizada será publicada nesta página com a data de vigência indicada no topo. Recomendamos revisar periodicamente esta página para se manter informado sobre como protegemos suas informações. Para mudanças significativas, podemos fornecer aviso adicional através de anúncios no site ou por e-mail. Seu uso continuado deste site após as atualizações da política constitui aceitação da Política de Privacidade revisada. Se você não concordar com a política atualizada, interrompa o uso deste site.",
+ch9_title:"9. Transferência Transfronteiriça de Dados",
+ch9_text:"Como plataforma de comércio eletrônico transfronteiriço da América Latina, o processamento de dados neste site pode envolver transferências transfronteiriças. Os detalhes são: (1) Localização do Servidor: Este site está hospedado em servidores nos Estados Unidos; seus dados podem ser transferidos para os EUA e outros países; (2) Finalidade da Transferência: Os dados fluem entre regiões para operações do site, distribuição de conteúdo e suporte técnico; (3) Garantias Legais: Garantimos que as transferências de dados estejam em conformidade com as leis aplicáveis (como Cláusulas Contratuais Padrão SCC do GDPR, Lei de Proteção de Informações Pessoais da China Art. 38, avaliação de segurança/contratos padrão); (4) Medidas de Proteção: Empregamos medidas técnicas e administrativas como transmissão criptografada e controles de acesso; (5) Seus Direitos: Você tem o direito de ser informado e de se opor. Para mais informações, entre em contato em hgm123002@outlook.com.",
+extra1_title:"10. Notas sobre Adaptação a 18 Idiomas",
+extra1_text:"Esta página está disponível em 18 idiomas para vendedores transfronteiriços globais. Idiomas: 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. Os 9 primeiros idiomas têm traduções completas; os 9 restantes usam a versão em inglês. Use o seletor de idioma no topo. Para imprecisões: hgm123002@outlook.com.",
+extra2_title:"Anexo: Notas sobre o Popup de Consentimento de Cookies",
+extra2_text:"Este site usa um popup de Consentimento de Cookies. Mecanismo: (1) Ativação: A barra de consentimento aparece no rodapé na primeira visita ou após limpar dados do navegador; (2) Escolha: 'Aceitar' permite todos os cookies, 'Rejeitar' mantém apenas cookies funcionais essenciais (localStorage de idioma); (3) Registro Persistente: Sua escolha é salva em localStorage e persiste — o popup não reaparecerá; (4) Retirar Consentimento: Limpe o cache ou localStorage para reexibir o popup; (5) Impacto: Após 'Rejeitar', este site não carregará scripts do Google AdSense nem código do Google Analytics.",
+contact_title:"Dúvidas sobre Privacidade?",
+contact_desc:"Se você tiver dúvidas, sugestões ou desejar exercer seus direitos de dados em relação a esta Política de Privacidade, entre em contato conosco por e-mail. Responderemos à sua solicitação dentro de 30 dias.",
+contact_btn:"Contatar Equipe de Privacidade: hgm123002@outlook.com",
+cookie_text:"Este site usa cookies e armazenamento local para preferências de idioma e publicidade personalizada. Ao continuar, você concorda com nossa Política de Privacidade.",
+cookie_accept:"Aceitar",
+cookie_reject:"Rejeitar",
+footer_home:"Início",
+footer_tools:"Ferramentas",
+footer_articles:"Artigos",
+footer_partners:"Parceiros",
+footer_coop:"Cooperação e Liquidação",
+footer_contact:"Contato",
+footer_copy:"© 2026 MeliToolHub. Todos os direitos reservados. Este site cumpre as políticas do Google AdSense e as regulamentações internacionais de proteção de privacidade."
+},
+
+/*══════════ Русский (ru) ══════════*/
+ru:{
+seo_title:"Политика Конфиденциальности | MeliToolHub Трансграничная Платформа LATAM",
+seo_desc:"Политика конфиденциальности MeliToolHub. Узнайте, как мы собираем, используем и защищаем вашу личную информацию. Соответствует политикам Google AdSense и требованиям GDPR.",
+og_title:"Политика Конфиденциальности | MeliToolHub",
+og_desc:"Узнайте, как MeliToolHub собирает, использует и защищает вашу личную информацию. Соответствие GDPR и международным стандартам конфиденциальности.",
+nav_back:"← На главную",
+hero_title:"Политика Конфиденциальности",
+hero_desc:"Мы ценим вашу конфиденциальность. Эта политика объясняет, как мы собираем, используем и защищаем вашу личную информацию.",
+hero_date:"Дата вступления в силу: 1 июня 2026 г.",
+bread_home:"Главная",
+bread_current:"Политика Конфиденциальности",
+ch1_title:"1. Сбор Информации",
+ch1_text:"Мы собираем вашу личную информацию только в следующих случаях: когда вы связываетесь с нами по электронной почте (hgm123002@outlook.com) или отправляете запрос на сотрудничество, мы можем собирать ваше имя, адрес электронной почты и любую связанную информацию, которую вы добровольно предоставляете. Кроме того, мы автоматически собираем неперсонализированные данные посетителей с помощью таких инструментов, как Google Analytics, включая: IP-адрес, тип и версию браузера, операционную систему, время посещения и страницы, URL-источник перехода, время пребывания на странице и т.д. Эти данные используются для анализа тенденций трафика сайта и оптимизации пользовательского опыта. Мы не собираем активно конфиденциальную личную информацию, такую как номера удостоверений личности или банковские реквизиты. Мы не запрашиваем и не обрабатываем платежную информацию напрямую через этот сайт.",
+ch2_title:"2. Использование Информации",
+ch2_text:"Мы используем собранную информацию для следующих целей: (1) Ответ на ваши запросы по электронной почте и заявки на сотрудничество; (2) Анализ трафика сайта для оптимизации контента и пользовательского опыта; (3) Показ релевантной рекламы через Google AdSense (если включено); (4) Отслеживание источников переходов и конверсий через партнерские ссылки (Mercado Libre, WorldFirst и др.) для поддержки контентных операций; (5) Соблюдение юридических обязательств и ответ на запросы регулирующих органов. Мы не будем использовать вашу личную информацию для целей, не связанных с указанными выше, и не будем использовать данные для автоматизированного принятия решений или профилирования пользователей.",
+ch3_title:"3. Безопасность и Хранение Информации",
+ch3_text:"Мы принимаем разумные технические и административные меры для защиты вашей личной информации, включая: использование шифрования HTTPS для всего трафика сайта; регулярное обновление систем сайта и патчей безопасности; контроль доступа к хранящимся записям переписки по электронной почте. Ваши личные данные хранятся на защищенных серверах и сохраняются только в течение минимального периода, необходимого для выполнения целей, для которых они были собраны. Мы не храним ненужные личные данные. Хотя мы стремимся защитить вашу личную информацию, передача через Интернет не является абсолютно безопасной, и мы не можем гарантировать абсолютную безопасность при передаче данных.",
+ch4_title:"4. Раскрытие Третьим Лицам",
+ch4_text:"Мы не продаем, не обмениваем и не передаем иным образом вашу личную идентифицирующую информацию третьим лицам. Ниже перечислены сторонние сервисы, используемые на этом сайте, и ссылки на их политики конфиденциальности: (1) Google AdSense: используется для размещения рекламы; Google может использовать файлы cookie для показа персонализированной рекламы. См. Политику конфиденциальности Google https://policies.google.com/privacy; (2) Google Analytics: используется для анализа трафика сайта, сбора анонимных данных о поведении посетителей; (3) Партнерские платформы: Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay и др. — при доступе к этим платформам через наши партнерские ссылки применяются их политики конфиденциальности; (4) Юридические требования: мы можем раскрывать информацию, когда это требуется по закону или для защиты наших законных интересов.",
+ch5_title:"5. Использование Cookie",
+ch5_text:"Этот сайт использует файлы cookie для улучшения пользовательского опыта, включая следующие типы: (1) Необходимые Cookie: используются для запоминания ваших языковых предпочтений (localStorage) для непрерывности просмотра, без персональной идентификации; (2) Аналитические Cookie: файлы cookie, устанавливаемые Google Analytics для подсчета просмотров страниц и анализа анонимного поведения пользователей; (3) Рекламные Cookie: если включен Google AdSense, Google может использовать файлы cookie DoubleClick для показа рекламы на основе интересов. Вы можете отключить файлы cookie в настройках браузера или управлять рекламными предпочтениями на http://www.aboutads.info/choices.",
+ch6_title:"6. Защита Несовершеннолетних",
+ch6_text:"Контент этого сайта предназначен для специалистов в области трансграничной электронной коммерции и не ориентирован на детей до 13 лет. Мы соблюдаем Закон США о защите конфиденциальности детей в Интернете (COPPA) и соответствующие международные нормы защиты детей и не собираем сознательно личную информацию детей младше 13 лет. Если мы обнаружим, что случайно собрали личную информацию ребенка младше 13 лет, мы немедленно удалим такие данные с наших серверов. Если вы являетесь родителем или опекуном и обнаружите, что ваш ребенок предоставил нам личную информацию, свяжитесь с нами по адресу hgm123002@outlook.com, и мы немедленно удалим соответствующую информацию.",
+ch7_title:"7. Права Пользователя",
+ch7_text:"В соответствии с применимыми законами о защите данных (GDPR, CCPA и др.) вы имеете следующие права: (1) Право на доступ: вы имеете право запросить копию личной информации, которую мы храним о вас; (2) Право на исправление: если ваша личная информация неточна или неполна, вы имеете право потребовать исправления; (3) Право на удаление: при определенных условиях вы можете запросить удаление ваших личных данных; (4) Право на возражение: вы имеете право возражать против использования ваших данных в целях прямого маркетинга; (5) Право на переносимость данных: вы имеете право получить ваши данные в структурированном, общеиспользуемом формате. Для осуществления этих прав или по вопросам конфиденциальности пишите на hgm123002@outlook.com. Мы ответим в течение 30 дней.",
+ch8_title:"8. Обновления Политики",
+ch8_text:"Мы можем время от времени обновлять настоящую Политику конфиденциальности, чтобы отразить изменения в наших методах обработки информации или изменения в законодательстве. Обновленная политика будет опубликована на этой странице с указанием даты вступления в силу вверху. Рекомендуем периодически проверять эту страницу. При существенных изменениях мы можем предоставить дополнительное уведомление через объявления на сайте или по электронной почте. Продолжение использования сайта после обновления политики означает принятие пересмотренной Политики конфиденциальности. Если вы не согласны с обновленной политикой, прекратите использование сайта.",
+ch9_title:"9. Трансграничная Передача Данных",
+ch9_text:"Как трансграничная платформа электронной коммерции в Латинской Америке, обработка данных на этом сайте может включать трансграничную передачу. Подробности: (1) Расположение Сервера: Сайт размещен на серверах в США; ваши данные могут передаваться в США и другие страны; (2) Цель Передачи: Данные передаются между регионами для работы сайта, распространения контента и технической поддержки; (3) Правовые Гарантии: Трансграничная передача соответствует применимым законам (например, Стандартные договорные условия GDPR SCC, Закон Китая о защите персональных данных ст. 38, оценка безопасности/стандартные контракты); (4) Меры Защиты: Шифрование передачи, контроль доступа и минимизация данных; (5) Ваши Права: Вы имеете право на информацию о трансграничной передаче и возражение. По вопросам: hgm123002@outlook.com.",
+extra1_title:"10. Примечания по Адаптации к 18 Языкам",
+extra1_text:"Эта страница доступна на 18 языках для глобальных продавцов. Языки: 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. Первые 9 языков имеют полные переводы; остальные 9 используют английскую версию. Используйте переключатель языка вверху. О неточностях: hgm123002@outlook.com.",
+extra2_title:"Приложение: Примечания о Всплывающем Окне Согласия на Cookie",
+extra2_text:"Сайт использует всплывающее окно согласия на Cookie. Механизм: (1) Активация: Панель согласия появляется внизу при первом посещении или после очистки данных браузера; (2) Выбор: «Принять» разрешает все cookie, «Отклонить» сохраняет только необходимые функциональные cookie (localStorage языка); (3) Постоянная Запись: Выбор сохраняется в localStorage и действует при последующих посещениях; (4) Отзыв Согласия: Очистите кэш браузера или localStorage, чтобы снова показать окно; (5) Влияние: После «Отклонить» сайт не загружает скрипты Google AdSense и код Google Analytics.",
+contact_title:"Вопросы о Конфиденциальности?",
+contact_desc:"Если у вас есть вопросы, предложения или вы хотите воспользоваться своими правами на данные в отношении настоящей Политики конфиденциальности, свяжитесь с нами по электронной почте. Мы ответим на ваш запрос в течение 30 дней.",
+contact_btn:"Связаться с командой конфиденциальности: hgm123002@outlook.com",
+cookie_text:"Этот сайт использует файлы cookie и локальное хранилище для языковых предпочтений и персонализированной рекламы. Продолжая, вы соглашаетесь с нашей Политикой конфиденциальности.",
+cookie_accept:"Принять",
+cookie_reject:"Отклонить",
+footer_home:"Главная",
+footer_tools:"Инструменты",
+footer_articles:"Статьи",
+footer_partners:"Партнеры",
+footer_coop:"Сотрудничество и Расчеты",
+footer_contact:"Контакты",
+footer_copy:"© 2026 MeliToolHub. Все права защищены. Сайт соблюдает политики Google AdSense и международные нормы защиты конфиденциальности."
+},
+
+/*══════════ Français (fr) ══════════*/
+fr:{
+seo_title:"Politique de Confidentialité | MeliToolHub Plateforme Transfrontalière LATAM",
+seo_desc:"Politique de confidentialité MeliToolHub. Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles. Conforme aux politiques Google AdSense et aux exigences du RGPD.",
+og_title:"Politique de Confidentialité | MeliToolHub",
+og_desc:"Découvrez comment MeliToolHub collecte, utilise et protège vos informations personnelles. Conforme au RGPD et aux normes internationales de confidentialité.",
+nav_back:"← Retour à l'Accueil",
+hero_title:"Politique de Confidentialité",
+hero_desc:"Nous attachons de l'importance à votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles.",
+hero_date:"Date d'entrée en vigueur : 1er juin 2026",
+bread_home:"Accueil",
+bread_current:"Politique de Confidentialité",
+ch1_title:"1. Collecte d'Informations",
+ch1_text:"Nous collectons vos informations personnelles uniquement dans les circonstances suivantes : lorsque vous nous contactez par e-mail (hgm123002@outlook.com) ou soumettez une demande de coopération, nous pouvons collecter votre nom, adresse e-mail et toute information connexe que vous fournissez volontairement. De plus, nous collectons automatiquement des données de visiteurs non personnellement identifiables via des outils tels que Google Analytics, notamment : adresse IP, type et version du navigateur, système d'exploitation, heure de visite et pages, URL de référence, temps passé sur la page, etc. Ces données sont utilisées pour analyser les tendances de trafic et optimiser l'expérience utilisateur. Ce site ne collecte pas activement d'informations personnelles sensibles. Nous ne demandons ni ne traitons aucune information de paiement directement via ce site.",
+ch2_title:"2. Utilisation des Informations",
+ch2_text:"Nous utilisons les informations collectées aux fins suivantes : (1) Répondre à vos demandes par e-mail et demandes de coopération ; (2) Analyser le trafic du site pour optimiser le contenu et l'expérience utilisateur ; (3) Afficher des publicités pertinentes via Google AdSense (si activé) ; (4) Suivre les sources de référence et les conversions via des liens d'affiliation (Mercado Libre, WorldFirst, etc.) ; (5) Respecter les obligations légales et répondre aux demandes réglementaires. Nous n'utiliserons pas vos informations personnelles à des fins non liées à celles indiquées ci-dessus.",
+ch3_title:"3. Sécurité et Stockage des Informations",
+ch3_text:"Nous mettons en œuvre des mesures techniques et administratives raisonnables pour protéger vos informations personnelles, notamment : utilisation du chiffrement HTTPS pour tout le trafic ; mises à jour régulières des systèmes et correctifs de sécurité ; contrôle d'accès aux enregistrements de correspondance stockés. Vos données personnelles sont stockées sur des serveurs sécurisés et conservées uniquement pendant la période minimale nécessaire. Nous ne conservons pas de données personnelles inutiles. Bien que nous nous efforcions de protéger vos informations, la transmission Internet n'est pas absolument sécurisée.",
+ch4_title:"4. Divulgation à des Tiers",
+ch4_text:"Nous ne vendons, n'échangeons ni ne transférons vos informations personnelles identifiables à des tiers. Voici les services tiers impliqués : (1) Google AdSense : pour le placement publicitaire ; consultez la politique de confidentialité de Google https://policies.google.com/privacy ; (2) Google Analytics : pour l'analyse du trafic, données anonymes ; (3) Plateformes d'affiliation : Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay, etc. ; (4) Exigences légales : divulgation si requis par la loi.",
+ch5_title:"5. Utilisation des Cookies",
+ch5_text:"Ce site utilise des cookies pour améliorer l'expérience utilisateur : (1) Cookies Essentiels : mémorisation des préférences linguistiques (localStorage) ; (2) Cookies Analytiques : Google Analytics pour les statistiques anonymes ; (3) Cookies Publicitaires : Google AdSense peut utiliser des cookies DoubleClick pour les publicités basées sur les centres d'intérêt. Vous pouvez désactiver les cookies dans les paramètres du navigateur.",
+ch6_title:"6. Protection des Mineurs",
+ch6_text:"Le contenu de ce site est destiné aux professionnels du e-commerce transfrontalier et ne s'adresse pas aux enfants de moins de 13 ans. Nous respectons la loi américaine COPPA et les réglementations internationales de protection des enfants. Nous ne collectons pas sciemment d'informations personnelles d'enfants de moins de 13 ans. Si nous découvrons une collecte par inadvertance, nous supprimerons ces données. Parents/tuteurs : contactez-nous à hgm123002@outlook.com pour toute question.",
+ch7_title:"7. Droits des Utilisateurs",
+ch7_text:"Conformément aux lois applicables sur la protection des données (RGPD, CCPA, etc.), vous disposez des droits suivants : (1) Droit d'accès ; (2) Droit de rectification ; (3) Droit à l'effacement ; (4) Droit d'opposition au marketing direct ; (5) Droit à la portabilité des données. Pour exercer ces droits, écrivez à hgm123002@outlook.com. Réponse sous 30 jours.",
+ch8_title:"8. Mises à Jour de la Politique",
+ch8_text:"Nous pouvons mettre à jour cette politique pour refléter les changements dans nos pratiques ou la législation. La politique mise à jour sera publiée sur cette page avec la date d'entrée en vigueur. Nous recommandons de consulter périodiquement cette page. Pour les changements importants, un avis supplémentaire peut être fourni. L'utilisation continue du site après les mises à jour constitue l'acceptation de la politique révisée.",
+ch9_title:"9. Transfert Transfrontalier de Données",
+ch9_text:"En tant que plateforme e-commerce transfrontalière LATAM, le traitement des données peut impliquer des transferts transfrontaliers. Détails : (1) Localisation du Serveur : Ce site est hébergé sur des serveurs aux États-Unis ; vos données peuvent être transférées aux États-Unis et dans d'autres pays ; (2) Finalité : Les données circulent entre régions pour les opérations du site, la distribution de contenu et le support technique ; (3) Garanties Légales : Les transferts sont conformes aux lois applicables (Clauses Contractuelles Types SCC du RGPD, Loi chinoise sur la protection des données personnelles art. 38, etc.) ; (4) Mesures de Protection : Transmission chiffrée, contrôles d'accès, minimisation des données ; (5) Vos Droits : Droit d'être informé et de s'opposer. Contact : hgm123002@outlook.com.",
+extra1_title:"10. Notes sur l'Adaptation en 18 Langues",
+extra1_text:"Cette page est disponible en 18 langues pour les vendeurs internationaux. Langues : 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. Les 9 premières langues ont des traductions complètes ; les 9 autres utilisent la version anglaise. Utilisez le sélecteur de langue en haut. Pour les inexactitudes : hgm123002@outlook.com.",
+extra2_title:"Annexe : Notes sur le Popup de Consentement aux Cookies",
+extra2_text:"Ce site utilise un popup de consentement aux cookies. Mécanisme : (1) Déclenchement : La barre de consentement apparaît en bas de page lors de la première visite ou après effacement des données du navigateur ; (2) Choix : 'Accepter' autorise tous les cookies, 'Refuser' conserve uniquement les cookies fonctionnels essentiels (localStorage de langue) ; (3) Enregistrement Persistant : Votre choix est sauvegardé dans localStorage et persiste lors des visites suivantes ; (4) Retrait du Consentement : Effacez le cache du navigateur ou localStorage pour réafficher le popup ; (5) Impact : Après 'Refuser', ce site ne charge pas les scripts Google AdSense ni le code Google Analytics.",
+contact_title:"Questions sur la Confidentialité ?",
+contact_desc:"Pour toute question, suggestion ou exercice de vos droits concernant cette politique, contactez-nous par e-mail. Réponse sous 30 jours.",
+contact_btn:"Contacter l'Équipe Confidentialité : hgm123002@outlook.com",
+cookie_text:"Ce site utilise des cookies et le stockage local pour les préférences linguistiques et la publicité personnalisée. En continuant, vous acceptez notre Politique de Confidentialité.",
+cookie_accept:"Accepter",
+cookie_reject:"Refuser",
+footer_home:"Accueil",
+footer_tools:"Outils",
+footer_articles:"Articles",
+footer_partners:"Partenaires",
+footer_coop:"Coopération et Règlement",
+footer_contact:"Contact",
+footer_copy:"© 2026 MeliToolHub. Tous droits réservés. Ce site respecte les politiques Google AdSense et les réglementations internationales de protection de la vie privée."
+},
+
+/*══════════ Deutsch (de) ══════════*/
+de:{
+seo_title:"Datenschutzerklärung | MeliToolHub LATAM Cross-Border-Plattform",
+seo_desc:"MelitoolHub Datenschutzerklärung. Erfahren Sie, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen. Konform mit Google AdSense-Richtlinien und DSGVO.",
+og_title:"Datenschutzerklärung | MeliToolHub",
+og_desc:"Erfahren Sie, wie MeliToolHub Ihre Daten erfasst, verwendet und schützt. DSGVO-konform und nach internationalen Datenschutzstandards.",
+nav_back:"← Zurück zur Startseite",
+hero_title:"Datenschutzerklärung",
+hero_desc:"Wir schätzen Ihre Privatsphäre. Diese Richtlinie erklärt, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen.",
+hero_date:"Gültig ab: 1. Juni 2026",
+bread_home:"Startseite",
+bread_current:"Datenschutzerklärung",
+ch1_title:"1. Datenerfassung",
+ch1_text:"Wir erfassen Ihre personenbezogenen Daten nur unter folgenden Umständen: Wenn Sie uns per E-Mail kontaktieren (hgm123002@outlook.com) oder eine Kooperationsanfrage senden, können wir Ihren Namen, Ihre E-Mail-Adresse und freiwillig bereitgestellte Informationen erfassen. Darüber hinaus erfassen wir automatisch nicht-personenbezogene Besucherdaten über Tools wie Google Analytics, einschließlich: IP-Adresse, Browsertyp und -version, Betriebssystem, Besuchszeit und Seiten, Verweis-URL, Verweildauer usw. Diese Daten dienen der Verkehrsanalyse und Optimierung der Nutzererfahrung. Wir erfassen keine sensiblen Daten wie Ausweisnummern oder Bankdaten.",
+ch2_title:"2. Datennutzung",
+ch2_text:"Wir verwenden die erfassten Informationen für folgende Zwecke: (1) Beantwortung Ihrer E-Mail-Anfragen und Kooperationsersuchen; (2) Analyse des Website-Verkehrs zur Optimierung von Inhalten und Nutzererfahrung; (3) Anzeige relevanter Werbung über Google AdSense (falls aktiviert); (4) Verfolgung von Empfehlungsquellen und Konversionen über Affiliate-Links (Mercado Libre, WorldFirst etc.); (5) Erfüllung rechtlicher Verpflichtungen. Keine Nutzung für automatisierte Entscheidungsfindung oder Profiling.",
+ch3_title:"3. Datensicherheit und -speicherung",
+ch3_text:"Wir setzen angemessene technische und administrative Maßnahmen zum Schutz Ihrer Daten ein: HTTPS-Verschlüsselung für den gesamten Verkehr; regelmäßige Systemaktualisierungen und Sicherheitspatches; Zugriffskontrolle für gespeicherte Korrespondenz. Ihre Daten werden auf sicheren Servern gespeichert und nur so lange aufbewahrt, wie es der Zweck erfordert. Trotz aller Bemühungen ist Internetübertragung nicht absolut sicher.",
+ch4_title:"4. Weitergabe an Dritte",
+ch4_text:"Wir verkaufen, handeln oder übertragen Ihre personenbezogenen Daten nicht an Dritte. Folgende Drittdienste sind beteiligt: (1) Google AdSense: für Werbeplatzierung; siehe Google-Datenschutzerklärung https://policies.google.com/privacy; (2) Google Analytics: Verkehrsanalyse mit anonymen Daten; (3) Affiliate-Plattformen: Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay etc.; (4) Rechtliche Anforderungen: Offenlegung bei gesetzlicher Verpflichtung.",
+ch5_title:"5. Cookie-Nutzung",
+ch5_text:"Diese Website verwendet Cookies: (1) Notwendige Cookies: Speicherung der Spracheinstellungen (localStorage); (2) Analyse-Cookies: Google Analytics für anonyme Statistiken; (3) Werbe-Cookies: Google AdSense kann DoubleClick-Cookies für interessenbasierte Werbung verwenden. Sie können Cookies in den Browsereinstellungen deaktivieren.",
+ch6_title:"6. Schutz Minderjähriger",
+ch6_text:"Die Inhalte richten sich an Fachleute des grenzüberschreitenden E-Commerce und nicht an Kinder unter 13 Jahren. Wir halten uns an COPPA und internationale Kinderschutzbestimmungen. Keine wissentliche Erfassung von Daten unter 13-Jähriger. Bei versehentlicher Erfassung löschen wir diese umgehend. Eltern/Erziehungsberechtigte: Kontakt unter hgm123002@outlook.com.",
+ch7_title:"7. Nutzerrechte",
+ch7_text:"Gemäß geltenden Datenschutzgesetzen (DSGVO, CCPA etc.) haben Sie folgende Rechte: (1) Auskunftsrecht; (2) Recht auf Berichtigung; (3) Recht auf Löschung; (4) Widerspruchsrecht gegen Direktmarketing; (5) Recht auf Datenübertragbarkeit. Zur Ausübung dieser Rechte: hgm123002@outlook.com. Antwort innerhalb von 30 Tagen.",
+ch8_title:"8. Richtlinienaktualisierungen",
+ch8_text:"Wir können diese Datenschutzerklärung aktualisieren, um Änderungen unserer Praktiken oder der Gesetzeslage widerzuspiegeln. Die aktualisierte Richtlinie wird mit Gültigkeitsdatum auf dieser Seite veröffentlicht. Regelmäßige Überprüfung wird empfohlen. Bei wesentlichen Änderungen erfolgt zusätzliche Benachrichtigung. Fortgesetzte Nutzung gilt als Annahme der überarbeiteten Richtlinie.",
+ch9_title:"9. Grenzüberschreitende Datenübermittlung",
+ch9_text:"Als LATAM-Cross-Border-E-Commerce-Plattform kann die Datenverarbeitung grenzüberschreitende Übermittlungen umfassen. Details: (1) Serverstandort: Diese Website wird auf Servern in den USA gehostet; Ihre Daten können in die USA und andere Länder übertragen werden; (2) Zweck: Daten fließen zwischen Regionen für Website-Betrieb, Inhaltsverteilung und technischen Support; (3) Rechtliche Garantien: Übermittlungen entsprechen geltenden Gesetzen (DSGVO-Standardvertragsklauseln SCC, Chinesisches Datenschutzgesetz Art. 38 etc.); (4) Schutzmaßnahmen: Verschlüsselte Übertragung, Zugriffskontrollen, Datenminimierung; (5) Ihre Rechte: Recht auf Information und Widerspruch. Kontakt: hgm123002@outlook.com.",
+extra1_title:"10. Hinweise zur 18-Sprachen-Anpassung",
+extra1_text:"Diese Seite ist in 18 Sprachen für globale Händler verfügbar. Sprachen: 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. Die ersten 9 Sprachen haben vollständige Übersetzungen; die übrigen 9 verwenden die englische Version. Verwenden Sie die Sprachauswahl oben. Für Ungenauigkeiten: hgm123002@outlook.com.",
+extra2_title:"Anhang: Hinweise zum Cookie-Zustimmungs-Popup",
+extra2_text:"Diese Website verwendet ein Cookie-Zustimmungs-Popup. Mechanismus: (1) Auslösung: Die Zustimmungsleiste erscheint beim ersten Besuch oder nach Löschen der Browserdaten am Seitenfuß; (2) Auswahl: 'Akzeptieren' erlaubt alle Cookies, 'Ablehnen' behält nur wesentliche funktionale Cookies (Sprach-LocalStorage); (3) Dauerhafte Speicherung: Ihre Auswahl wird in localStorage gespeichert und bleibt bei Folgebesuchen bestehen; (4) Widerruf: Löschen Sie den Browser-Cache oder localStorage, um das Popup erneut anzuzeigen; (5) Auswirkung: Nach 'Ablehnen' werden keine Google AdSense-Skripte oder Google Analytics-Code geladen.",
+contact_title:"Fragen zum Datenschutz?",
+contact_desc:"Bei Fragen, Anregungen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns per E-Mail. Antwort innerhalb von 30 Tagen.",
+contact_btn:"Datenschutz-Team kontaktieren: hgm123002@outlook.com",
+cookie_text:"Diese Website verwendet Cookies und lokalen Speicher für Spracheinstellungen und personalisierte Werbung. Durch die weitere Nutzung stimmen Sie unserer Datenschutzerklärung zu.",
+cookie_accept:"Akzeptieren",
+cookie_reject:"Ablehnen",
+footer_home:"Startseite",
+footer_tools:"Tools",
+footer_articles:"Artikel",
+footer_partners:"Partner",
+footer_coop:"Zusammenarbeit & Abrechnung",
+footer_contact:"Kontakt",
+footer_copy:"© 2026 MeliToolHub. Alle Rechte vorbehalten. Diese Website entspricht den Google AdSense-Richtlinien und internationalen Datenschutzbestimmungen."
+},
+
+/*══════════ Italiano (it) ══════════*/
+it:{
+seo_title:"Informativa sulla Privacy | MeliToolHub Piattaforma Transfrontaliera LATAM",
+seo_desc:"Informativa sulla privacy MeliToolHub. Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Conforme alle policy Google AdSense e ai requisiti GDPR.",
+og_title:"Informativa sulla Privacy | MeliToolHub",
+og_desc:"Scopri come MeliToolHub raccoglie, utilizza e protegge i tuoi dati personali. Conforme al GDPR e agli standard internazionali sulla privacy.",
+nav_back:"← Torna alla Home",
+hero_title:"Informativa sulla Privacy",
+hero_desc:"Diamo valore alla tua privacy. Questa informativa spiega come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
+hero_date:"Data di entrata in vigore: 1 giugno 2026",
+bread_home:"Home",
+bread_current:"Informativa sulla Privacy",
+ch1_title:"1. Raccolta delle Informazioni",
+ch1_text:"Raccogliamo i tuoi dati personali solo nelle seguenti circostanze: quando ci contatti via email (hgm123002@outlook.com) o invii una richiesta di cooperazione, possiamo raccogliere nome, indirizzo email e informazioni correlate fornite volontariamente. Inoltre, raccogliamo automaticamente dati non identificabili personalmente tramite Google Analytics: indirizzo IP, tipo di browser, sistema operativo, orario di visita, pagine visitate, URL di provenienza, tempo di permanenza, ecc. Questi dati analizzano le tendenze del traffico e ottimizzano l'esperienza. Non raccogliamo dati sensibili come documenti d'identità o dati bancari.",
+ch2_title:"2. Utilizzo delle Informazioni",
+ch2_text:"Utilizziamo le informazioni raccolte per: (1) Rispondere alle tue richieste email e di cooperazione; (2) Analizzare il traffico per ottimizzare contenuti ed esperienza; (3) Mostrare annunci pertinenti tramite Google AdSense (se abilitato); (4) Tracciare fonti di riferimento e conversioni tramite link di affiliazione (Mercado Libre, WorldFirst, ecc.); (5) Rispettare obblighi legali. Non utilizziamo i dati per decisioni automatizzate o profilazione.",
+ch3_title:"3. Sicurezza e Conservazione",
+ch3_text:"Implementiamo misure tecniche e amministrative ragionevoli: crittografia HTTPS per tutto il traffico; aggiornamenti regolari e patch di sicurezza; controllo degli accessi alla corrispondenza archiviata. I dati sono conservati su server sicuri solo per il periodo minimo necessario. La trasmissione Internet non è assolutamente sicura.",
+ch4_title:"4. Divulgazione a Terzi",
+ch4_text:"Non vendiamo, scambiamo o trasferiamo dati personali identificabili a terzi. Servizi terzi coinvolti: (1) Google AdSense: per annunci; vedi policy Google https://policies.google.com/privacy; (2) Google Analytics: analisi traffico anonima; (3) Piattaforme affiliate: Mercado Libre, WorldFirst, PingPong, Airwallex, LianLian Pay, ecc.; (4) Requisiti legali: divulgazione se richiesto dalla legge.",
+ch5_title:"5. Utilizzo dei Cookie",
+ch5_text:"Questo sito utilizza cookie: (1) Cookie Essenziali: preferenze lingua (localStorage); (2) Cookie Analitici: Google Analytics per statistiche anonime; (3) Cookie Pubblicitari: Google AdSense può usare DoubleClick per annunci basati sugli interessi. È possibile disabilitare i cookie nelle impostazioni del browser.",
+ch6_title:"6. Protezione dei Minori",
+ch6_text:"I contenuti sono destinati a professionisti dell'e-commerce transfrontaliero, non a minori di 13 anni. Rispettiamo il COPPA e le normative internazionali sulla protezione dei minori. Non raccogliamo consapevolmente dati di minori di 13 anni. In caso di raccolta accidentale, elimineremo i dati. Genitori/tutori: contattare hgm123002@outlook.com.",
+ch7_title:"7. Diritti dell'Utente",
+ch7_text:"Ai sensi delle leggi applicabili (GDPR, CCPA, ecc.), hai diritto a: (1) Accesso; (2) Rettifica; (3) Cancellazione; (4) Opposizione al marketing diretto; (5) Portabilità dei dati. Per esercitare questi diritti: hgm123002@outlook.com. Risposta entro 30 giorni.",
+ch8_title:"8. Aggiornamenti della Policy",
+ch8_text:"Possiamo aggiornare questa informativa per riflettere cambiamenti nelle nostre pratiche o nella legislazione. L'informativa aggiornata sarà pubblicata con data di entrata in vigore. Si consiglia la consultazione periodica. L'uso continuato del sito costituisce accettazione dell'informativa rivista.",
+ch9_title:"9. Trasferimento Transfrontaliero dei Dati",
+ch9_text:"Come piattaforma e-commerce transfrontaliera LATAM, il trattamento dei dati può comportare trasferimenti transfrontalieri. Dettagli: (1) Posizione del Server: Questo sito è ospitato su server negli Stati Uniti; i tuoi dati possono essere trasferiti negli USA e in altri paesi; (2) Finalità: I dati fluiscono tra regioni per operazioni del sito, distribuzione di contenuti e supporto tecnico; (3) Garanzie Legali: I trasferimenti sono conformi alle leggi applicabili (Clausole Contrattuali Standard SCC del GDPR, Legge Cinese sulla Protezione dei Dati Personali art. 38, ecc.); (4) Misure di Protezione: Trasmissione crittografata, controlli di accesso, minimizzazione dei dati; (5) Tuoi Diritti: Diritto di essere informato e di opporsi. Contatto: hgm123002@outlook.com.",
+extra1_title:"10. Note sull'Adattamento a 18 Lingue",
+extra1_text:"Questa pagina è disponibile in 18 lingue per venditori globali. Lingue: 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. Le prime 9 lingue hanno traduzioni complete; le altre 9 usano la versione inglese. Usa il selettore lingua in alto. Per inesattezze: hgm123002@outlook.com.",
+extra2_title:"Appendice: Note sul Popup di Consenso ai Cookie",
+extra2_text:"Questo sito utilizza un popup di consenso ai cookie. Meccanismo: (1) Attivazione: La barra di consenso appare in fondo alla pagina alla prima visita o dopo la cancellazione dei dati del browser; (2) Scelta: 'Accetta' consente tutti i cookie, 'Rifiuta' mantiene solo i cookie funzionali essenziali (localStorage lingua); (3) Registrazione Persistente: La tua scelta è salvata in localStorage e persiste nelle visite successive; (4) Revoca: Cancella la cache del browser o localStorage per mostrare di nuovo il popup; (5) Impatto: Dopo 'Rifiuta', questo sito non carica script Google AdSense né codice Google Analytics.",
+contact_title:"Domande sulla Privacy?",
+contact_desc:"Per domande, suggerimenti o esercizio dei diritti relativi a questa informativa, contattaci via email. Risposta entro 30 giorni.",
+contact_btn:"Contatta il Team Privacy: hgm123002@outlook.com",
+cookie_text:"Questo sito utilizza cookie e archiviazione locale per preferenze di lingua e pubblicità personalizzata. Continuando, accetti la nostra Informativa sulla Privacy.",
+cookie_accept:"Accetta",
+cookie_reject:"Rifiuta",
+footer_home:"Home",
+footer_tools:"Strumenti",
+footer_articles:"Articoli",
+footer_partners:"Partner",
+footer_coop:"Cooperazione e Liquidazione",
+footer_contact:"Contatti",
+footer_copy:"© 2026 MeliToolHub. Tutti i diritti riservati. Questo sito è conforme alle policy Google AdSense e alle normative internazionali sulla privacy."
+},
+
+/*══════════ العربية (ar) ══════════*/
+ar:{
+seo_title:"سياسة الخصوصية | MeliToolHub منصة أمريكا اللاتينية",
+seo_desc:"سياسة خصوصية MeliToolHub. تعرف على كيفية جمع واستخدام وحماية معلوماتك الشخصية. متوافقة مع سياسات Google AdSense ومتطلبات GDPR.",
+og_title:"سياسة الخصوصية | MeliToolHub",
+og_desc:"تعرف على كيفية جمع واستخدام وحماية MeliToolHub لمعلوماتك الشخصية. متوافقة مع اللائحة العامة لحماية البيانات والمعايير الدولية.",
+nav_back:"← العودة للرئيسية",
+hero_title:"سياسة الخصوصية",
+hero_desc:"نحن نقدر خصوصيتك. توضح هذه السياسة كيفية جمع واستخدام وحماية معلوماتك الشخصية.",
+hero_date:"تاريخ السريان: 1 يونيو 2026",
+bread_home:"الرئيسية",
+bread_current:"سياسة الخصوصية",
+ch1_title:"1. جمع المعلومات",
+ch1_text:"نقوم بجمع معلوماتك الشخصية فقط في الحالات التالية: عند الاتصال بنا عبر البريد الإلكتروني (hgm123002@outlook.com) أو تقديم طلب تعاون، قد نجمع اسمك وعنوان بريدك الإلكتروني وأي معلومات ذات صلة تقدمها طواعية. بالإضافة إلى ذلك، نقوم تلقائياً بجمع بيانات زوار غير محددة للهوية من خلال أدوات مثل Google Analytics، بما في ذلك: عنوان IP، نوع المتصفح وإصداره، نظام التشغيل، وقت الزيارة والصفحات، عنوان URL المرجعي، مدة البقاء في الصفحة، إلخ. تُستخدم هذه البيانات لتحليل اتجاهات حركة المرور وتحسين تجربة المستخدم. لا يقوم هذا الموقع بجمع معلومات شخصية حساسة مثل أرقام الهوية أو التفاصيل المصرفية.",
+ch2_title:"2. استخدام المعلومات",
+ch2_text:"نستخدم المعلومات التي تم جمعها للأغراض التالية: (1) الرد على استفساراتك عبر البريد الإلكتروني وطلبات التعاون؛ (2) تحليل حركة المرور لتحسين المحتوى وتجربة المستخدم؛ (3) عرض إعلانات ذات صلة عبر Google AdSense (إذا تم تمكينه)؛ (4) تتبع مصادر الإحالة والتحويلات عبر روابط الشراكة (Mercado Libre، WorldFirst، إلخ)؛ (5) الامتثال للالتزامات القانونية والاستجابة للطلبات التنظيمية. لا نستخدم معلوماتك لأغراض غير مرتبطة بتلك المذكورة أعلاه.",
+ch3_title:"3. أمن المعلومات وتخزينها",
+ch3_text:"نطبق تدابير تقنية وإدارية معقولة لحماية معلوماتك الشخصية، بما في ذلك: استخدام تشفير HTTPS لجميع حركة المرور؛ تحديثات منتظمة لأنظمة الموقع وتصحيحات الأمان؛ التحكم في الوصول إلى سجلات المراسلات المخزنة. يتم تخزين بياناتك الشخصية على خوادم آمنة والاحتفاظ بها فقط للفترة الدنيا اللازمة. على الرغم من جهودنا، فإن نقل البيانات عبر الإنترنت ليس آمناً بشكل مطلق.",
+ch4_title:"4. الإفصاح لأطراف ثالثة",
+ch4_text:"لا نقوم ببيع أو تداول أو نقل معلوماتك الشخصية لأطراف ثالثة. الخدمات الخارجية المعنية: (1) Google AdSense: لعرض الإعلانات؛ راجع سياسة خصوصية Google https://policies.google.com/privacy؛ (2) Google Analytics: لتحليل حركة المرور ببيانات مجهولة؛ (3) منصات الشراكة: Mercado Libre، WorldFirst، PingPong، Airwallex، LianLian Pay، إلخ؛ (4) المتطلبات القانونية: الإفصاح عند الاقتضاء القانوني.",
+ch5_title:"5. استخدام ملفات تعريف الارتباط",
+ch5_text:"يستخدم هذا الموقع ملفات تعريف الارتباط: (1) ملفات تعريف الارتباط الأساسية: تذكر تفضيلات اللغة (localStorage)؛ (2) ملفات تعريف الارتباط التحليلية: Google Analytics لإحصاءات مجهولة؛ (3) ملفات تعريف الارتباط الإعلانية: قد تستخدم Google AdSense ملفات DoubleClick للإعلانات القائمة على الاهتمامات. يمكنك تعطيل ملفات تعريف الارتباط في إعدادات المتصفح.",
+ch6_title:"6. حماية القاصرين",
+ch6_text:"محتوى هذا الموقع موجه لممارسي التجارة الإلكترونية عبر الحدود وليس للأطفال دون سن 13 عاماً. نلتزم بقانون حماية خصوصية الأطفال على الإنترنت (COPPA) واللوائح الدولية. لا نجمع عن علم معلومات شخصية من أطفال دون 13 عاماً. في حالة الجمع غير المقصود، سنحذف البيانات فوراً. الآباء/الأوصياء: اتصلوا بنا على hgm123002@outlook.com.",
+ch7_title:"7. حقوق المستخدم",
+ch7_text:"بموجب قوانين حماية البيانات المعمول بها (GDPR، CCPA، إلخ)، لديك الحقوق التالية: (1) حق الوصول؛ (2) حق التصحيح؛ (3) حق الحذف؛ (4) حق الاعتراض على التسويق المباشر؛ (5) حق نقل البيانات. لممارسة هذه الحقوق: hgm123002@outlook.com. سنرد خلال 30 يوماً.",
+ch8_title:"8. تحديثات السياسة",
+ch8_text:"قد نقوم بتحديث سياسة الخصوصية هذه لتعكس التغييرات في ممارساتنا أو القوانين. سيتم نشر السياسة المحدثة مع تاريخ السريان. يوصى بالمراجعة الدورية. استمرار استخدام الموقع يشكل قبولاً بالسياسة المنقحة.",
+ch9_title:"9. نقل البيانات عبر الحدود",
+ch9_text:"كمنصة تجارة إلكترونية عبر الحدود في أمريكا اللاتينية، قد تتضمن معالجة البيانات عمليات نقل عبر الحدود. التفاصيل: (1) موقع الخادم: هذا الموقع مستضاف على خوادم في الولايات المتحدة؛ قد يتم نقل بياناتك إلى الولايات المتحدة ودول أخرى؛ (2) الغرض: تتدفق البيانات بين المناطق لعمليات الموقع وتوزيع المحتوى والدعم الفني؛ (3) الضمانات القانونية: الامتثال للقوانين المعمول بها (البنود التعاقدية القياسية للائحة العامة لحماية البيانات SCC، قانون حماية المعلومات الشخصية الصيني المادة 38، إلخ)؛ (4) تدابير الحماية: نقل مشفر، ضوابط الوصول، تقليل البيانات؛ (5) حقوقك: الحق في الإعلام والاعتراض. اتصل: hgm123002@outlook.com.",
+extra1_title:"10. ملاحظات حول التكيف مع 18 لغة",
+extra1_text:"هذه الصفحة متاحة بـ 18 لغة للبائعين العالميين. اللغات: 中文, English, Español, Português, Русский, Français, Deutsch, Italiano, العربية, Türkçe, Tiếng Việt, ภาษาไทย, Bahasa Indonesia, Bahasa Melayu, 한국어, 日本語, Polski, Nederlands. أول 9 لغات لديها ترجمات كاملة؛ اللغات التسع المتبقية تستخدم النسخة الإنجليزية. استخدم محدد اللغة في الأعلى. للإبلاغ عن عدم الدقة: hgm123002@outlook.com.",
+extra2_title:"ملحق: ملاحظات حول نافذة الموافقة على ملفات تعريف الارتباط",
+extra2_text:"يستخدم هذا الموقع نافذة منبثقة للموافقة على ملفات تعريف الارتباط. الآلية: (1) التنشيط: يظهر شريط الموافقة في أسفل الصفحة عند الزيارة الأولى أو بعد مسح بيانات المتصفح؛ (2) الاختيار: 'موافق' يسمح بجميع ملفات تعريف الارتباط، 'رفض' يحتفظ فقط بملفات تعريف الارتباط الوظيفية الأساسية (localStorage اللغة)؛ (3) التسجيل الدائم: يتم حفظ اختيارك في localStorage ويستمر عبر الزيارات اللاحقة؛ (4) سحب الموافقة: امسح ذاكرة التخزين المؤقت للمتصفح أو localStorage لإظهار النافذة مرة أخرى؛ (5) التأثير: بعد 'رفض'، لن يقوم الموقع بتحميل نصوص Google AdSense أو كود Google Analytics.",
+contact_title:"أسئلة حول الخصوصية؟",
+contact_desc:"للأسئلة أو الاقتراحات أو ممارسة حقوق البيانات الخاصة بك، اتصل بنا عبر البريد الإلكتروني. سنرد خلال 30 يوماً.",
+contact_btn:"الاتصال بفريق الخصوصية: hgm123002@outlook.com",
+cookie_text:"يستخدم هذا الموقع ملفات تعريف الارتباط والتخزين المحلي لتفضيلات اللغة والإعلانات المخصصة. بالمتابعة، أنت توافق على سياسة الخصوصية الخاصة بنا.",
+cookie_accept:"موافق",
+cookie_reject:"رفض",
+footer_home:"الرئيسية",
+footer_tools:"الأدوات",
+footer_articles:"المقالات",
+footer_partners:"الشركاء",
+footer_coop:"التعاون والتسوية",
+footer_contact:"اتصل بنا",
+footer_copy:"© 2026 MeliToolHub. جميع الحقوق محفوظة. هذا الموقع يلتزم بسياسات Google AdSense ولوائح الخصوصية الدولية."
+},
+
+/*══════════ End of translations ══════════*/
+};
+
+// Auto-fill fallback languages with English
+var en=T.en;
+['tr','vi','th','id','ms','ko','ja','pl','nl'].forEach(function(l){T[l]=Object.assign({},en);});
+
+var D=document,L=['zh','en','es','pt','ru','fr','de','it','ar','tr','vi','th','id','ms','ko','ja','pl','nl'];
+
+function p(l){
+  if(!T[l])return;
+  var t=T[l];
+  D.documentElement.lang=l==='zh'?'zh-CN':l;
+  D.documentElement.dir=l==='ar'?'rtl':'ltr';
+  D.querySelectorAll('[data-i18n]').forEach(function(e){
+    var k=e.getAttribute('data-i18n'),v=t[k];
+    if(typeof v!=='undefined')e.textContent=v;
+  });
+  D.querySelectorAll('[data-i18n-attrib]').forEach(function(e){
+    var k=e.getAttribute('data-i18n-attrib');
+    if(t[k])e.setAttribute('content',t[k]);
+  });
+  var metaDesc=D.querySelector('meta[name="description"]');
+  if(metaDesc&&t.seo_desc)metaDesc.setAttribute('content',t.seo_desc);
+  var ogTitle=D.querySelector('meta[property="og:title"]');
+  if(ogTitle&&t.og_title)ogTitle.setAttribute('content',t.og_title);
+  var ogDesc=D.querySelector('meta[property="og:description"]');
+  if(ogDesc&&t.og_desc)ogDesc.setAttribute('content',t.og_desc);
+  D.title=t.seo_title||D.title;
+  var sel=D.getElementById('lang-select');
+  if(sel)sel.value=l;
+  try{localStorage.setItem('mthlang',l);}catch(e){}
+}
+
+function gL(){
+  var u=new URL(window.location.href),up=u.searchParams.get('lang');
+  if(up&&L.indexOf(up)!==-1)return up;
+  try{var s=localStorage.getItem('mthlang');if(s&&L.indexOf(s)!==-1)return s;}catch(e){}
+  var n=navigator.language||navigator.userLanguage||'';
+  for(var i=0;i<L.length;i++){if(n.toLowerCase().indexOf(L[i])===0)return L[i];}
+  if(n.indexOf('zh')===0)return'zh';
+  return'zh';
+}
+
+D.addEventListener('DOMContentLoaded',function(){
+  var sel=D.getElementById('lang-select');
+  if(sel){
+    sel.value=gL();
+    sel.addEventListener('change',function(){p(this.value);});
+  }
+  p(gL());
+
+  // ===== Cookie Consent =====
+  var cb=D.getElementById('cookie-bar');
+  if(cb){
+    var consent=null;
+    try{consent=localStorage.getItem('mthCookieConsent');}catch(e){}
+    if(!consent){cb.classList.add('show');}
+    var cba=D.getElementById('cookie-accept');
+    var cbr=D.getElementById('cookie-reject');
+    if(cba)cba.addEventListener('click',function(){try{localStorage.setItem('mthCookieConsent','accepted');}catch(e){};cb.classList.remove('show');});
+    if(cbr)cbr.addEventListener('click',function(){try{localStorage.setItem('mthCookieConsent','rejected');}catch(e){};cb.classList.remove('show');});
+  }
+});
+})();
+</script>
+
 </body>
 </html>

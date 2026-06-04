@@ -1,14 +1,13 @@
-# MeliToolHub robots.txt
+# GlobalTrade Hub robots.txt
 # https://melitoolhub.com/robots.txt
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
 
-# 指定 sitemap 位置（提升 Google 收录效率）
+# 指定 sitemap 位置
 Sitemap: https://melitoolhub.com/sitemap.xml
 
-# 爬取速度限制（防止服务器压力过大）
+# 爬取速度限制
 Crawl-delay: 1
