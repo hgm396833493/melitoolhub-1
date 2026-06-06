@@ -433,6 +433,7 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 <section class="hero" id="home">
 <h1><span data-i18n="hero_title">跨境贸易一站式服务平台</span></h1>
 <p data-i18n="hero_subtitle">覆盖拉美、俄罗斯、东南亚、欧洲、中东 | 18语种合规内容 | 原创干货·实用工具·采购代办</p>
+<p class="hero-welcome" data-i18n="hero_welcome" style="font-size:.92rem;opacity:.82;max-width:740px;margin:0 auto 20px;line-height:1.8">亲爱的朋友，当您打开这个网站，您和我就建立了联系。我的初心是帮助更多人<b>买到物美价廉的好商品</b>。这里有跨境干货、政策合规、汇率换算、物流追踪等实用工具，还有中国采购代办服务和全球卖家交流社区。🌍 <b>让好货连接世界，让跨境生意更简单！</b></p>
 <div class="hero-btns">
 <a href="#articles" class="hero-btn hero-btn-primary" data-i18n="hero_btn1">探索跨境干货</a>
 <a href="#sourcing" class="hero-btn hero-btn-secondary" data-i18n="hero_btn2">中国采购代办</a>
@@ -796,6 +797,7 @@ nav_sourcing:"采购代办",
 nav_partners:"联盟工具",
 hero_title:"跨境贸易一站式服务平台",
 hero_subtitle:"覆盖拉美、俄罗斯、东南亚、欧洲、中东 | 18语种合规内容 | 原创干货·实用工具·采购代办",
+hero_welcome:"亲爱的朋友，当您打开这个网站，您和我就建立了联系。我的初心是帮助更多人买到物美价廉的好商品。这里有跨境干货、政策合规、汇率换算、物流追踪等实用工具，还有中国采购代办服务和全球卖家交流社区。让好货连接世界，让跨境生意更简单！",
 hero_btn1:"探索跨境干货",
 hero_btn2:"中国采购代办",
 sec1_title:"📝 跨境干货文章",
@@ -880,6 +882,7 @@ nav_sourcing:"Sourcing",
 nav_partners:"Partners",
 hero_title:"Your One-Stop Cross-Border Trade Platform",
 hero_subtitle:"Latin America · Russia · Southeast Asia · Europe · Middle East | 18 Languages | Original Content · Tools · Sourcing",
+hero_welcome:"Welcome, friend! By visiting this site, you and I are now connected. My mission is to help more people access quality products at fair prices. Here you'll find cross-border insights, compliance guides, currency tools, logistics tracking, China sourcing services, and a global seller community. Let quality goods connect the world, and make cross-border trade easier!",
 hero_btn1:"Explore Articles",
 hero_btn2:"China Sourcing",
 sec1_title:"📝 Cross-Border Articles",
@@ -1815,12 +1818,14 @@ function updateCommentForm(){
 }
 
 async function submitComment(){
+  if(!initSupabase()){showCommentToast('System not ready, refresh page');return;}
   var input = document.getElementById('comment-input');
-  if(!input||!input.value.trim())return;
+  if(!input||!input.value.trim()){showCommentToast('Please write a comment first');return;}
   var content = input.value.trim();
-  if(content.length>1000)return;
+  if(content.length>1000){showCommentToast('Comment too long (max 1000 chars)');return;}
   var btn = document.getElementById('comment-submit');
-  if(btn)btn.disabled = true;
+  if(!currentUser){showCommentToast('Please login first');return;}
+  if(btn){btn.disabled = true; btn.textContent = 'Posting...';}
   try{
     var r = await supabaseClient.from('comments').insert({
       page_path: getPagePath(),
@@ -1828,18 +1833,35 @@ async function submitComment(){
       content: content,
       parent_id: null
     }).select('*, profiles(nickname)').single();
-    if(r.error){console.error(r.error);if(btn)btn.disabled=false;return;}
+    if(r.error){showCommentToast(r.error.message||'Failed to post');if(btn){btn.disabled=false;btn.textContent='Post';}return;}
     input.value = '';
-    document.getElementById('comment-char-count').textContent = '0/1000';
-    if(btn)btn.disabled = false;
+    var cc = document.getElementById('comment-char-count');
+    if(cc)cc.textContent = '0/1000';
+    if(btn){btn.disabled = false; btn.textContent = 'Post';}
+    showCommentToast('Posted!');
     await loadComments();
-  }catch(e){console.error(e);if(btn)btn.disabled=false;}
+  }catch(e){showCommentToast(e.message||'Network error');if(btn){btn.disabled=false;btn.textContent='Post';}}
+}
+
+function showCommentToast(msg){
+  var t = document.getElementById('comment-toast');
+  if(!t){
+    t = document.createElement('div');
+    t.id = 'comment-toast';
+    t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a3a5c;color:#fff;padding:10px 24px;border-radius:8px;font-size:.88rem;z-index:10001;transition:opacity .3s;opacity:0;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,.3)';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.style.opacity = '1';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(function(){t.style.opacity='0';},2500);
 }
 
 async function submitReply(parentId){
+  if(!initSupabase()){showCommentToast('System not ready, refresh page');return;}
   var form = document.getElementById('reply-form-' + parentId);
   var textarea = form ? form.querySelector('textarea') : null;
-  if(!textarea||!textarea.value.trim())return;
+  if(!textarea||!textarea.value.trim()){showCommentToast('Please write a reply first');return;}
   var content = textarea.value.trim();
   try{
     var r = await supabaseClient.from('comments').insert({
@@ -1848,10 +1870,11 @@ async function submitReply(parentId){
       content: content,
       parent_id: parentId
     }).select('*, profiles(nickname)').single();
-    if(r.error){console.error(r.error);return;}
+    if(r.error){showCommentToast(r.error.message||'Failed to reply');return;}
     activeReplyId = null;
+    showCommentToast('Reply posted!');
     await loadComments();
-  }catch(e){console.error(e);}
+  }catch(e){showCommentToast(e.message||'Network error');}
 }
 
 function showReplyForm(commentId){
