@@ -601,7 +601,7 @@ async function handleSubscribeFooter(e,form){
 
 
 
-    :root{--primary:#1a3a5c;--accent:#f0b429;--bg:#f5f7fa;--card:#fff;--text:#333;--sub:#666;--radius:12px;--shadow:0 4px 18px rgba(0,0,0,.08);}
+    :root{--p:#1a3a5c;--primary:#1a3a5c;--accent:#f0b429;--bg:#f5f7fa;--card:#fff;--text:#333;--sub:#666;--radius:12px;--shadow:0 4px 18px rgba(0,0,0,.08);}
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;}
     a{text-decoration:none;color:inherit;}
@@ -757,7 +757,10 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 @keyframes rocket-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .rocket-badge{position:absolute;top:-4px;right:-4px;background:#fff;color:#e8453c;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15);white-space:nowrap}
 @media(max-width:768px){.rocket-btn{bottom:20px;right:16px;width:50px;height:50px}.rocket-btn svg{width:28px;height:28px}}
-</style>
+
+.nav-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.nav-lang{display:flex;align-items:center;gap:4px;margin-right:4px}
+.nav-lang select{padding:4px 6px;border-radius:5px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;font-size:.8rem;cursor:pointer}</style>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">

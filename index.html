@@ -431,7 +431,24 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 @keyframes rocket-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .rocket-badge{position:absolute;top:-4px;right:-4px;background:#fff;color:#e8453c;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15);white-space:nowrap}
 @media(max-width:768px){.rocket-btn{bottom:20px;right:16px;width:50px;height:50px}.rocket-btn svg{width:28px;height:28px}}
-</style>
+
+@media(max-width:768px){
+.nav-toggle{display:block}
+.nav-links{display:none;position:absolute;top:54px;left:0;right:0;background:var(--p);flex-direction:column;padding:8px 16px;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.nav-links.active{display:flex}
+.nav-group{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:10px 8px;cursor:pointer;font-size:.85rem}
+.nav-group-items{display:none;padding:0 8px 8px;flex-direction:column}
+.nav-group-items.active{display:flex}
+.nav-arrow{display:inline-block;font-size:.7rem;transition:transform .2s;color:rgba(255,255,255,.7)}
+.nav-arrow.rotated{transform:rotate(180deg);color:#fff}
+.nav-actions{gap:6px}
+.nav-lang{padding:0;gap:3px}
+.nav-lang select{max-width:90px;font-size:.7rem}
+.nav-btn-login{padding:4px 10px;font-size:.72rem}
+.nav-btn-register{padding:5px 10px;font-size:.72rem}
+.nav-user-name{display:none}
+}</style>
 </head>
 <body>
 
