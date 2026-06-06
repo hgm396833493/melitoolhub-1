@@ -1,5 +1,34 @@
+# ========== Python ==========
+*.py
+__pycache__/
+*.pyc
+*.pyo
+
+# ========== 临时/审计文档 ==========
+*_AUDIT.md
+*_CHECKLIST.md
+*.docx
+
+# ========== 构建产物 ==========
 node_modules/
+dist/
+out/
+.next/
+
+# ========== 系统文件 ==========
 .DS_Store
 Thumbs.db
 *.log
+
+# ========== IDE ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========== WorkBuddy ==========
 .workbuddy/
+
+# ========== 图片（待制作后取消注释） ==========
+# og-image.jpg
+# apple-touch-icon.png

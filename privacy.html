@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title data-i18n="seo_title">隐私政策 | MeliToolHub 拉美跨境电商平台</title>
-<meta name="description" data-i18n-attrib="seo_desc" content="MeliToolHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。">
+<title data-i18n="seo_title">隐私政策 | GlobalTradeHub 拉美跨境电商平台</title>
+<meta name="description" data-i18n-attrib="seo_desc" content="GlobalTradeHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://melitoolhub.com/privacy.html">
 
@@ -28,15 +28,25 @@
 <link rel="alternate" hreflang="nl"    href="https://melitoolhub.com/privacy.html?lang=nl">
 <link rel="alternate" hreflang="x-default" href="https://melitoolhub.com/privacy.html">
 
-<meta property="og:title"       content="隐私政策 | MeliToolHub" data-i18n-attrib="og_title">
-<meta property="og:description" content="了解 MeliToolHub 如何收集、使用和保护您的个人信息。遵守 GDPR 及国际隐私保护标准。" data-i18n-attrib="og_desc">
+<meta property="og:title"       content="隐私政策 | GlobalTradeHub" data-i18n-attrib="og_title">
+<meta property="og:description" content="了解 GlobalTradeHub 如何收集、使用和保护您的个人信息。遵守 GDPR 及国际隐私保护标准。" data-i18n-attrib="og_desc">
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://melitoolhub.com/privacy.html">
-<meta property="og:site_name"   content="MeliToolHub">
+<meta property="og:site_name"   content="GlobalTradeHub">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="GlobalTradeHub"/>
+<meta name="twitter:description" content="GlobalTradeHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。"/>
+<meta name="twitter:image" content="https://melitoolhub.com/og-image.jpg"/>
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 <style>
+/* Nav */
+.nav-links{display:flex;gap:2px;flex-wrap:wrap}
+.nav-links a{color:rgba(255,255,255,.82);font-size:.85rem;padding:7px 12px;border-radius:6px;transition:.2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.14);color:#fff}
+.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
+
 :root{--p:#1a3a5c;--a:#f0b429;--bg:#f5f7fa;--c:#fff;--t:#333;--s:#666;--r:12px;--sh:0 4px 18px rgba(0,0,0,.08);--border:#edf0f5;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.7;min-height:100vh;}
@@ -44,6 +54,12 @@ a{text-decoration:none;color:inherit;}
 img{max-width:100%;height:auto;display:block;}
 
 /* Nav */
+/* Nav Language Selector */
+.nav-lang{display:flex;align-items:center;gap:4px;margin-right:4px}
+.nav-lang label{color:rgba(255,255,255,.7);font-size:.82rem;cursor:pointer}
+.nav-lang select{padding:4px 6px;border-radius:5px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font-size:.78rem;cursor:pointer;outline:none}
+.nav-lang select:focus{border-color:var(--a)}
+.nav-lang select option{background:var(--p);color:#fff}
 nav{background:var(--p);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.2);gap:16px;}
 .nav-left{display:flex;align-items:center;gap:16px;}
 .nav-logo{color:var(--c);font-size:1.3rem;font-weight:700;letter-spacing:1px;white-space:nowrap;}
@@ -132,6 +148,8 @@ footer{background:var(--p);color:var(--c);padding:36px 24px 24px;text-align:cent
   .nav-logo{font-size:1.05rem;}
   .nav-back{font-size:.82rem;padding:6px 10px;}
   .lang-select{min-width:85px;font-size:.74rem;padding:5px 26px 5px 8px;}
+
+.nav-lang select{max-width:90px;font-size:.7rem}
 }
 @media(max-width:360px){
   .hero h1{font-size:1.05rem;}
@@ -162,41 +180,167 @@ html[dir="rtl"]{direction:rtl;text-align:right}
 html[dir="rtl"] .nav-left,html[dir="rtl"] .nav-right{direction:rtl}
 html[dir="rtl"] .privacy-card p{text-align:right}
 html[dir="rtl"] .lang-select{direction:rtl}
+
+
+/* Auth Modal */
+.auth-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10001;display:none;align-items:center;justify-content:center}
+.auth-overlay.show{display:flex}
+.auth-panel{background:var(--c);border-radius:14px;width:min(420px,92vw);box-shadow:0 20px 60px rgba(0,0,0,.35);overflow:hidden;animation:authSlideIn .25s ease}
+@keyframes authSlideIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.auth-header{background:var(--p);color:#fff;padding:20px 24px;text-align:center;position:relative}
+.auth-header h3{font-size:1.1rem;font-weight:700;margin:0}
+.auth-header p{font-size:.78rem;opacity:.8;margin:4px 0 0}
+.auth-close{position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(255,255,255,.7);font-size:1.3rem;cursor:pointer;padding:4px;line-height:1}
+.auth-close:hover{color:#fff}
+.auth-body{padding:24px 24px 8px}
+.auth-body label{display:block;font-size:.8rem;font-weight:600;color:var(--p);margin-bottom:4px;margin-top:12px}
+.auth-body label:first-child{margin-top:0}
+.auth-body input{width:100%;padding:10px 12px;border:1px solid #d0d7e3;border-radius:8px;font-size:.9rem;outline:none;background:var(--bg);transition:.2s}
+.auth-body input:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+.auth-submit{width:100%;margin-top:18px;padding:11px;background:var(--p);color:#fff;border:none;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;transition:.2s}
+.auth-submit:hover{background:#2d6a9f}
+.auth-submit:disabled{opacity:.6;cursor:not-allowed}
+.auth-error{color:#e74c3c;font-size:.78rem;margin-top:8px;display:none;text-align:center}
+.auth-error.show{display:block}
+.auth-success{color:#27ae60;font-size:.78rem;margin-top:8px;display:none;text-align:center}
+.auth-success.show{display:block}
+.auth-footer{padding:0 24px 20px;text-align:center;font-size:.82rem;color:var(--s)}
+.auth-footer a{color:var(--p);font-weight:600;cursor:pointer;text-decoration:underline}
+.auth-footer a:hover{color:#2d6a9f}
+/* Auth Tabs */
+.auth-tabs{display:flex;border-bottom:1px solid var(--bdr)}
+.auth-tab{flex:1;text-align:center;padding:12px;font-size:.88rem;font-weight:600;color:var(--s);cursor:pointer;border:none;background:none;transition:.2s;border-bottom:2px solid transparent}
+.auth-tab.active{color:var(--p);border-bottom-color:var(--p)}
+.auth-tab:hover{color:var(--p);background:rgba(26,58,92,.03)}
+/* Nav Auth Buttons */
+.nav-auth-btns{display:flex;align-items:center;gap:8px}
+.nav-btn-login,.nav-btn-register{padding:6px 14px;border-radius:6px;font-size:.8rem;font-weight:600;cursor:pointer;transition:.2s;border:none;white-space:nowrap}
+.nav-btn-login{background:rgba(255,255,255,.15);color:#fff}
+.nav-btn-login:hover{background:rgba(255,255,255,.25)}
+.nav-btn-register{background:var(--a);color:var(--p)}
+.nav-btn-register:hover{background:#e0a020}
+.nav-user-info{display:flex;align-items:center;gap:8px;cursor:pointer;position:relative}
+.nav-user-avatar{width:32px;height:32px;border-radius:50%;background:var(--a);color:var(--p);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+.nav-user-name{color:#fff;font-size:.82rem;font-weight:600;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nav-user-dropdown{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:var(--c);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.2);min-width:150px;overflow:hidden;z-index:1000}
+.nav-user-info:hover .nav-user-dropdown,.nav-user-dropdown.show{display:block}
+.nav-user-dropdown a,.nav-user-dropdown button{display:block;width:100%;padding:10px 16px;font-size:.82rem;color:var(--t);text-align:left;background:none;border:none;cursor:pointer;transition:.15s}
+.nav-user-dropdown a:hover,.nav-user-dropdown button:hover{background:#f5f7fa;color:var(--p)}
+.nav-user-dropdown button.logout-btn{color:#e74c3c;border-top:1px solid var(--bdr)}
+/* Community Comments */
+.community-section{max-width:1140px;margin:40px auto 0;padding:0 24px}
+.community-section .sec-header{margin-bottom:20px}
+.comment-box{background:var(--c);border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--bdr);overflow:hidden}
+.comment-form-wrap{padding:20px 24px;border-bottom:1px solid var(--bdr);background:#fafbfc}
+.comment-form-wrap .login-prompt{text-align:center;padding:16px;font-size:.88rem;color:var(--s)}
+.comment-form-wrap .login-prompt a{color:var(--p);font-weight:600;cursor:pointer;text-decoration:underline}
+.comment-input{width:100%;min-height:80px;padding:12px;border:1px solid #d0d7e3;border-radius:8px;font-size:.9rem;outline:none;resize:vertical;font-family:inherit;background:#fff;transition:.2s}
+.comment-input:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+.comment-submit-row{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:10px}
+.comment-char-count{font-size:.75rem;color:var(--s)}
+.comment-submit-btn{padding:8px 20px;background:var(--p);color:#fff;border:none;border-radius:6px;font-size:.85rem;font-weight:600;cursor:pointer;transition:.2s}
+.comment-submit-btn:hover{background:#2d6a9f}
+.comment-submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.comment-list{padding:16px 24px}
+.comment-empty{text-align:center;padding:40px 20px;color:var(--s);font-size:.9rem}
+.comment-empty .icon{font-size:2.5rem;display:block;margin-bottom:10px}
+.comment-item{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #f0f1f3}
+.comment-item:last-child{border-bottom:none}
+.comment-avatar{width:36px;height:36px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0}
+.comment-body{flex:1;min-width:0}
+.comment-author{font-weight:600;font-size:.85rem;color:var(--p);margin-bottom:2px}
+.comment-time{font-size:.72rem;color:#aaa;margin-left:8px;font-weight:400}
+.comment-text{font-size:.88rem;color:var(--t);line-height:1.6;word-break:break-word}
+.comment-actions{display:flex;gap:14px;margin-top:8px;align-items:center}
+.comment-like,.comment-reply-btn,.comment-delete{background:none;border:none;font-size:.78rem;color:var(--s);cursor:pointer;padding:2px 4px;border-radius:4px;transition:.15s;display:flex;align-items:center;gap:4px}
+.comment-like:hover,.comment-reply-btn:hover{color:var(--p);background:rgba(26,58,92,.05)}
+.comment-delete:hover{color:#e74c3c;background:rgba(231,76,60,.05)}
+.comment-like.liked{color:#e74c3c}
+/* Reply thread */
+.comment-replies{margin-left:32px;border-left:2px solid #edf0f5;padding-left:16px;margin-top:8px}
+.comment-reply-form{padding:12px 0}
+.comment-reply-form textarea{width:100%;min-height:50px;padding:10px;border:1px solid #d0d7e3;border-radius:6px;font-size:.85rem;outline:none;resize:vertical;font-family:inherit;transition:.2s}
+.comment-reply-form textarea:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+.comment-reply-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:6px}
+.comment-cancel-btn{padding:6px 14px;background:none;border:1px solid #d0d7e3;border-radius:6px;font-size:.8rem;cursor:pointer;color:var(--s);transition:.2s}
+.comment-cancel-btn:hover{background:#f0f0f0}
+.comment-loading{text-align:center;padding:20px;color:var(--s);font-size:.85rem}
+@media(max-width:768px){
+.community-section{padding:0 12px;margin:32px auto 0}
+.comment-form-wrap{padding:14px 16px}
+.comment-list{padding:12px 16px}
+.comment-replies{margin-left:16px;padding-left:12px}
+.nav-auth-btns .nav-btn-register{display:none}
+.nav-user-name{display:none}
+}
+
+@media(max-width:768px){
+.nav-links{
+display:none;
+position:absolute;
+top:54px;
+left:0;
+right:0;
+background:var(--p);
+flex-direction:column;
+padding:8px 16px;
+box-shadow:0 6px 16px rgba(0,0,0,.3)
+}
+.nav-links.open{display:flex}
+.nav-links a{padding:12px 8px;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem}
+.nav-toggle{display:block}
+}
 </style>
 </head>
 <body>
 
 <!-- Nav -->
 <nav role="navigation" aria-label="主导航">
-  <div class="nav-left">
-    <div class="nav-logo">Meli<span>Tool</span>Hub</div>
-  </div>
-  <div class="nav-right">
-    <div class="lang-select-wrap">
-      <select class="lang-select" id="lang-select" aria-label="选择语言">
-        <option value="zh">中文</option>
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="pt">Português</option>
-        <option value="ru">Русский</option>
-        <option value="fr">Français</option>
-        <option value="de">Deutsch</option>
-        <option value="it">Italiano</option>
-        <option value="ar">العربية</option>
-        <option value="tr">Türkçe</option>
-        <option value="vi">Tiếng Việt</option>
-        <option value="th">ภาษาไทย</option>
-        <option value="id">Bahasa Indonesia</option>
-        <option value="ms">Bahasa Melayu</option>
-        <option value="ko">한국어</option>
-        <option value="ja">日本語</option>
-        <option value="pl">Polski</option>
-        <option value="nl">Nederlands</option>
-      </select>
-      <span class="lang-select-arrow">▼</span>
-    </div>
-    <a href="index.html" class="nav-back" data-i18n="nav_back">← 返回首页</a>
-  </div>
+<a href="index.html" class="nav-logo">Global<span>Trade</span>Hub</a>
+<div class="nav-links" id="nav-links">
+<a href="index.html" data-i18n="nav_home">首页</a>
+<a href="index.html#articles" data-i18n="nav_articles">跨境干货</a>
+<a href="index.html#policy" data-i18n="nav_policy">政策合规</a>
+<a href="index.html#tools" data-i18n="nav_tools">实用工具</a>
+<a href="index.html#sourcing" data-i18n="nav_sourcing">采购代办</a>
+<a href="index.html#partners" data-i18n="nav_partners">联盟工具</a>
+<a href="index.html#community" data-i18n="nav_community">用户交流</a>
+</div>
+<div class="nav-actions">
+<div class="nav-lang">
+<label for="lang-select">🌐</label>
+<select id="lang-select" aria-label="切换语言">
+<option value="zh">中文</option>
+<option value="en">EN</option>
+<option value="es">ES</option>
+<option value="pt">PT</option>
+<option value="ru">RU</option>
+<option value="fr">FR</option>
+<option value="de">DE</option>
+<option value="it">IT</option>
+<option value="ar">AR</option>
+<option value="tr">TR</option>
+<option value="vi">VI</option>
+<option value="th">TH</option>
+<option value="id">ID</option>
+<option value="ms">MS</option>
+<option value="ko">KO</option>
+<option value="ja">JA</option>
+<option value="pl">PL</option>
+<option value="nl">NL</option>
+</select>
+</div>
+<div class="nav-auth-btns" id="nav-auth-btns">
+<button class="nav-btn-login" id="nav-btn-login" data-i18n="btn_login">登录</button>
+<button class="nav-btn-register" id="nav-btn-register" data-i18n="btn_register">注册</button>
+<div class="nav-user-info" id="nav-user-info" style="display:none">
+<span class="nav-user-avatar" id="nav-user-avatar"></span>
+<span class="nav-user-name" id="nav-user-name"></span>
+<button class="nav-btn-logout" id="nav-btn-logout" data-i18n="btn_logout">退出</button>
+</div>
+</div>
+<button class="nav-toggle" id="nav-toggle" aria-label="菜单">☰</button>
+</div>
 </nav>
 
 <!-- Hero -->
@@ -297,6 +441,26 @@ html[dir="rtl"] .lang-select{direction:rtl}
 </main>
 
 <!-- Footer -->
+
+-- ===== Community Discussion Section ===== -->
+<section class="community-section" id="community">
+<div class="sec-header">
+<h2><span data-i18n="community_title">💬 全球贸易商交流区</span></h2>
+<div class="sec-divider"></div>
+<p data-i18n="community_desc">跨境贸易同行交流讨论，分享经验、解答疑问</p>
+</div>
+<div class="comment-box">
+<div class="comment-form-wrap" id="comment-form-wrap">
+<!-- Filled by JS: either login prompt or comment form -->
+</div>
+<div class="comment-loading" id="comment-loading">⏳ <span data-i18n="comment_loading">加载评论中...</span></div>
+<div class="comment-list" id="comment-list"></div>
+<div class="comment-empty" id="comment-empty" style="display:none">
+<span class="icon">💬</span>
+<p data-i18n="comment_empty">暂无评论，成为第一个发言的人吧！</p>
+</div>
+</div>
+</section>
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-links">
@@ -308,7 +472,7 @@ html[dir="rtl"] .lang-select{direction:rtl}
       <a href="sitemap.xml">Sitemap</a>
       <a href="mailto:hgm123002@outlook.com" data-i18n="footer_contact">联系我们</a>
     </div>
-    <p class="footer-copy" data-i18n="footer_copy">© 2026 MeliToolHub. All Rights Reserved. 本站遵守 Google AdSense 广告政策及国际隐私保护法规。</p>
+    <p class="footer-copy" data-i18n="footer_copy">© 2026 GlobalTradeHub. All Rights Reserved. 本站遵守 Google AdSense 广告政策及国际隐私保护法规。</p>
   </div>
 </footer>
 
@@ -328,8 +492,8 @@ html[dir="rtl"] .lang-select{direction:rtl}
   "@type":"WebPage",
   "name":"隐私政策",
   "url":"https://melitoolhub.com/privacy.html",
-  "description":"MeliToolHub 隐私政策：信息收集、使用、存储、第三方披露、Cookie、未成年人保护及用户权利说明",
-  "isPartOf":{"@type":"WebSite","name":"MeliToolHub","url":"https://melitoolhub.com"},
+  "description":"GlobalTradeHub 隐私政策：信息收集、使用、存储、第三方披露、Cookie、未成年人保护及用户权利说明",
+  "isPartOf":{"@type":"WebSite","name":"GlobalTradeHub","url":"https://melitoolhub.com"},
   "breadcrumb":{
     "@type":"BreadcrumbList",
     "itemListElement":[
@@ -347,10 +511,10 @@ var T={
 
 /*══════════ 中文 (zh) ══════════*/
 zh:{
-seo_title:"隐私政策 | MeliToolHub 拉美跨境电商平台",
-seo_desc:"MeliToolHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。",
-og_title:"隐私政策 | MeliToolHub",
-og_desc:"了解 MeliToolHub 如何收集、使用和保护您的个人信息。遵守 GDPR 及国际隐私保护标准。",
+seo_title:"隐私政策 | GlobalTradeHub 拉美跨境电商平台",
+seo_desc:"GlobalTradeHub 隐私政策页面。了解我们如何收集、使用和保护您的个人信息。本网站遵守 Google AdSense 广告政策和 GDPR 数据保护要求。",
+og_title:"隐私政策 | GlobalTradeHub",
+og_desc:"了解 GlobalTradeHub 如何收集、使用和保护您的个人信息。遵守 GDPR 及国际隐私保护标准。",
 nav_back:"← 返回首页",
 hero_title:"隐私政策",
 hero_desc:"我们重视您的隐私。本政策说明了我们如何收集、使用和保护您的个人信息。",
@@ -391,15 +555,15 @@ footer_articles:"原创文章",
 footer_partners:"合作伙伴",
 footer_coop:"合作与结算",
 footer_contact:"联系我们",
-footer_copy:"© 2026 MeliToolHub. All Rights Reserved. 本站遵守 Google AdSense 广告政策及国际隐私保护法规。"
+footer_copy:"© 2026 GlobalTradeHub. All Rights Reserved. 本站遵守 Google AdSense 广告政策及国际隐私保护法规。"
 },
 
 /*══════════ English (en) ══════════*/
 en:{
-seo_title:"Privacy Policy | MeliToolHub Latin America Cross-Border Platform",
-seo_desc:"MeliToolHub Privacy Policy. Learn how we collect, use, and protect your personal information. This site complies with Google AdSense advertising policies and GDPR data protection requirements.",
-og_title:"Privacy Policy | MeliToolHub",
-og_desc:"Learn how MeliToolHub collects, uses, and protects your personal information. GDPR and international privacy standards compliant.",
+seo_title:"Privacy Policy | GlobalTradeHub Latin America Cross-Border Platform",
+seo_desc:"GlobalTradeHub Privacy Policy. Learn how we collect, use, and protect your personal information. This site complies with Google AdSense advertising policies and GDPR data protection requirements.",
+og_title:"Privacy Policy | GlobalTradeHub",
+og_desc:"Learn how GlobalTradeHub collects, uses, and protects your personal information. GDPR and international privacy standards compliant.",
 nav_back:"← Back to Home",
 hero_title:"Privacy Policy",
 hero_desc:"We value your privacy. This policy explains how we collect, use, and protect your personal information.",
@@ -440,15 +604,15 @@ footer_articles:"Articles",
 footer_partners:"Partners",
 footer_coop:"Cooperation & Settlement",
 footer_contact:"Contact Us",
-footer_copy:"© 2026 MeliToolHub. All Rights Reserved. This site complies with Google AdSense advertising policies and international privacy protection regulations."
+footer_copy:"© 2026 GlobalTradeHub. All Rights Reserved. This site complies with Google AdSense advertising policies and international privacy protection regulations."
 },
 
 /*══════════ Español (es) ══════════*/
 es:{
-seo_title:"Política de Privacidad | MeliToolHub Plataforma Transfronteriza LATAM",
-seo_desc:"Política de Privacidad de MeliToolHub. Conozca cómo recopilamos, usamos y protegemos su información personal. Cumplimos con las políticas de Google AdSense y los requisitos del GDPR.",
-og_title:"Política de Privacidad | MeliToolHub",
-og_desc:"Conozca cómo MeliToolHub recopila, usa y protege su información personal. Cumple con GDPR y estándares internacionales de privacidad.",
+seo_title:"Política de Privacidad | GlobalTradeHub Plataforma Transfronteriza LATAM",
+seo_desc:"Política de Privacidad de GlobalTradeHub. Conozca cómo recopilamos, usamos y protegemos su información personal. Cumplimos con las políticas de Google AdSense y los requisitos del GDPR.",
+og_title:"Política de Privacidad | GlobalTradeHub",
+og_desc:"Conozca cómo GlobalTradeHub recopila, usa y protege su información personal. Cumple con GDPR y estándares internacionales de privacidad.",
 nav_back:"← Volver al Inicio",
 hero_title:"Política de Privacidad",
 hero_desc:"Valoramos su privacidad. Esta política explica cómo recopilamos, usamos y protegemos su información personal.",
@@ -489,15 +653,15 @@ footer_articles:"Artículos",
 footer_partners:"Socios",
 footer_coop:"Cooperación y Liquidación",
 footer_contact:"Contacto",
-footer_copy:"© 2026 MeliToolHub. Todos los derechos reservados. Este sitio cumple con las políticas de Google AdSense y las regulaciones internacionales de protección de privacidad."
+footer_copy:"© 2026 GlobalTradeHub. Todos los derechos reservados. Este sitio cumple con las políticas de Google AdSense y las regulaciones internacionales de protección de privacidad."
 },
 
 /*══════════ Português (pt) ══════════*/
 pt:{
-seo_title:"Política de Privacidade | MeliToolHub Plataforma Transfronteiriça LATAM",
-seo_desc:"Política de Privacidade da MeliToolHub. Saiba como coletamos, usamos e protegemos suas informações pessoais. Em conformidade com as políticas do Google AdSense e requisitos do GDPR.",
-og_title:"Política de Privacidade | MeliToolHub",
-og_desc:"Saiba como a MeliToolHub coleta, usa e protege suas informações pessoais. Em conformidade com GDPR e padrões internacionais de privacidade.",
+seo_title:"Política de Privacidade | GlobalTradeHub Plataforma Transfronteiriça LATAM",
+seo_desc:"Política de Privacidade da GlobalTradeHub. Saiba como coletamos, usamos e protegemos suas informações pessoais. Em conformidade com as políticas do Google AdSense e requisitos do GDPR.",
+og_title:"Política de Privacidade | GlobalTradeHub",
+og_desc:"Saiba como a GlobalTradeHub coleta, usa e protege suas informações pessoais. Em conformidade com GDPR e padrões internacionais de privacidade.",
 nav_back:"← Voltar ao Início",
 hero_title:"Política de Privacidade",
 hero_desc:"Valorizamos sua privacidade. Esta política explica como coletamos, usamos e protegemos suas informações pessoais.",
@@ -538,15 +702,15 @@ footer_articles:"Artigos",
 footer_partners:"Parceiros",
 footer_coop:"Cooperação e Liquidação",
 footer_contact:"Contato",
-footer_copy:"© 2026 MeliToolHub. Todos os direitos reservados. Este site cumpre as políticas do Google AdSense e as regulamentações internacionais de proteção de privacidade."
+footer_copy:"© 2026 GlobalTradeHub. Todos os direitos reservados. Este site cumpre as políticas do Google AdSense e as regulamentações internacionais de proteção de privacidade."
 },
 
 /*══════════ Русский (ru) ══════════*/
 ru:{
-seo_title:"Политика Конфиденциальности | MeliToolHub Трансграничная Платформа LATAM",
-seo_desc:"Политика конфиденциальности MeliToolHub. Узнайте, как мы собираем, используем и защищаем вашу личную информацию. Соответствует политикам Google AdSense и требованиям GDPR.",
-og_title:"Политика Конфиденциальности | MeliToolHub",
-og_desc:"Узнайте, как MeliToolHub собирает, использует и защищает вашу личную информацию. Соответствие GDPR и международным стандартам конфиденциальности.",
+seo_title:"Политика Конфиденциальности | GlobalTradeHub Трансграничная Платформа LATAM",
+seo_desc:"Политика конфиденциальности GlobalTradeHub. Узнайте, как мы собираем, используем и защищаем вашу личную информацию. Соответствует политикам Google AdSense и требованиям GDPR.",
+og_title:"Политика Конфиденциальности | GlobalTradeHub",
+og_desc:"Узнайте, как GlobalTradeHub собирает, использует и защищает вашу личную информацию. Соответствие GDPR и международным стандартам конфиденциальности.",
 nav_back:"← На главную",
 hero_title:"Политика Конфиденциальности",
 hero_desc:"Мы ценим вашу конфиденциальность. Эта политика объясняет, как мы собираем, используем и защищаем вашу личную информацию.",
@@ -587,15 +751,15 @@ footer_articles:"Статьи",
 footer_partners:"Партнеры",
 footer_coop:"Сотрудничество и Расчеты",
 footer_contact:"Контакты",
-footer_copy:"© 2026 MeliToolHub. Все права защищены. Сайт соблюдает политики Google AdSense и международные нормы защиты конфиденциальности."
+footer_copy:"© 2026 GlobalTradeHub. Все права защищены. Сайт соблюдает политики Google AdSense и международные нормы защиты конфиденциальности."
 },
 
 /*══════════ Français (fr) ══════════*/
 fr:{
-seo_title:"Politique de Confidentialité | MeliToolHub Plateforme Transfrontalière LATAM",
-seo_desc:"Politique de confidentialité MeliToolHub. Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles. Conforme aux politiques Google AdSense et aux exigences du RGPD.",
-og_title:"Politique de Confidentialité | MeliToolHub",
-og_desc:"Découvrez comment MeliToolHub collecte, utilise et protège vos informations personnelles. Conforme au RGPD et aux normes internationales de confidentialité.",
+seo_title:"Politique de Confidentialité | GlobalTradeHub Plateforme Transfrontalière LATAM",
+seo_desc:"Politique de confidentialité GlobalTradeHub. Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles. Conforme aux politiques Google AdSense et aux exigences du RGPD.",
+og_title:"Politique de Confidentialité | GlobalTradeHub",
+og_desc:"Découvrez comment GlobalTradeHub collecte, utilise et protège vos informations personnelles. Conforme au RGPD et aux normes internationales de confidentialité.",
 nav_back:"← Retour à l'Accueil",
 hero_title:"Politique de Confidentialité",
 hero_desc:"Nous attachons de l'importance à votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles.",
@@ -636,15 +800,15 @@ footer_articles:"Articles",
 footer_partners:"Partenaires",
 footer_coop:"Coopération et Règlement",
 footer_contact:"Contact",
-footer_copy:"© 2026 MeliToolHub. Tous droits réservés. Ce site respecte les politiques Google AdSense et les réglementations internationales de protection de la vie privée."
+footer_copy:"© 2026 GlobalTradeHub. Tous droits réservés. Ce site respecte les politiques Google AdSense et les réglementations internationales de protection de la vie privée."
 },
 
 /*══════════ Deutsch (de) ══════════*/
 de:{
-seo_title:"Datenschutzerklärung | MeliToolHub LATAM Cross-Border-Plattform",
+seo_title:"Datenschutzerklärung | GlobalTradeHub LATAM Cross-Border-Plattform",
 seo_desc:"MelitoolHub Datenschutzerklärung. Erfahren Sie, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen. Konform mit Google AdSense-Richtlinien und DSGVO.",
-og_title:"Datenschutzerklärung | MeliToolHub",
-og_desc:"Erfahren Sie, wie MeliToolHub Ihre Daten erfasst, verwendet und schützt. DSGVO-konform und nach internationalen Datenschutzstandards.",
+og_title:"Datenschutzerklärung | GlobalTradeHub",
+og_desc:"Erfahren Sie, wie GlobalTradeHub Ihre Daten erfasst, verwendet und schützt. DSGVO-konform und nach internationalen Datenschutzstandards.",
 nav_back:"← Zurück zur Startseite",
 hero_title:"Datenschutzerklärung",
 hero_desc:"Wir schätzen Ihre Privatsphäre. Diese Richtlinie erklärt, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen.",
@@ -685,15 +849,15 @@ footer_articles:"Artikel",
 footer_partners:"Partner",
 footer_coop:"Zusammenarbeit & Abrechnung",
 footer_contact:"Kontakt",
-footer_copy:"© 2026 MeliToolHub. Alle Rechte vorbehalten. Diese Website entspricht den Google AdSense-Richtlinien und internationalen Datenschutzbestimmungen."
+footer_copy:"© 2026 GlobalTradeHub. Alle Rechte vorbehalten. Diese Website entspricht den Google AdSense-Richtlinien und internationalen Datenschutzbestimmungen."
 },
 
 /*══════════ Italiano (it) ══════════*/
 it:{
-seo_title:"Informativa sulla Privacy | MeliToolHub Piattaforma Transfrontaliera LATAM",
-seo_desc:"Informativa sulla privacy MeliToolHub. Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Conforme alle policy Google AdSense e ai requisiti GDPR.",
-og_title:"Informativa sulla Privacy | MeliToolHub",
-og_desc:"Scopri come MeliToolHub raccoglie, utilizza e protegge i tuoi dati personali. Conforme al GDPR e agli standard internazionali sulla privacy.",
+seo_title:"Informativa sulla Privacy | GlobalTradeHub Piattaforma Transfrontaliera LATAM",
+seo_desc:"Informativa sulla privacy GlobalTradeHub. Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali. Conforme alle policy Google AdSense e ai requisiti GDPR.",
+og_title:"Informativa sulla Privacy | GlobalTradeHub",
+og_desc:"Scopri come GlobalTradeHub raccoglie, utilizza e protegge i tuoi dati personali. Conforme al GDPR e agli standard internazionali sulla privacy.",
 nav_back:"← Torna alla Home",
 hero_title:"Informativa sulla Privacy",
 hero_desc:"Diamo valore alla tua privacy. Questa informativa spiega come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
@@ -734,15 +898,15 @@ footer_articles:"Articoli",
 footer_partners:"Partner",
 footer_coop:"Cooperazione e Liquidazione",
 footer_contact:"Contatti",
-footer_copy:"© 2026 MeliToolHub. Tutti i diritti riservati. Questo sito è conforme alle policy Google AdSense e alle normative internazionali sulla privacy."
+footer_copy:"© 2026 GlobalTradeHub. Tutti i diritti riservati. Questo sito è conforme alle policy Google AdSense e alle normative internazionali sulla privacy."
 },
 
 /*══════════ العربية (ar) ══════════*/
 ar:{
-seo_title:"سياسة الخصوصية | MeliToolHub منصة أمريكا اللاتينية",
-seo_desc:"سياسة خصوصية MeliToolHub. تعرف على كيفية جمع واستخدام وحماية معلوماتك الشخصية. متوافقة مع سياسات Google AdSense ومتطلبات GDPR.",
-og_title:"سياسة الخصوصية | MeliToolHub",
-og_desc:"تعرف على كيفية جمع واستخدام وحماية MeliToolHub لمعلوماتك الشخصية. متوافقة مع اللائحة العامة لحماية البيانات والمعايير الدولية.",
+seo_title:"سياسة الخصوصية | GlobalTradeHub منصة أمريكا اللاتينية",
+seo_desc:"سياسة خصوصية GlobalTradeHub. تعرف على كيفية جمع واستخدام وحماية معلوماتك الشخصية. متوافقة مع سياسات Google AdSense ومتطلبات GDPR.",
+og_title:"سياسة الخصوصية | GlobalTradeHub",
+og_desc:"تعرف على كيفية جمع واستخدام وحماية GlobalTradeHub لمعلوماتك الشخصية. متوافقة مع اللائحة العامة لحماية البيانات والمعايير الدولية.",
 nav_back:"← العودة للرئيسية",
 hero_title:"سياسة الخصوصية",
 hero_desc:"نحن نقدر خصوصيتك. توضح هذه السياسة كيفية جمع واستخدام وحماية معلوماتك الشخصية.",
@@ -783,7 +947,7 @@ footer_articles:"المقالات",
 footer_partners:"الشركاء",
 footer_coop:"التعاون والتسوية",
 footer_contact:"اتصل بنا",
-footer_copy:"© 2026 MeliToolHub. جميع الحقوق محفوظة. هذا الموقع يلتزم بسياسات Google AdSense ولوائح الخصوصية الدولية."
+footer_copy:"© 2026 GlobalTradeHub. جميع الحقوق محفوظة. هذا الموقع يلتزم بسياسات Google AdSense ولوائح الخصوصية الدولية."
 },
 
 /*══════════ End of translations ══════════*/
@@ -851,7 +1015,525 @@ D.addEventListener('DOMContentLoaded',function(){
   }
 });
 })();
+
+
+// ===== Supabase Client =====
+var SUPABASE_URL = 'https://woiwjttrtokwgrhhzobm.supabase.co';
+var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndvaXdqdHRydG9rd2dyaGh6b2JtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2NjQyOTAsImV4cCI6MjA5NjI0MDI5MH0.0t55C_xI2Bxowi2DyOV43tXukU8TVzGlRK0zSZ3j2R8';
+var supabaseClient = null;
+
+function initSupabase(){
+  if(!SUPABASE_URL || SUPABASE_URL!=='https://woiwjttrtokwgrhhzobm.supabase.co'){
+    console.warn('[Auth] Supabase not configured');
+    return false;
+  }
+  if(supabaseClient)return true;
+  try{
+    supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    return true;
+  }catch(e){
+    console.error('[Auth] Failed to init Supabase:', e);
+    return false;
+  }
+}
+
+// ===== Auth State =====
+var currentUser = null;
+
+async function checkSession(){
+  if(!initSupabase())return;
+  try{
+    var d = (await supabaseClient.auth.getSession()).data;
+    if(d && d.session){
+      currentUser = d.session.user;
+    }
+  }catch(e){}
+  updateAuthUI();
+}
+
+function updateAuthUI(){
+  var btns = document.getElementById('nav-auth-btns');
+  if(!btns)return;
+  var loginBtn = document.getElementById('nav-btn-login');
+  var registerBtn = document.getElementById('nav-btn-register');
+  var userInfo = document.getElementById('nav-user-info');
+  var userName = document.getElementById('nav-user-name');
+  var userAvatar = document.getElementById('nav-user-avatar');
+
+  if(currentUser){
+    if(loginBtn)loginBtn.style.display='none';
+    if(registerBtn)registerBtn.style.display='none';
+    if(userInfo)userInfo.style.display='flex';
+    var nick = (currentUser.user_metadata && currentUser.user_metadata.nickname) || currentUser.email.split('@')[0];
+    if(userName)userName.textContent = nick;
+    if(userAvatar)userAvatar.textContent = (nick[0]||'?').toUpperCase();
+  }else{
+    if(loginBtn)loginBtn.style.display='';
+    if(registerBtn)registerBtn.style.display='';
+    if(userInfo)userInfo.style.display='none';
+  }
+  // Update comment form
+  updateCommentForm();
+}
+
+// ===== Auth Modal =====
+function openAuthModal(tab){
+  var overlay = document.getElementById('auth-overlay');
+  if(!overlay)return;
+  overlay.classList.add('show');
+  switchAuthTab(tab||'login');
+}
+
+function closeAuthModal(){
+  var overlay = document.getElementById('auth-overlay');
+  if(overlay)overlay.classList.remove('show');
+  clearAuthErrors();
+}
+
+function switchAuthTab(tab){
+  var loginBody = document.getElementById('auth-body-login');
+  var registerBody = document.getElementById('auth-body-register');
+  var loginFooter = document.getElementById('auth-footer-login');
+  var registerFooter = document.getElementById('auth-footer-register');
+  var tabs = document.querySelectorAll('.auth-tab');
+  var title = document.getElementById('auth-title');
+  var subtitle = document.getElementById('auth-subtitle');
+  var d = (I18N[curLang]||I18N.en);
+
+  tabs.forEach(function(t){ t.classList.remove('active'); });
+  if(tab==='register'){
+    if(loginBody)loginBody.style.display='none';
+    if(registerBody)registerBody.style.display='';
+    if(loginFooter)loginFooter.style.display='none';
+    if(registerFooter)registerFooter.style.display='';
+    var regTab = document.querySelector('.auth-tab[data-tab="register"]');
+    if(regTab)regTab.classList.add('active');
+    if(title)title.textContent = d.auth_register_title||'Register';
+    if(subtitle)subtitle.textContent = d.auth_register_subtitle||'Join our community';
+  }else{
+    if(loginBody)loginBody.style.display='';
+    if(registerBody)registerBody.style.display='none';
+    if(loginFooter)loginFooter.style.display='';
+    if(registerFooter)registerFooter.style.display='none';
+    var loginTab = document.querySelector('.auth-tab[data-tab="login"]');
+    if(loginTab)loginTab.classList.add('active');
+    if(title)title.textContent = d.auth_login_title||'Login';
+    if(subtitle)subtitle.textContent = d.auth_login_subtitle||'Login to join the discussion';
+  }
+  clearAuthErrors();
+}
+
+function clearAuthErrors(){
+  var loginErr = document.getElementById('login-error');
+  var regErr = document.getElementById('register-error');
+  var regSuccess = document.getElementById('register-success');
+  if(loginErr){loginErr.textContent='';loginErr.classList.remove('show');}
+  if(regErr){regErr.textContent='';regErr.classList.remove('show');}
+  if(regSuccess){regSuccess.textContent='';regSuccess.classList.remove('show');}
+}
+
+async function handleLogin(){
+  if(!initSupabase()){
+    showLoginError('Auth system not configured');
+    return;
+  }
+  var email = document.getElementById('login-email').value.trim();
+  var password = document.getElementById('login-password').value;
+  if(!email||!password){showLoginError('Please enter email and password');return;}
+  var btn = document.getElementById('login-submit');
+  if(btn)btn.disabled = true;
+  try{
+    var r = await supabaseClient.auth.signInWithPassword({email:email,password:password});
+    if(r.error){showLoginError(r.error.message);if(btn)btn.disabled=false;return;}
+    currentUser = r.data.user;
+    updateAuthUI();
+    closeAuthModal();
+    loadComments();
+  }catch(e){showLoginError(e.message);if(btn)btn.disabled=false;}
+}
+
+async function handleRegister(){
+  if(!initSupabase()){
+    showRegisterError('Auth system not configured');
+    return;
+  }
+  var nickname = document.getElementById('register-nickname').value.trim();
+  var email = document.getElementById('register-email').value.trim();
+  var password = document.getElementById('register-password').value;
+  var confirm = document.getElementById('register-password-confirm').value;
+  if(!nickname||!email||!password){showRegisterError('Please fill all fields');return;}
+  if(password!==confirm){showRegisterError('Passwords do not match');return;}
+  if(password.length<6){showRegisterError('Password must be at least 6 characters');return;}
+  var btn = document.getElementById('register-submit');
+  if(btn)btn.disabled = true;
+  try{
+    var r = await supabaseClient.auth.signUp({
+      email:email,
+      password:password,
+      options:{data:{nickname:nickname}}
+    });
+    if(r.error){showRegisterError(r.error.message);if(btn)btn.disabled=false;return;}
+    if(r.data.user && !r.data.session){
+      // Email confirmation required
+      var success = document.getElementById('register-success');
+      var d = (I18N[curLang]||I18N.en);
+      if(success){success.textContent = d.auth_check_email||'Check your email to confirm registration!';success.classList.add('show');}
+      if(btn)btn.disabled = false;
+    }else{
+      currentUser = r.data.user;
+      updateAuthUI();
+      closeAuthModal();
+      loadComments();
+    }
+  }catch(e){showRegisterError(e.message);if(btn)btn.disabled=false;}
+}
+
+function showLoginError(msg){var el=document.getElementById('login-error');if(el){el.textContent=translateError(msg);el.classList.add('show');}}
+function showRegisterError(msg){var el=document.getElementById('register-error');if(el){el.textContent=translateError(msg);el.classList.add('show');}}
+
+function translateError(msg){
+  var map={
+    'Invalid login credentials':'邮箱或密码错误',
+    'User already registered':'该邮箱已注册',
+    'Password must be at least 6 characters':'密码至少6位',
+    'Passwords do not match':'两次密码不一致',
+    'Please enter email and password':'请输入邮箱和密码',
+    'Please fill all fields':'请填写所有字段',
+    'Auth system not configured':'认证系统未配置',
+    'Email not confirmed':'邮箱未验证，请检查邮件'
+  };
+  return map[msg]||msg;
+}
+
+async function handleLogout(){
+  if(supabaseClient){
+    await supabaseClient.auth.signOut();
+  }
+  currentUser = null;
+  updateAuthUI();
+  loadComments();
+}
+
+// ===== Comment System =====
+var currentComments = [];
+var activeReplyId = null;
+
+function getPagePath(){
+  var path = window.location.pathname;
+  var page = path.split('/').pop()||'index.html';
+  if(!page||page==='/')page='index.html';
+  var lang = new URLSearchParams(window.location.search).get('lang');
+  if(lang)page = page + '?lang=' + lang.substring(0,5);
+  return page;
+}
+
+function updateCommentForm(){
+  var wrap = document.getElementById('comment-form-wrap');
+  if(!wrap)return;
+  var d = (I18N[curLang]||I18N.en);
+  if(currentUser){
+    wrap.innerHTML = '<textarea class="comment-input" id="comment-input" maxlength="1000" placeholder="' + (d.comment_placeholder||'Share your thoughts...') + '"></textarea>' +
+      '<div class="comment-submit-row">' +
+      '<span class="comment-char-count" id="comment-char-count">0/1000</span>' +
+      '<button class="comment-submit-btn" id="comment-submit" data-i18n="comment_submit">' + (d.comment_submit||'Post') + '</button>' +
+      '</div>';
+    var input = document.getElementById('comment-input');
+    var count = document.getElementById('comment-char-count');
+    if(input&&count){
+      input.addEventListener('input',function(){count.textContent=input.value.length+'/1000';});
+    }
+    var submit = document.getElementById('comment-submit');
+    if(submit)submit.addEventListener('click',submitComment);
+  }else{
+    wrap.innerHTML = '<div class="login-prompt">' +
+      '<a id="comment-login-link" data-i18n="comment_login_first">登录</a> ' +
+      '<span data-i18n="comment_login_to_post">后发表评论</span></div>';
+    var loginLink = document.getElementById('comment-login-link');
+    if(loginLink)loginLink.addEventListener('click',function(e){e.preventDefault();openAuthModal('login');});
+  }
+}
+
+async function submitComment(){
+  var input = document.getElementById('comment-input');
+  if(!input||!input.value.trim())return;
+  var content = input.value.trim();
+  if(content.length>1000)return;
+  var btn = document.getElementById('comment-submit');
+  if(btn)btn.disabled = true;
+  try{
+    var r = await supabaseClient.from('comments').insert({
+      page_path: getPagePath(),
+      user_id: currentUser.id,
+      content: content,
+      parent_id: null
+    }).select('*, profiles(nickname)').single();
+    if(r.error){console.error(r.error);if(btn)btn.disabled=false;return;}
+    input.value = '';
+    document.getElementById('comment-char-count').textContent = '0/1000';
+    if(btn)btn.disabled = false;
+    await loadComments();
+  }catch(e){console.error(e);if(btn)btn.disabled=false;}
+}
+
+async function submitReply(parentId){
+  var form = document.getElementById('reply-form-' + parentId);
+  var textarea = form ? form.querySelector('textarea') : null;
+  if(!textarea||!textarea.value.trim())return;
+  var content = textarea.value.trim();
+  try{
+    var r = await supabaseClient.from('comments').insert({
+      page_path: getPagePath(),
+      user_id: currentUser.id,
+      content: content,
+      parent_id: parentId
+    }).select('*, profiles(nickname)').single();
+    if(r.error){console.error(r.error);return;}
+    activeReplyId = null;
+    await loadComments();
+  }catch(e){console.error(e);}
+}
+
+function showReplyForm(commentId){
+  activeReplyId = activeReplyId===commentId ? null : commentId;
+  loadComments();
+}
+
+async function toggleLike(commentId, currentLikes){
+  if(!currentUser){openAuthModal('login');return;}
+  try{
+    await supabaseClient.from('comments').update({likes: (currentLikes||0)+1}).eq('id', commentId);
+    await loadComments();
+  }catch(e){console.error(e);}
+}
+
+async function deleteComment(commentId){
+  if(!currentUser)return;
+  var d = (I18N[curLang]||I18N.en);
+  if(!confirm(d.comment_delete_confirm||'Delete this comment?'))return;
+  try{
+    await supabaseClient.from('comments').delete().eq('id', commentId);
+    await loadComments();
+  }catch(e){console.error(e);}
+}
+
+async function loadComments(){
+  var loading = document.getElementById('comment-loading');
+  var list = document.getElementById('comment-list');
+  var empty = document.getElementById('comment-empty');
+  if(loading)loading.style.display = 'block';
+  if(list)list.innerHTML = '';
+  if(empty)empty.style.display = 'none';
+
+  try{
+    var r = await supabaseClient.from('comments')
+      .select('*, profiles!comments_user_id_fkey(nickname)')
+      .eq('page_path', getPagePath())
+      .order('created_at', {ascending: true});
+
+    if(r.error){console.error(r.error);if(loading)loading.style.display='none';return;}
+
+    currentComments = r.data||[];
+    if(loading)loading.style.display = 'none';
+
+    if(currentComments.length===0){
+      if(empty)empty.style.display = 'block';
+      return;
+    }
+
+    // Build nested structure
+    var topLevel = currentComments.filter(function(c){return !c.parent_id;});
+    renderComments(topLevel, list);
+  }catch(e){console.error(e);if(loading)loading.style.display='none';}
+}
+
+function renderComments(comments, container){
+  if(!container)return;
+  var d = (I18N[curLang]||I18N.en);
+  container.innerHTML = '';
+
+  comments.forEach(function(c){
+    var replies = currentComments.filter(function(r){return r.parent_id===c.id;});
+    var nickname = (c.profiles&&c.profiles.nickname)||'User';
+    var timeAgo = formatTimeAgo(c.created_at);
+    var isOwner = currentUser && currentUser.id === c.user_id;
+
+    var html = '<div class="comment-item">' +
+      '<div class="comment-avatar">' + (nickname[0]||'?').toUpperCase() + '</div>' +
+      '<div class="comment-body">' +
+      '<div class="comment-author">' + escapeHtml(nickname) + '<span class="comment-time">' + timeAgo + '</span></div>' +
+      '<div class="comment-text">' + escapeHtml(c.content) + '</div>' +
+      '<div class="comment-actions">' +
+      '<button class="comment-like' + (false?' liked':'') + '" onclick="toggleLike('+c.id+','+c.likes+')">❤️ ' + (c.likes||0) + '</button>' +
+      '<button class="comment-reply-btn" onclick="showReplyForm('+c.id+')" data-i18n="comment_reply">' + (d.comment_reply||'Reply') + '</button>' +
+      (isOwner?'<button class="comment-delete" onclick="deleteComment('+c.id+')" data-i18n="comment_delete">' + (d.comment_delete||'Delete') + '</button>':'') +
+      '</div>';
+
+    // Reply form
+    if(activeReplyId===c.id){
+      html += '<div class="comment-reply-form" id="reply-form-'+c.id+'">' +
+        '<textarea placeholder="' + (d.comment_reply_ph||'Write a reply...') + '" rows="2"></textarea>' +
+        '<div class="comment-reply-actions">' +
+        '<button class="comment-cancel-btn" onclick="showReplyForm('+c.id+')" data-i18n="comment_cancel">' + (d.comment_cancel||'Cancel') + '</button>' +
+        '<button class="comment-submit-btn" onclick="submitReply('+c.id+')" data-i18n="comment_submit">' + (d.comment_submit||'Post') + '</button>' +
+        '</div></div>';
+    }
+
+    // Replies
+    if(replies.length>0){
+      html += '<div class="comment-replies">';
+      replies.forEach(function(r){
+        var rNick = (r.profiles&&r.profiles.nickname)||'User';
+        var rTime = formatTimeAgo(r.created_at);
+        var rIsOwner = currentUser && currentUser.id === r.user_id;
+        html += '<div class="comment-item">' +
+          '<div class="comment-avatar">' + (rNick[0]||'?').toUpperCase() + '</div>' +
+          '<div class="comment-body">' +
+          '<div class="comment-author">' + escapeHtml(rNick) + '<span class="comment-time">' + rTime + '</span></div>' +
+          '<div class="comment-text">' + escapeHtml(r.content) + '</div>' +
+          '<div class="comment-actions">' +
+          '<button class="comment-like" onclick="toggleLike('+r.id+','+r.likes+')">❤️ ' + (r.likes||0) + '</button>' +
+          (rIsOwner?'<button class="comment-delete" onclick="deleteComment('+r.id+')" data-i18n="comment_delete">' + (d.comment_delete||'Delete') + '</button>':'') +
+          '</div></div></div>';
+      });
+      html += '</div>';
+    }
+
+    html += '</div></div>';
+    container.innerHTML += html;
+  });
+}
+
+function escapeHtml(text){
+  var map={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'};
+  return (''+text).replace(/[&<>"']/g,function(m){return map[m];});
+}
+
+function formatTimeAgo(dateStr){
+  if(!dateStr)return '';
+  var now = new Date();
+  var date = new Date(dateStr);
+  var diff = Math.floor((now-date)/1000);
+  if(diff<60)return 'just now';
+  if(diff<3600)return Math.floor(diff/60)+'m ago';
+  if(diff<86400)return Math.floor(diff/3600)+'h ago';
+  if(diff<604800)return Math.floor(diff/86400)+'d ago';
+  return date.toLocaleDateString();
+}
+
+// ===== Init =====
+document.addEventListener('DOMContentLoaded', function(){
+  // Load Supabase SDK dynamically
+  var supabaseScript = document.getElementById('supabase-sdk');
+  if(!supabaseScript){
+    var s = document.createElement('script');
+    s.id = 'supabase-sdk';
+    s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+    s.onload = function(){
+      checkSession().then(function(){
+        loadComments();
+      });
+    };
+    s.onerror = function(){
+      console.warn('[Auth] Failed to load Supabase SDK');
+      updateCommentForm();
+    };
+    document.head.appendChild(s);
+  }else{
+    checkSession().then(function(){
+      loadComments();
+    });
+  }
+
+  // Auth modal events
+  var authOverlay = document.getElementById('auth-overlay');
+  var authClose = document.getElementById('auth-close');
+  var loginSubmit = document.getElementById('login-submit');
+  var registerSubmit = document.getElementById('register-submit');
+  var switchReg = document.getElementById('switch-to-register');
+  var switchLogin = document.getElementById('switch-to-login');
+  var navLogin = document.getElementById('nav-btn-login');
+  var navRegister = document.getElementById('nav-btn-register');
+  var navLogout = document.getElementById('nav-logout');
+
+  if(authOverlay)authOverlay.addEventListener('click',function(e){if(e.target===authOverlay)closeAuthModal();});
+  if(authClose)authClose.addEventListener('click',closeAuthModal);
+  if(loginSubmit)loginSubmit.addEventListener('click',handleLogin);
+  if(registerSubmit)registerSubmit.addEventListener('click',handleRegister);
+  if(switchReg)switchReg.addEventListener('click',function(){switchAuthTab('register');});
+  if(switchLogin)switchLogin.addEventListener('click',function(){switchAuthTab('login');});
+  if(navLogin)navLogin.addEventListener('click',function(){openAuthModal('login');});
+  if(navRegister)navRegister.addEventListener('click',function(){openAuthModal('register');});
+  if(navLogout)navLogout.addEventListener('click',function(e){e.preventDefault();handleLogout();});
+
+  // Auth tabs
+  document.querySelectorAll('.auth-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      switchAuthTab(tab.dataset.tab);
+    });
+  });
+
+  // Keyboard enter to submit
+  var loginPw = document.getElementById('login-password');
+  var regPw = document.getElementById('register-password');
+  if(loginPw)loginPw.addEventListener('keydown',function(e){if(e.key==='Enter')handleLogin();});
+  if(regPw)regPw.addEventListener('keydown',function(e){if(e.key==='Enter')handleRegister();});
+
+  // Nav dropdown toggle
+  var userInfo = document.getElementById('nav-user-info');
+  var dropdown = document.getElementById('nav-user-dropdown');
+  if(userInfo&&dropdown){
+    userInfo.addEventListener('click',function(e){
+      e.stopPropagation();
+      dropdown.classList.toggle('show');
+    });
+    document.addEventListener('click',function(){dropdown.classList.remove('show');});
+  }
+});
+
 </script>
 
+
+
+<!-- ===== Auth Modal ===== -->
+<div class="auth-overlay" id="auth-overlay">
+<div class="auth-panel">
+<div class="auth-header">
+<button class="auth-close" id="auth-close">&times;</button>
+<h3 id="auth-title" data-i18n="auth_login_title">登录</h3>
+<p id="auth-subtitle" data-i18n="auth_login_subtitle">登录后参与社区讨论</p>
+</div>
+<div class="auth-tabs">
+<button class="auth-tab active" data-tab="login" data-i18n="auth_tab_login">登录</button>
+<button class="auth-tab" data-tab="register" data-i18n="auth_tab_register">注册</button>
+</div>
+<div class="auth-body" id="auth-body-login">
+<label data-i18n="auth_email">邮箱</label>
+<input type="email" id="login-email" placeholder="your@email.com" autocomplete="email">
+<label data-i18n="auth_password">密码</label>
+<input type="password" id="login-password" placeholder="········" autocomplete="current-password">
+<div class="auth-error" id="login-error"></div>
+<button class="auth-submit" id="login-submit" data-i18n="auth_btn_login">登录</button>
+</div>
+<div class="auth-body" id="auth-body-register" style="display:none">
+<label data-i18n="auth_nickname">昵称</label>
+<input type="text" id="register-nickname" placeholder="" autocomplete="name" data-i18n-attrib="placeholder:auth_nickname_ph">
+<label data-i18n="auth_email">邮箱</label>
+<input type="email" id="register-email" placeholder="your@email.com" autocomplete="email">
+<label data-i18n="auth_password">密码</label>
+<input type="password" id="register-password" placeholder="········" autocomplete="new-password">
+<label data-i18n="auth_password_confirm">确认密码</label>
+<input type="password" id="register-password-confirm" placeholder="········" autocomplete="new-password">
+<div class="auth-error" id="register-error"></div>
+<div class="auth-success" id="register-success"></div>
+<button class="auth-submit" id="register-submit" data-i18n="auth_btn_register">注册</button>
+</div>
+<div class="auth-footer" id="auth-footer-login">
+<span data-i18n="auth_no_account">还没有账号？</span> <a id="switch-to-register" data-i18n="auth_go_register">立即注册</a>
+</div>
+<div class="auth-footer" id="auth-footer-register" style="display:none">
+<span data-i18n="auth_has_account">已有账号？</span> <a id="switch-to-login" data-i18n="auth_go_login">去登录</a>
+</div>
+</div>
+</div>
 </body>
 </html>
