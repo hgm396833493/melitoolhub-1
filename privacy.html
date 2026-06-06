@@ -50,12 +50,7 @@
 .nav-links a{color:rgba(255,255,255,.82);font-size:.85rem;padding:7px 12px;border-radius:6px;transition:.2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.14);color:#fff}
 .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
-/* Nav group accordion - desktop inline */
-.nav-group{display:inline}
-.nav-group-title{display:none}
-.nav-group-items{display:inline}
-.nav-group-items a{display:inline}
-.nav-arrow{display:none}
+@media(max-width:768px){
 /* Mobile accordion */
 .nav-links .nav-group{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-links .nav-group:last-child{border-bottom:none}
@@ -68,6 +63,9 @@
 .nav-links .nav-group-items a{display:block;padding:10px 12px;border-bottom:none;font-size:.88rem;color:rgba(255,255,255,.7);border-radius:6px;transition:.15s}
 .nav-links .nav-group-items a:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-links .nav-group-items a:last-child{margin-bottom:4px}
+}
+
+
 
 
 :root{--p:#1a3a5c;--a:#f0b429;--bg:#f5f7fa;--c:#fff;--t:#333;--s:#666;--r:12px;--sh:0 4px 18px rgba(0,0,0,.08);--border:#edf0f5;}
@@ -75,6 +73,13 @@
 body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.7;min-height:100vh;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;height:auto;display:block;}
+/* Nav group accordion - desktop inline */
+.nav-group{display:inline}
+.nav-group-title{display:none}
+.nav-group-items{display:inline}
+.nav-group-items a{display:inline}
+.nav-arrow{display:none}
+
 
 /* Nav */
 /* Nav Language Selector */

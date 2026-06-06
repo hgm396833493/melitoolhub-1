@@ -614,12 +614,7 @@ async function handleSubscribeFooter(e,form){
 .nav-links a{color:rgba(255,255,255,.82);font-size:.85rem;padding:7px 12px;border-radius:6px;transition:.2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.14);color:#fff}
 .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
-/* Nav group accordion - desktop inline */
-.nav-group{display:inline}
-.nav-group-title{display:none}
-.nav-group-items{display:inline}
-.nav-group-items a{display:inline}
-.nav-arrow{display:none}
+@media(max-width:768px){
 /* Mobile accordion */
 .nav-links .nav-group{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-links .nav-group:last-child{border-bottom:none}
@@ -632,6 +627,9 @@ async function handleSubscribeFooter(e,form){
 .nav-links .nav-group-items a{display:block;padding:10px 12px;border-bottom:none;font-size:.88rem;color:rgba(255,255,255,.7);border-radius:6px;transition:.15s}
 .nav-links .nav-group-items a:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-links .nav-group-items a:last-child{margin-bottom:4px}
+}
+
+
 
 
 @media(max-width:768px){
@@ -650,6 +648,13 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 .nav-links a{padding:12px 8px;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem}
 .nav-toggle{display:block}
 }
+/* Nav group accordion - desktop inline */
+.nav-group{display:inline}
+.nav-group-title{display:none}
+.nav-group-items{display:inline}
+.nav-group-items a{display:inline}
+.nav-arrow{display:none}
+
 }
 /* ===== 小火箭浮动按钮 ===== */
 .rocket-btn{position:fixed;bottom:28px;right:24px;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#e8453c,#ff6b3d);box-shadow:0 6px 24px rgba(232,69,60,.4);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:pointer;transition:transform .3s,box-shadow .3s;animation:rocket-bounce 2s ease-in-out infinite;border:none;text-decoration:none}

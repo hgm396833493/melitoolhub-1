@@ -90,6 +90,13 @@ a{text-decoration:none;color:inherit}
 
 
 .nav-lang label{color:rgba(255,255,255,.6);font-size:.78rem;white-space:nowrap}
+/* Nav group accordion - desktop inline */
+.nav-group{display:inline}
+.nav-group-title{display:none}
+.nav-group-items{display:inline}
+.nav-group-items a{display:inline}
+.nav-arrow{display:none}
+
 
 
 
@@ -115,12 +122,7 @@ nav{background:var(--p);padding:0 24px;display:flex;align-items:center;justify-c
 .nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.14);color:#fff}
 
 .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
-/* Nav group accordion - desktop inline */
-.nav-group{display:inline}
-.nav-group-title{display:none}
-.nav-group-items{display:inline}
-.nav-group-items a{display:inline}
-.nav-arrow{display:none}
+@media(max-width:768px){
 /* Mobile accordion */
 .nav-links .nav-group{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-links .nav-group:last-child{border-bottom:none}
@@ -133,6 +135,9 @@ nav{background:var(--p);padding:0 24px;display:flex;align-items:center;justify-c
 .nav-links .nav-group-items a{display:block;padding:10px 12px;border-bottom:none;font-size:.88rem;color:rgba(255,255,255,.7);border-radius:6px;transition:.15s}
 .nav-links .nav-group-items a:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-links .nav-group-items a:last-child{margin-bottom:4px}
+}
+
+
 
 
 /* 404 Content */
