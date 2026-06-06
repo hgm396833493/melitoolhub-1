@@ -1827,13 +1827,17 @@ async function submitComment(){
   if(!currentUser){showCommentToast('Please login first');return;}
   if(btn){btn.disabled = true; btn.textContent = 'Posting...';}
   try{
+    var note = (currentUser.user_metadata&&currentUser.user_metadata.nickname)||currentUser.email||'User';
     var r = await supabaseClient.from('comments').insert({
       page_path: getPagePath(),
       user_id: currentUser.id,
       content: content,
-      parent_id: null
-    }).select('*, profiles(nickname)').single();
+      parent_id: null,
+      author_note: note.substring(0,50)
+    }).select().single();
     if(r.error){showCommentToast(r.error.message||'Failed to post');if(btn){btn.disabled=false;btn.textContent='Post';}return;}
+    // Cache nickname for display
+    if(r.data){r.data._author = note;}
     input.value = '';
     var cc = document.getElementById('comment-char-count');
     if(cc)cc.textContent = '0/1000';
@@ -1864,12 +1868,14 @@ async function submitReply(parentId){
   if(!textarea||!textarea.value.trim()){showCommentToast('Please write a reply first');return;}
   var content = textarea.value.trim();
   try{
+    var note = (currentUser.user_metadata&&currentUser.user_metadata.nickname)||currentUser.email||'User';
     var r = await supabaseClient.from('comments').insert({
       page_path: getPagePath(),
       user_id: currentUser.id,
       content: content,
-      parent_id: parentId
-    }).select('*, profiles(nickname)').single();
+      parent_id: parentId,
+      author_note: note.substring(0,50)
+    }).select().single();
     if(r.error){showCommentToast(r.error.message||'Failed to reply');return;}
     activeReplyId = null;
     showCommentToast('Reply posted!');
@@ -1910,7 +1916,7 @@ async function loadComments(){
 
   try{
     var r = await supabaseClient.from('comments')
-      .select('*, profiles!comments_user_id_fkey(nickname)')
+      .select('*')
       .eq('page_path', getPagePath())
       .order('created_at', {ascending: true});
 
@@ -1937,7 +1943,7 @@ function renderComments(comments, container){
 
   comments.forEach(function(c){
     var replies = currentComments.filter(function(r){return r.parent_id===c.id;});
-    var nickname = (c.profiles&&c.profiles.nickname)||'User';
+    var nickname = c._author || c.author_note || (c.user_id||'User').substring(0,8);
     var timeAgo = formatTimeAgo(c.created_at);
     var isOwner = currentUser && currentUser.id === c.user_id;
 
