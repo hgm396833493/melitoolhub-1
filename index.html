@@ -81,11 +81,24 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 .nav-links.open{
 display:flex
 }
-.nav-links a{
-padding:12px 8px;
-border-bottom:1px solid rgba(255,255,255,.08);
-font-size:.9rem
-}
+/* Nav group accordion - desktop inline */
+.nav-group{display:inline}
+.nav-group-title{display:none}
+.nav-group-items{display:inline}
+.nav-group-items a{display:inline}
+.nav-arrow{display:none}
+/* Mobile accordion */
+.nav-links .nav-group{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-links .nav-group:last-child{border-bottom:none}
+.nav-links .nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:12px 8px;color:rgba(255,255,255,.82);font-size:.9rem;cursor:pointer;transition:.2s}
+.nav-links .nav-group-title.active{color:#fff;background:rgba(255,255,255,.08);border-radius:6px}
+.nav-links .nav-arrow{display:inline-block;font-size:.7rem;transition:transform .2s;color:rgba(255,255,255,.5)}
+.nav-links .nav-group-title.active .nav-arrow{transform:rotate(180deg);color:#fff}
+.nav-links .nav-group-items{display:none;padding:0 8px 8px;flex-direction:column}
+.nav-links .nav-group-items.open{display:flex}
+.nav-links .nav-group-items a{display:block;padding:10px 12px;border-bottom:none;font-size:.88rem;color:rgba(255,255,255,.7);border-radius:6px;transition:.15s}
+.nav-links .nav-group-items a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.nav-links .nav-group-items a:last-child{margin-bottom:4px}
 .nav-toggle{
 display:block
 }
@@ -437,13 +450,33 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 <nav role="navigation" aria-label="主导航">
 <a href="index.html" class="nav-logo">Global<span>Trade</span>Hub</a>
 <div class="nav-links" id="nav-links">
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-home">🏠 网站首页<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-home">
 <a href="index.html" data-i18n="nav_home">首页</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-content">📚 核心内容<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-content">
 <a href="index.html#articles" data-i18n="nav_articles">跨境干货</a>
 <a href="index.html#policy" data-i18n="nav_policy">政策合规</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-tools">🛠️ 服务工具<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-tools">
 <a href="index.html#tools" data-i18n="nav_tools">实用工具</a>
 <a href="index.html#sourcing" data-i18n="nav_sourcing">采购代办</a>
 <a href="index.html#partners" data-i18n="nav_partners">联盟工具</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-social">💬 互动交流<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-social">
 <a href="index.html#community" data-i18n="nav_community">用户交流</a>
+</div>
+</div>
 </div>
 <div class="nav-actions">
 <div class="nav-lang">
@@ -2549,8 +2582,10 @@ async function handleSubscribe(e,form,source){
     if(r.error){
       if(r.error.message&&r.error.message.indexOf('duplicate')>=0){
         showSubscribeMsg(source,'你已订阅过了！','error');
+      }else if(r.error.message&&(r.error.message.indexOf('table')>=0||r.error.message.indexOf('schema')>=0||r.error.message.indexOf('subscribers')>=0)){
+        showSubscribeMsg(source,'订阅功能正在初始化，请稍后重试 ⏳','error');
       }else{
-        showSubscribeMsg(source,r.error.message||'Subscription failed','error');
+        showSubscribeMsg(source,r.error.message||'订阅失败，请稍后重试','error');
       }
     }else{
       emailInput.value='';
@@ -2588,7 +2623,17 @@ var nt=document.getElementById('nav-toggle');
 var nl=document.getElementById('nav-links');
 if(nt&&nl){
 nt.addEventListener('click',function(){nl.classList.toggle('open');});
-nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open');});});
+// Mobile accordion nav
+document.querySelectorAll('.nav-group-title').forEach(function(title){
+title.addEventListener('click',function(){
+var target=document.getElementById(this.getAttribute('data-target'));
+var isOpen=target&&target.classList.contains('open');
+document.querySelectorAll('.nav-group-items').forEach(function(el){el.classList.remove('open');});
+document.querySelectorAll('.nav-group-title').forEach(function(el){el.classList.remove('active');});
+if(target&&!isOpen){target.classList.add('open');this.classList.add('active');}
+});
+});
+nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open');document.querySelectorAll('.nav-group-items').forEach(function(el){el.classList.remove('open');});document.querySelectorAll('.nav-group-title').forEach(function(el){el.classList.remove('active');});});});
 }
 // Init all
 initCookieConsent();

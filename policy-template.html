@@ -238,13 +238,33 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 <nav role="navigation" aria-label="主导航">
 <a href="index.html" class="nav-logo">Global<span>Trade</span>Hub</a>
 <div class="nav-links" id="nav-links">
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-home">🏠 网站首页<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-home">
 <a href="index.html" data-i18n="nav_home">首页</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-content">📚 核心内容<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-content">
 <a href="index.html#articles" data-i18n="nav_articles">跨境干货</a>
 <a href="index.html#policy" data-i18n="nav_policy">政策合规</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-tools">🛠️ 服务工具<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-tools">
 <a href="index.html#tools" data-i18n="nav_tools">实用工具</a>
 <a href="index.html#sourcing" data-i18n="nav_sourcing">采购代办</a>
 <a href="index.html#partners" data-i18n="nav_partners">联盟工具</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" data-target="ng-social">💬 互动交流<span class="nav-arrow">▼</span></div>
+<div class="nav-group-items" id="ng-social">
 <a href="index.html#community" data-i18n="nav_community">用户交流</a>
+</div>
+</div>
 </div>
 <div class="nav-actions">
 <div class="nav-lang">
@@ -897,6 +917,46 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function applyLang(lang){curLang=lang;localStorage.setItem('gthLang',lang);document.documentElement.lang=lang==='zh'?'zh-CN':lang;var d=I18N[lang]||I18N.en;var els=document.querySelectorAll('[data-i18n]');for(var i=0;i<els.length;i++){var e=els[i],k=e.getAttribute('data-i18n');if(d[k]){if(k==='body')e.innerHTML=d[k];else e.textContent=d[k];}}var sel=document.getElementById('lang-select');if(sel)sel.value=lang;}
 document.addEventListener('DOMContentLoaded',function(){applyLang(curLang);document.getElementById('lang-select').addEventListener('change',function(){applyLang(this.value);});});
+
+// Footer subscribe handler
+async function handleSubscribeFooter(e,form){
+  e.preventDefault();
+  var emailInput=form.querySelector('input[type=email]');
+  if(!emailInput||!emailInput.value.trim())return false;
+  var email=emailInput.value.trim();
+  var btn=form.querySelector('button');
+  var msgEl=form.parentElement.querySelector('.footer-sub-msg');
+  if(btn){btn.disabled=true;btn.textContent='订阅中...';}
+  if(!initSupabase()){
+    if(msgEl){msgEl.textContent='系统未就绪，请稍后重试';msgEl.style.display='block';msgEl.style.color='#f44336';}
+    if(btn){btn.disabled=false;btn.textContent='订阅';}
+    return false;
+  }
+  try{
+    var r=await supabaseClient.from('subscribers').insert({
+      email:email,
+      language:curLang,
+      source:'footer'
+    }).select().single();
+    if(r.error){
+      if(r.error.message&&r.error.message.indexOf('duplicate')>=0){
+        if(msgEl){msgEl.textContent='你已订阅过了！';msgEl.style.display='block';msgEl.style.color='#f44336';}
+      }else if(r.error.message&&(r.error.message.indexOf('table')>=0||r.error.message.indexOf('schema')>=0||r.error.message.indexOf('subscribers')>=0)){
+        if(msgEl){msgEl.textContent='订阅功能正在初始化，请稍后重试 ⏳';msgEl.style.display='block';msgEl.style.color='#f44336';}
+      }else{
+        if(msgEl){msgEl.textContent='订阅失败，请稍后重试';msgEl.style.display='block';msgEl.style.color='#f44336';}
+      }
+    }else{
+      emailInput.value='';
+      if(msgEl){msgEl.textContent='✅ 订阅成功！感谢你的关注';msgEl.style.display='block';msgEl.style.color='#4caf50';}
+      setTimeout(function(){if(msgEl)msgEl.style.display='none';},5000);
+    }
+  }catch(e){
+    if(msgEl){msgEl.textContent='网络错误，请稍后重试';msgEl.style.display='block';msgEl.style.color='#f44336';}
+  }
+  if(btn){btn.disabled=false;btn.textContent='订阅';}
+  return false;
+}
 </script>
 
 <!-- ===== 小火箭浮动按钮 ===== -->
