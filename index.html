@@ -182,9 +182,10 @@ nav{background:var(--p);padding:0 24px;display:flex;align-items:center;justify-c
 .card h3{font-size:1rem;font-weight:700;color:var(--p);margin-bottom:8px}
 .card p{font-size:.85rem;color:var(--s);line-height:1.65}
 /* Article List */
-.art-list{display:flex;flex-direction:column;gap:12px}
-.art-item{display:flex;align-items:center;gap:16px;background:var(--c);border-radius:10px;padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.05);border:1px solid var(--bdr);transition:.2s}
+.art-list{display:flex;flex-direction:column;gap:12px;width:100%}
+.art-item{display:flex;align-items:center;gap:16px;background:var(--c);border-radius:10px;padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.05);border:1px solid var(--bdr);transition:.2s;margin:0}
 .art-item:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.art-list .art-item:nth-child(n){background:var(--c);border:1px solid var(--bdr);box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .art-num{width:36px;height:36px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0}
 .art-info{flex:1;min-width:0}
 .art-info a{font-weight:700;color:var(--p);font-size:.93rem;display:block;margin-bottom:4px;transition:.2s}
@@ -820,7 +821,7 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 <div class="comment-form-wrap" id="comment-form-wrap">
 <!-- Filled by JS: either login prompt or comment form -->
 </div>
-<div class="comment-loading" id="comment-loading">⏳ <span data-i18n="comment_loading">加载评论中...</span></div>
+<div class="comment-loading" id="comment-loading" style="display:none">⏳ <span data-i18n="comment_loading">加载评论中...</span></div>
 <div class="comment-list" id="comment-list"></div>
 <div class="comment-empty" id="comment-empty" style="display:none">
 <span class="icon">💬</span>
@@ -2071,13 +2072,20 @@ async function loadComments(){
   if(list)list.innerHTML = '';
   if(empty)empty.style.display = 'none';
 
+  // Timeout fallback: hide loading after 6 seconds no matter what
+  var loadTimeout = setTimeout(function(){
+    if(loading)loading.style.display = 'none';
+    if(empty && (!list || list.innerHTML===''))empty.style.display = 'block';
+  }, 6000);
+
   try{
     var r = await supabaseClient.from('comments')
       .select('*')
       .eq('page_path', getPagePath())
       .order('created_at', {ascending: true});
 
-    if(r.error){console.error(r.error);if(loading)loading.style.display='none';return;}
+    clearTimeout(loadTimeout);
+    if(r.error){console.error(r.error);if(loading)loading.style.display='none';if(empty)empty.style.display='block';return;}
 
     currentComments = r.data||[];
     if(loading)loading.style.display = 'none';
@@ -2090,7 +2098,12 @@ async function loadComments(){
     // Build nested structure
     var topLevel = currentComments.filter(function(c){return !c.parent_id;});
     renderComments(topLevel, list);
-  }catch(e){console.error(e);if(loading)loading.style.display='none';}
+  }catch(e){
+    clearTimeout(loadTimeout);
+    console.error(e);
+    if(loading)loading.style.display='none';
+    if(empty)empty.style.display='block';
+  }
 }
 
 function getUserNickname(c){
@@ -2195,6 +2208,10 @@ document.addEventListener('DOMContentLoaded', function(){
     s.onerror = function(){
       console.warn('[Auth] Failed to load Supabase SDK');
       updateCommentForm();
+      var loading = document.getElementById('comment-loading');
+      var empty = document.getElementById('comment-empty');
+      if(loading)loading.style.display='none';
+      if(empty)empty.style.display='block';
     };
     document.head.appendChild(s);
   }else{
