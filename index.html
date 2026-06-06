@@ -202,6 +202,65 @@ nav{background:var(--p);padding:0 24px;display:flex;align-items:center;justify-c
 .p-card-comm{font-size:.76rem;color:#1e8449;font-weight:600;margin-bottom:12px}
 .p-card-btn{display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:8px 16px;background:var(--p);color:#fff;border-radius:6px;font-size:.82rem;font-weight:600;transition:.2s;text-align:center}
 .p-card-btn:hover{background:#2d6a9f}
+/* Star Rating */
+.p-card-rating{cursor:pointer;display:flex;align-items:center;gap:6px;margin-bottom:10px;padding:6px 10px;background:#fdf8e7;border-radius:6px;transition:.2s}
+.p-card-rating:hover{background:#fef3c7}
+.stars-inline{display:inline-flex;gap:1px;font-size:.9rem;color:#d4a017;letter-spacing:-1px}
+.stars-inline .s-empty{color:#ccc}
+.rating-text{font-size:.73rem;color:#8b6914;font-weight:600}
+/* Review Modal */
+.review-modal{display:none;position:fixed;right:20px;bottom:140px;z-index:998;width:400px;max-width:calc(100vw - 40px);max-height:70vh;overflow-y:auto;background:var(--c);border-radius:var(--r);box-shadow:0 8px 32px rgba(0,0,0,.2);padding:24px 20px}
+.review-modal.show{display:block}
+.review-modal h3{font-size:1rem;font-weight:700;color:var(--p);margin-bottom:2px}
+.review-modal h4{font-size:.85rem;color:var(--s);margin-bottom:12px;font-weight:400}
+.review-modal .close-btn{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--s);padding:4px}
+.review-modal .close-btn:hover{color:var(--t)}
+.review-stats{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg);border-radius:8px;margin-bottom:14px}
+.review-stats .avg-rating{font-size:2rem;font-weight:700;color:var(--p)}
+.review-stats .stars-lg{font-size:1.3rem;color:#d4a017;letter-spacing:2px}
+.review-stats .total-reviews{font-size:.76rem;color:var(--s)}
+.star-select{display:inline-flex;gap:4px;font-size:1.6rem;cursor:pointer;margin-bottom:8px;user-select:none}
+.star-select span{color:#ccc;transition:.15s}
+.star-select span.active{color:#d4a017}
+.star-select:hover span{color:#d4a017}
+.star-select span:hover~span{color:#ccc}
+.review-input-wrap{margin-bottom:12px}
+.review-input-wrap textarea{width:100%;padding:10px 12px;border:1px solid #d0d7e3;border-radius:8px;font-size:.85rem;resize:vertical;min-height:60px;outline:none;background:var(--bg)}
+.review-input-wrap textarea:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.06)}
+.review-submit-btn{width:100%;padding:10px;background:var(--p);color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:700;cursor:pointer;transition:.2s}
+.review-submit-btn:hover{background:#2d6a9f}
+.review-submit-btn:disabled{background:#8899aa;cursor:not-allowed}
+.review-list{margin-top:16px;border-top:1px solid var(--bdr);padding-top:12px}
+.review-item{padding:10px 0;border-bottom:1px solid var(--bdr)}
+.review-item:last-child{border-bottom:none}
+.review-item .ri-header{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.review-item .ri-stars{font-size:.82rem;color:#d4a017;letter-spacing:1px}
+.review-item .ri-user{font-size:.76rem;color:var(--s)}
+.review-item .ri-time{font-size:.7rem;color:#999;margin-left:auto}
+.review-item .ri-content{font-size:.82rem;color:var(--t);line-height:1.5}
+.review-empty{text-align:center;padding:20px;color:var(--s);font-size:.82rem}
+/* Email Subscribe */
+.subscribe-section{background:linear-gradient(135deg,#1a3a5c,#0f2440);padding:40px 20px;text-align:center;margin-top:20px}
+.subscribe-section h3{color:#fff;font-size:1.3rem;margin-bottom:6px}
+.subscribe-section p{color:rgba(255,255,255,.7);font-size:.88rem;margin-bottom:18px}
+.subscribe-form{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;max-width:460px;margin:0 auto}
+.subscribe-form input{flex:1;min-width:200px;padding:12px 16px;border:none;border-radius:8px;font-size:.9rem;outline:none}
+.subscribe-form input:focus{box-shadow:0 0 0 3px rgba(240,180,41,.4)}
+.subscribe-form button{padding:12px 28px;background:var(--a);color:#1a3a5c;border:none;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;transition:.2s}
+.subscribe-form button:hover{background:#f5c550}
+.subscribe-form button:disabled{opacity:.6;cursor:not-allowed}
+.subscribe-success{display:none;color:#4caf50;font-weight:600;font-size:.92rem;margin-top:10px}
+.subscribe-error{display:none;color:#f44336;font-size:.82rem;margin-top:10px}
+/* Footer Subscribe Mini */
+.footer-subscribe{margin-top:6px}
+.footer-subscribe .mini-sub-form{display:flex;gap:4px;margin-top:4px}
+.footer-subscribe .mini-sub-form input{flex:1;padding:7px 10px;border:1px solid rgba(255,255,255,.2);border-radius:4px;background:rgba(255,255,255,.08);color:#fff;font-size:.76rem;outline:none;min-width:120px}
+.footer-subscribe .mini-sub-form input::placeholder{color:rgba(255,255,255,.4)}
+.footer-subscribe .mini-sub-form button{padding:7px 12px;background:var(--a);color:#1a3a5c;border:none;border-radius:4px;font-size:.76rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
+.footer-subscribe .mini-sub-form button:hover{background:#f5c550}
+.footer-sub-msg{font-size:.7rem;margin-top:4px}
+.footer-sub-msg.success{color:#4caf50}
+.footer-sub-msg.error{color:#f44336}
 /* Sourcing Section */
 .sourcing-features{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
 .sf-card{background:var(--c);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid var(--bdr);padding:22px 20px;text-align:center}
@@ -240,7 +299,7 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 .consult-modal .submit-btn:hover{background:#2d6a9f}
 .consult-success{display:none;text-align:center;padding:12px 0}
 .consult-success h4{color:#1e8449;font-size:1rem;margin-bottom:4px}
-@media(max-width:480px){.consult-btn{right:10px;bottom:20px;width:48px;height:48px;font-size:1.3rem}.consult-modal{right:10px;bottom:80px;width:calc(100vw - 20px)}
+@media(max-width:480px){.consult-btn{right:10px;bottom:20px;width:48px;height:48px;font-size:1.3rem}.consult-modal{right:10px;bottom:80px;width:calc(100vw - 20px)}.review-modal{right:10px;bottom:80px;width:calc(100vw - 20px);max-height:60vh}
 .nav-lang select{max-width:90px;font-size:.7rem}
 }
 /* Responsive */
@@ -718,6 +777,19 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 </div>
 </div>
 </section>
+
+<!-- ===== Email Subscribe Section ===== -->
+<section class="subscribe-section" id="subscribe">
+<h3>📬 订阅跨境资讯简报</h3>
+<p>每周精选跨境贸易动态、政策变化、工具推荐，直送邮箱</p>
+<form class="subscribe-form" onsubmit="return handleSubscribe(event,this)" id="subscribe-hero-form">
+<input type="email" placeholder="your@email.com" required id="subscribe-hero-email">
+<button type="submit" id="subscribe-hero-btn">立即订阅</button>
+</form>
+<div class="subscribe-success" id="subscribe-hero-success">✅ 订阅成功！每周精选将发送到你的邮箱</div>
+<div class="subscribe-error" id="subscribe-hero-error"></div>
+</section>
+
 <footer>
 <div class="footer-inner">
 <div class="footer-col">
@@ -742,6 +814,14 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 <h4 data-i18n="ft_contact">联系我们</h4>
 <a href="mailto:hgm123002@outlook.com">📧 hgm123002@outlook.com</a>
 <a>💬 微信：hgm123002</a>
+<div class="footer-subscribe">
+<div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:4px">订阅简报</div>
+<form class="mini-sub-form" onsubmit="return handleSubscribe(event,this,'footer')">
+<input type="email" placeholder="your@email.com" required>
+<button type="submit">订阅</button>
+</form>
+<div class="footer-sub-msg" style="display:none"></div>
+</div>
 </div>
 </div>
 <div class="footer-bottom">
@@ -781,6 +861,27 @@ footer{background:#0d2135;color:#fff;padding:36px 24px 24px}
 <h4>✅ 提交成功！</h4>
 <p>我们将在24小时内与您联系</p>
 </div>
+</div>
+
+<!-- ===== Tool Review Modal ===== -->
+<div class="review-modal" id="review-modal">
+<button class="close-btn" id="review-close">✕</button>
+<h3>⭐ 工具评价</h3>
+<h4 id="review-tool-name"></h4>
+<div class="review-stats" id="review-stats">
+<div class="avg-rating" id="review-avg">0.0</div>
+<div class="stars-lg" id="review-stars-lg"></div>
+<div class="total-reviews" id="review-count">0 条评价</div>
+</div>
+<div class="review-input-wrap" id="review-form-wrap">
+<div class="star-select" id="star-select">
+<span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+</div>
+<textarea id="review-content" maxlength="500" placeholder="分享你的使用体验（选填，最多500字）"></textarea>
+<button class="review-submit-btn" id="review-submit">提交评价</button>
+</div>
+<div class="review-list" id="review-list"></div>
+<div class="review-empty" id="review-empty" style="display:none">暂无评价，成为第一个评价的人吧！</div>
 </div>
 
 <!-- ===== Schema ===== -->
@@ -2144,15 +2245,15 @@ list.innerHTML=h;
 
 // ===== Partners Data =====
 var partners=[
-{icon:'🛒',name:{zh:'美客多 Mercado Libre',en:'Mercado Libre Affiliate'},desc:{zh:'拉美最大电商平台官方联盟，开店入驻与成交佣金。',en:'LATAM largest e-commerce platform official affiliate program.'},tags:{zh:'拉美电商',en:'LATAM E-Commerce'},comm:{zh:'最高11%佣金',en:'Up to 11% commission'},url:'https://www.mercadolibre.com/afiliados'},
-{icon:'📦',name:{zh:'亚马逊 Amazon Associates',en:'Amazon Associates'},desc:{zh:'全球开店干货指导，通过官方联盟合规赚取入驻与成交佣金。',en:'Global selling guides and official affiliate commissions.'},tags:{zh:'全球开店',en:'Global Selling'},comm:{zh:'品类佣金',en:'Category commission'},url:'https://affiliate-program.amazon.com'},
-{icon:'🛍️',name:{zh:'Shopee 虾皮联盟',en:'Shopee Affiliate'},desc:{zh:'东南亚全站点开店运营干货，官方AMS联盟营销体系。',en:'SEA all-site store setup guides, official AMS affiliate system.'},tags:{zh:'东南亚电商',en:'SEA E-Commerce'},comm:{zh:'入驻+成交佣金',en:'Registration + sale commission'},url:'https://shopee.com'},
-{icon:'🇷🇺',name:{zh:'OZON 官方联盟',en:'OZON Affiliate'},desc:{zh:'俄罗斯头部跨境平台，入驻开店与本土市场合规干货。',en:'Russia top cross-border platform, store setup and compliance guides.'},tags:{zh:'俄罗斯电商',en:'Russia E-Commerce'},comm:{zh:'入驻+成交佣金',en:'Registration + sale commission'},url:'https://www.ozon.ru'},
-{icon:'💰',name:{zh:'万里汇 WorldFirst',en:'WorldFirst'},desc:{zh:'蚂蚁集团旗下跨境收款，0.3%行业最低费率。',en:'Ant Group cross-border payment, 0.3% industry-low rate.'},tags:{zh:'跨境支付',en:'Cross-Border Payment'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://www.worldfirst.com'},
-{icon:'🔐',name:{zh:'紫鸟浏览器',en:'Ziniao Browser'},desc:{zh:'正规跨境防关联工具，多账号安全管理。',en:'Official anti-association browser for multi-account management.'},tags:{zh:'账号安全',en:'Account Security'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://www.ziniao.com/sharelinks/?from=17514381163618&activity_id=114'},
-{icon:'📊',name:{zh:'智赢ERP',en:'Zhiying ERP'},desc:{zh:'正规跨境店铺管理系统，多平台订单统一管理。',en:'Official cross-border store management, multi-platform order management.'},tags:{zh:'店铺管理',en:'Store Management'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://www.zying.net/'},
-{icon:'⚡',name:{zh:'妙手ERP',en:'Miaoshou ERP'},desc:{zh:'跨境ERP效率工具，批量上架与库存管理。',en:'Cross-border ERP efficiency tool, batch listing and inventory.'},tags:{zh:'效率工具',en:'Efficiency Tool'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://erp.91miaoshou.com/'},
-{icon:'🚀',name:{zh:'小火箭加速器',en:'Rocket Accelerator'},desc:{zh:'高速网络加速，稳定连接，跨境运营必备工具。',en:'High-speed network accelerator for stable cross-border operations.'},tags:{zh:'网络加速',en:'Network'},comm:{zh:'免费试用',en:'Free Trial'},url:'https://h5n5.xiaohuojian.sbs/auth/register?code=h5n5'}
+{id:'mercadolibre',icon:'🛒',name:{zh:'美客多 Mercado Libre',en:'Mercado Libre Affiliate'},desc:{zh:'拉美最大电商平台官方联盟，开店入驻与成交佣金。',en:'LATAM largest e-commerce platform official affiliate program.'},tags:{zh:'拉美电商',en:'LATAM E-Commerce'},comm:{zh:'最高11%佣金',en:'Up to 11% commission'},url:'https://www.mercadolibre.com/afiliados'},
+{id:'amazon-assoc',icon:'📦',name:{zh:'亚马逊 Amazon Associates',en:'Amazon Associates'},desc:{zh:'全球开店干货指导，通过官方联盟合规赚取入驻与成交佣金。',en:'Global selling guides and official affiliate commissions.'},tags:{zh:'全球开店',en:'Global Selling'},comm:{zh:'品类佣金',en:'Category commission'},url:'https://affiliate-program.amazon.com'},
+{id:'shopee',icon:'🛍️',name:{zh:'Shopee 虾皮联盟',en:'Shopee Affiliate'},desc:{zh:'东南亚全站点开店运营干货，官方AMS联盟营销体系。',en:'SEA all-site store setup guides, official AMS affiliate system.'},tags:{zh:'东南亚电商',en:'SEA E-Commerce'},comm:{zh:'入驻+成交佣金',en:'Registration + sale commission'},url:'https://shopee.com'},
+{id:'ozon',icon:'🇷🇺',name:{zh:'OZON 官方联盟',en:'OZON Affiliate'},desc:{zh:'俄罗斯头部跨境平台，入驻开店与本土市场合规干货。',en:'Russia top cross-border platform, store setup and compliance guides.'},tags:{zh:'俄罗斯电商',en:'Russia E-Commerce'},comm:{zh:'入驻+成交佣金',en:'Registration + sale commission'},url:'https://www.ozon.ru'},
+{id:'worldfirst',icon:'💰',name:{zh:'万里汇 WorldFirst',en:'WorldFirst'},desc:{zh:'蚂蚁集团旗下跨境收款，0.3%行业最低费率。',en:'Ant Group cross-border payment, 0.3% industry-low rate.'},tags:{zh:'跨境支付',en:'Cross-Border Payment'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://www.worldfirst.com'},
+{id:'ziniao',icon:'🔐',name:{zh:'紫鸟浏览器',en:'Ziniao Browser'},desc:{zh:'正规跨境防关联工具，多账号安全管理。',en:'Official anti-association browser for multi-account management.'},tags:{zh:'账号安全',en:'Account Security'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://www.ziniao.com/sharelinks/?from=17514381163618&activity_id=114'},
+{id:'zying-erp',icon:'📊',name:{zh:'智赢ERP',en:'Zhiying ERP'},desc:{zh:'正规跨境店铺管理系统，多平台订单统一管理。',en:'Official cross-border store management, multi-platform order management.'},tags:{zh:'店铺管理',en:'Store Management'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://www.zying.net/'},
+{id:'miaoshou-erp',icon:'⚡',name:{zh:'妙手ERP',en:'Miaoshou ERP'},desc:{zh:'跨境ERP效率工具，批量上架与库存管理。',en:'Cross-border ERP efficiency tool, batch listing and inventory.'},tags:{zh:'效率工具',en:'Efficiency Tool'},comm:{zh:'推荐奖励',en:'Referral reward'},url:'https://erp.91miaoshou.com/'},
+{id:'xiaohuojian',icon:'🚀',name:{zh:'小火箭加速器',en:'Rocket Accelerator'},desc:{zh:'高速网络加速，稳定连接，跨境运营必备工具。',en:'High-speed network accelerator for stable cross-border operations.'},tags:{zh:'网络加速',en:'Network'},comm:{zh:'免费试用',en:'Free Trial'},url:'https://h5n5.xiaohuojian.sbs/auth/register?code=h5n5'}
 ];
 
 function renderPartners(){
@@ -2165,7 +2266,10 @@ var n=p.name[lang]||p.name.en||Object.values(p.name)[0];
 var d=p.desc[lang]||p.desc.en||Object.values(p.desc)[0];
 var t=p.tags[lang]||p.tags.en||Object.values(p.tags)[0];
 var c=p.comm[lang]||p.comm.en||Object.values(p.comm)[0];
-h+='<div class="p-card"><div class="p-card-header"><div class="p-card-logo">'+p.icon+'</div><div class="p-card-name">'+n+'</div></div><div class="p-card-desc">'+d+'</div><div class="p-card-tags"><span class="p-tag">'+t+'</span></div><div class="p-card-comm">💎 '+c+'</div><a href="'+p.url+'" target="_blank" rel="noopener noreferrer sponsored" class="p-card-btn">'+((I18N[lang]||I18N.en).hero_btn1||'Learn More')+' →</a></div>';
+var avgRating = (toolRatings[p.id]&&toolRatings[p.id].avg) ? toolRatings[p.id].avg.toFixed(1) : '0.0';
+var reviewCount = (toolRatings[p.id]&&toolRatings[p.id].count) ? toolRatings[p.id].count : 0;
+var starHtml = renderStarsDisplay(parseFloat(avgRating));
+h+='<div class="p-card"><div class="p-card-header"><div class="p-card-logo">'+p.icon+'</div><div class="p-card-name">'+n+'</div></div><div class="p-card-desc">'+d+'</div><div class="p-card-tags"><span class="p-tag">'+t+'</span></div><div class="p-card-comm">💎 '+c+'</div><div class="p-card-rating" onclick="openReviewModal(\''+p.id+'\')" title="点击查看评价"><div class="stars-inline">'+starHtml+'</div><span class="rating-text">'+avgRating+' ('+reviewCount+')</span></div><a href="'+p.url+'" target="_blank" rel="noopener noreferrer sponsored" class="p-card-btn">'+((I18N[lang]||I18N.en).hero_btn1||'Learn More')+' →</a></div>';
 }
 grid.innerHTML=h;
 }
@@ -2250,6 +2354,234 @@ document.getElementById('consult-modal').classList.remove('show');
 return false;
 }
 
+// ===== Tool Rating & Review System =====
+var toolRatings = {};
+var currentReviewTool = null;
+var currentReviewRating = 0;
+
+function renderStarsDisplay(rating){
+  var h='';
+  for(var i=1;i<=5;i++){
+    if(i<=Math.floor(rating))h+='★';
+    else if(i===Math.ceil(rating)&&rating%1>=0.3)h+='★';
+    else h+='<span class="s-empty">★</span>';
+  }
+  return h;
+}
+
+async function loadAllToolRatings(){
+  if(!initSupabase()){setTimeout(loadAllToolRatings,2000);return;}
+  try{
+    var r=await supabaseClient.from('tool_reviews').select('tool_id,rating');
+    if(r.error){console.error(r.error);return;}
+    var data=r.data||[];
+    var stats={};
+    for(var i=0;i<data.length;i++){
+      var d=data[i];
+      if(!stats[d.tool_id])stats[d.tool_id]={sum:0,count:0};
+      stats[d.tool_id].sum+=d.rating;
+      stats[d.tool_id].count++;
+    }
+    for(var k in stats){
+      toolRatings[k]={avg:stats[k].sum/stats[k].count,count:stats[k].count};
+    }
+    renderPartners();
+  }catch(e){console.error(e);}
+}
+
+function openReviewModal(toolId){
+  var p=null;
+  for(var i=0;i<partners.length;i++){if(partners[i].id===toolId){p=partners[i];break;}}
+  if(!p)return;
+  currentReviewTool=toolId;
+  var lang=curLang;
+  var n=p.name[lang]||p.name.en||Object.values(p.name)[0];
+  document.getElementById('review-tool-name').textContent=n;
+  currentReviewRating=0;
+  updateStarSelect(0);
+  document.getElementById('review-content').value='';
+  document.getElementById('review-submit').disabled=false;
+  document.getElementById('review-submit').textContent='提交评价';
+  document.getElementById('review-modal').classList.add('show');
+  loadToolReviews(toolId);
+}
+
+function closeReviewModal(){
+  document.getElementById('review-modal').classList.remove('show');
+  currentReviewTool=null;
+}
+
+document.addEventListener('click',function(e){
+  var m=document.getElementById('review-modal');
+  var c=document.getElementById('review-close');
+  if(e.target===c){closeReviewModal();return;}
+  if(m&&m.classList.contains('show')&&!m.contains(e.target)){
+    var clickedOnCard=false;
+    var el=e.target;
+    while(el){if(el.classList&&el.classList.contains('p-card-rating')){clickedOnCard=true;break;}el=el.parentElement;}
+    if(!clickedOnCard)closeReviewModal();
+  }
+});
+
+function updateStarSelect(rating){
+  currentReviewRating=rating;
+  var stars=document.querySelectorAll('#star-select span');
+  for(var i=0;i<stars.length;i++){
+    stars[i].classList.toggle('active',i<rating);
+  }
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  var ss=document.getElementById('star-select');
+  if(ss){
+    ss.addEventListener('click',function(e){
+      if(e.target.tagName==='SPAN'){
+        var v=parseInt(e.target.getAttribute('data-v'));
+        updateStarSelect(v);
+      }
+    });
+  }
+  var rs=document.getElementById('review-submit');
+  if(rs){rs.addEventListener('click',submitToolReview);}
+});
+
+async function submitToolReview(){
+  if(!currentReviewTool){return;}
+  if(!initSupabase()){alert('System not ready');return;}
+  if(!currentUser){alert('Please login first to submit a review');return;}
+  if(currentReviewRating<1){alert('Please select a star rating (1-5)');return;}
+  var content=document.getElementById('review-content').value.trim();
+  var btn=document.getElementById('review-submit');
+  if(btn){btn.disabled=true;btn.textContent='Submitting...';}
+  try{
+    var r=await supabaseClient.from('tool_reviews').insert({
+      tool_id:currentReviewTool,
+      user_id:currentUser.id,
+      rating:currentReviewRating,
+      content:content||''
+    }).select().single();
+    if(r.error){
+      if(r.error.message&&r.error.message.indexOf('duplicate')>=0){
+        alert('You have already reviewed this tool. Each user can only review once per tool.');
+      }else{
+        alert(r.error.message||'Failed to submit review');
+      }
+      if(btn){btn.disabled=false;btn.textContent='提交评价';}
+      return;
+    }
+    document.getElementById('review-content').value='';
+    currentReviewRating=0;
+    updateStarSelect(0);
+    if(btn){btn.disabled=false;btn.textContent='提交评价';}
+    showCommentToast('Review submitted! Thank you!');
+    await loadAllToolRatings();
+    await loadToolReviews(currentReviewTool);
+  }catch(e){alert(e.message||'Network error');if(btn){btn.disabled=false;btn.textContent='提交评价';}}
+}
+
+async function loadToolReviews(toolId){
+  if(!initSupabase())return;
+  var list=document.getElementById('review-list');
+  var empty=document.getElementById('review-empty');
+  if(list)list.innerHTML='';
+  if(empty)empty.style.display='none';
+  try{
+    var r=await supabaseClient.from('tool_reviews')
+      .select('*')
+      .eq('tool_id',toolId)
+      .order('created_at',{ascending:false});
+    if(r.error){console.error(r.error);return;}
+    var data=r.data||[];
+    if(data.length===0){if(empty)empty.style.display='block';updateReviewStats(toolId);return;}
+    var avg=data.reduce(function(s,x){return s+x.rating;},0)/data.length;
+    document.getElementById('review-avg').textContent=avg.toFixed(1);
+    document.getElementById('review-stars-lg').textContent='★★★★★'.substring(0,Math.round(avg));
+    document.getElementById('review-count').textContent=data.length+' 条评价';
+    var h='';
+    for(var i=0;i<data.length;i++){
+      var d=data[i];
+      var nick=getUserNickname({user_id:d.user_id})||'User';
+      var stars='★★★★★'.substring(0,d.rating)+'☆☆☆☆☆'.substring(0,5-d.rating);
+      var time=new Date(d.created_at).toLocaleDateString();
+      h+='<div class="review-item"><div class="ri-header"><span class="ri-stars">'+stars+'</span><span class="ri-user">'+nick+'</span><span class="ri-time">'+time+'</span></div>';
+      if(d.content)h+='<div class="ri-content">'+escapeHtml(d.content)+'</div>';
+      h+='</div>';
+    }
+    if(list)list.innerHTML=h;
+    updateReviewStats(toolId);
+  }catch(e){console.error(e);}
+}
+
+function updateReviewStats(toolId){
+  var stats=toolRatings[toolId];
+  var avg=stats?stats.avg.toFixed(1):'0.0';
+  var cnt=stats?stats.count:0;
+  document.getElementById('review-avg').textContent=avg;
+  document.getElementById('review-stars-lg').textContent='★★★★★'.substring(0,Math.round(parseFloat(avg)));
+  document.getElementById('review-count').textContent=cnt+' 条评价';
+}
+
+function escapeHtml(str){
+  var d=document.createElement('div');
+  d.textContent=str;
+  return d.innerHTML;
+}
+
+// ===== Email Subscribe =====
+async function handleSubscribe(e,form,source){
+  e.preventDefault();
+  var emailInput=form.querySelector('input[type=email]');
+  if(!emailInput||!emailInput.value.trim())return false;
+  var email=emailInput.value.trim();
+  var btn=form.querySelector('button');
+  if(btn){btn.disabled=true;btn.textContent='订阅中...';}
+  if(!initSupabase()){
+    showSubscribeMsg(source,'System not ready, please try again later','error');
+    if(btn){btn.disabled=false;btn.textContent='立即订阅';}
+    return false;
+  }
+  try{
+    var r=await supabaseClient.from('subscribers').insert({
+      email:email,
+      language:curLang,
+      source:source||'hero'
+    }).select().single();
+    if(r.error){
+      if(r.error.message&&r.error.message.indexOf('duplicate')>=0){
+        showSubscribeMsg(source,'你已订阅过了！','error');
+      }else{
+        showSubscribeMsg(source,r.error.message||'Subscription failed','error');
+      }
+    }else{
+      emailInput.value='';
+      showSubscribeMsg(source,'✅ 订阅成功！感谢你的关注','success');
+    }
+  }catch(e){
+    showSubscribeMsg(source,'Network error, please try again','error');
+  }
+  if(btn){btn.disabled=false;btn.textContent=source==='footer'?'订阅':'立即订阅';}
+  return false;
+}
+
+function showSubscribeMsg(source,msg,type){
+  var el;
+  if(source==='footer'){
+    el=document.querySelector('.footer-sub-msg');
+  }else{
+    el=document.getElementById('subscribe-hero-'+type);
+  }
+  if(!el)return;
+  el.textContent=msg;
+  el.style.display='block';
+  el.className=(source==='footer'?'footer-sub-msg ':'subscribe-')+type;
+  if(type==='success'){
+    if(source!=='footer'){
+      document.getElementById('subscribe-hero-error').style.display='none';
+    }
+    setTimeout(function(){el.style.display='none';},5000);
+  }
+}
+
 // ===== Navigation Toggle =====
 document.addEventListener('DOMContentLoaded',function(){
 var nt=document.getElementById('nav-toggle');
@@ -2263,6 +2595,7 @@ initCookieConsent();
 applyLang(curLang);
 renderArticles();
 renderPartners();
+loadAllToolRatings();
 // Language selector
 var ls=document.getElementById('lang-select');
 if(ls){
