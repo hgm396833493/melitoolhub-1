@@ -1827,17 +1827,13 @@ async function submitComment(){
   if(!currentUser){showCommentToast('Please login first');return;}
   if(btn){btn.disabled = true; btn.textContent = 'Posting...';}
   try{
-    var note = (currentUser.user_metadata&&currentUser.user_metadata.nickname)||currentUser.email||'User';
     var r = await supabaseClient.from('comments').insert({
       page_path: getPagePath(),
       user_id: currentUser.id,
       content: content,
-      parent_id: null,
-      author_note: note.substring(0,50)
+      parent_id: null
     }).select().single();
     if(r.error){showCommentToast(r.error.message||'Failed to post');if(btn){btn.disabled=false;btn.textContent='Post';}return;}
-    // Cache nickname for display
-    if(r.data){r.data._author = note;}
     input.value = '';
     var cc = document.getElementById('comment-char-count');
     if(cc)cc.textContent = '0/1000';
@@ -1868,13 +1864,11 @@ async function submitReply(parentId){
   if(!textarea||!textarea.value.trim()){showCommentToast('Please write a reply first');return;}
   var content = textarea.value.trim();
   try{
-    var note = (currentUser.user_metadata&&currentUser.user_metadata.nickname)||currentUser.email||'User';
     var r = await supabaseClient.from('comments').insert({
       page_path: getPagePath(),
       user_id: currentUser.id,
       content: content,
-      parent_id: parentId,
-      author_note: note.substring(0,50)
+      parent_id: parentId
     }).select().single();
     if(r.error){showCommentToast(r.error.message||'Failed to reply');return;}
     activeReplyId = null;
@@ -1936,6 +1930,18 @@ async function loadComments(){
   }catch(e){console.error(e);if(loading)loading.style.display='none';}
 }
 
+function getUserNickname(c){
+  // Try to get nickname from currentUser if it's the logged-in user's own comment
+  if(currentUser && c.user_id === currentUser.id){
+    var meta = currentUser.user_metadata;
+    if(meta && meta.nickname) return meta.nickname;
+    var em = currentUser.email;
+    if(em) return em.split('@')[0];
+  }
+  // Fallback: use shortened user_id
+  return 'User-' + (c.user_id||'').substring(0,6);
+}
+
 function renderComments(comments, container){
   if(!container)return;
   var d = (I18N[curLang]||I18N.en);
@@ -1943,7 +1949,7 @@ function renderComments(comments, container){
 
   comments.forEach(function(c){
     var replies = currentComments.filter(function(r){return r.parent_id===c.id;});
-    var nickname = c._author || c.author_note || (c.user_id||'User').substring(0,8);
+    var nickname = getUserNickname(c);
     var timeAgo = formatTimeAgo(c.created_at);
     var isOwner = currentUser && currentUser.id === c.user_id;
 
@@ -2043,7 +2049,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var switchLogin = document.getElementById('switch-to-login');
   var navLogin = document.getElementById('nav-btn-login');
   var navRegister = document.getElementById('nav-btn-register');
-  var navLogout = document.getElementById('nav-logout');
+  var navLogout = document.getElementById('nav-btn-logout');
 
   if(authOverlay)authOverlay.addEventListener('click',function(e){if(e.target===authOverlay)closeAuthModal();});
   if(authClose)authClose.addEventListener('click',closeAuthModal);
