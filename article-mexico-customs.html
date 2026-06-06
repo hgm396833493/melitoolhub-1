@@ -639,6 +639,16 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 .nav-links a{padding:12px 8px;border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem}
 .nav-toggle{display:block}
 }
+}
+/* ===== 小火箭浮动按钮 ===== */
+.rocket-btn{position:fixed;bottom:28px;right:24px;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#e8453c,#ff6b3d);box-shadow:0 6px 24px rgba(232,69,60,.4);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:pointer;transition:transform .3s,box-shadow .3s;animation:rocket-bounce 2s ease-in-out infinite;border:none;text-decoration:none}
+.rocket-btn:hover{transform:scale(1.12);box-shadow:0 8px 32px rgba(232,69,60,.55)}
+.rocket-btn:active{transform:scale(.95)}
+.rocket-btn svg{width:32px;height:32px;fill:#fff;transition:transform .3s}
+.rocket-btn:hover svg{transform:rotate(-15deg) translateY(-2px)}
+@keyframes rocket-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.rocket-badge{position:absolute;top:-4px;right:-4px;background:#fff;color:#e8453c;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15);white-space:nowrap}
+@media(max-width:768px){.rocket-btn{bottom:20px;right:16px;width:50px;height:50px}.rocket-btn svg{width:28px;height:28px}}
 </style>
 </head>
 <body>
@@ -823,4 +833,11 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 </div>
 </section>
 <footer><p>© 2026 GlobalTradeHub · <a href="index.html">Inicio</a> · <a href="mailto:hgm123002@outlook.com">Contacto</a></p></footer>
+
+<!-- ===== 小火箭浮动按钮 ===== -->
+<a href="https://h5n5.xiaohuojian.sbs/auth/register?code=h5n5" target="_blank" rel="noopener" class="rocket-btn" title="小火箭 - 快速注册">
+<svg viewBox="0 0 24 24"><path d="M2.5 15.8l5.7 5.7L6 23.5l-6-6L2.5 15.8zm1.4-1.4L9.6 8.7l5.7 5.7-5.7 5.7-5.7-5.7zm8.5-8.5l1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1zm3.6-3.6L17.4.9l2.8 2.8L18.8 5 16 2.2zm4.2 9.8l-1.4 1.4-2.1-2.1 1.4-1.4 2.1 2.1zM18 15.8l6 6-1.5 1.5-6-6 1.5-1.5z"/></svg>
+<span class="rocket-badge">Free</span>
+</a>
+
 </body></html>
