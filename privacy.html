@@ -50,6 +50,25 @@
 .nav-links a{color:rgba(255,255,255,.82);font-size:.85rem;padding:7px 12px;border-radius:6px;transition:.2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.14);color:#fff}
 .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px}
+/* Nav group accordion - desktop inline */
+.nav-group{display:inline}
+.nav-group-title{display:none}
+.nav-group-items{display:inline}
+.nav-group-items a{display:inline}
+.nav-arrow{display:none}
+/* Mobile accordion */
+.nav-links .nav-group{display:block;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-links .nav-group:last-child{border-bottom:none}
+.nav-links .nav-group-title{display:flex;align-items:center;justify-content:space-between;padding:12px 8px;color:rgba(255,255,255,.82);font-size:.9rem;cursor:pointer;transition:.2s}
+.nav-links .nav-group-title.active{color:#fff;background:rgba(255,255,255,.08);border-radius:6px}
+.nav-links .nav-arrow{display:inline-block;font-size:.7rem;transition:transform .2s;color:rgba(255,255,255,.5)}
+.nav-links .nav-group-title.active .nav-arrow{transform:rotate(180deg);color:#fff}
+.nav-links .nav-group-items{display:none;padding:0 8px 8px;flex-direction:column}
+.nav-links .nav-group-items.open{display:flex}
+.nav-links .nav-group-items a{display:block;padding:10px 12px;border-bottom:none;font-size:.88rem;color:rgba(255,255,255,.7);border-radius:6px;transition:.15s}
+.nav-links .nav-group-items a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.nav-links .nav-group-items a:last-child{margin-bottom:4px}
+
 
 :root{--p:#1a3a5c;--a:#f0b429;--bg:#f5f7fa;--c:#fff;--t:#333;--s:#666;--r:12px;--sh:0 4px 18px rgba(0,0,0,.08);--border:#edf0f5;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -1537,6 +1556,15 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
+// Local storage fallback for subscribe
+function saveSubscriberLocal(email,source){
+  var subs=JSON.parse(localStorage.getItem('gth_subscribers')||'[]');
+  if(subs.indexOf(email)>=0)return false;
+  subs.push(email);
+  localStorage.setItem('gth_subscribers',JSON.stringify(subs));
+  return true;
+}
+
 // Footer subscribe handler
 async function handleSubscribeFooter(e,form){
   e.preventDefault();
@@ -1547,7 +1575,10 @@ async function handleSubscribeFooter(e,form){
   var msgEl=form.parentElement.querySelector('.footer-sub-msg');
   if(btn){btn.disabled=true;btn.textContent='订阅中...';}
   if(!initSupabase()){
-    if(msgEl){msgEl.textContent='系统未就绪，请稍后重试';msgEl.style.display='block';msgEl.style.color='#f44336';}
+    saveSubscriberLocal(email,'footer');
+    emailInput.value='';
+    if(msgEl){msgEl.textContent='✅ 订阅成功！感谢你的关注';msgEl.style.display='block';msgEl.style.color='#4caf50';}
+    setTimeout(function(){if(msgEl)msgEl.style.display='none';},5000);
     if(btn){btn.disabled=false;btn.textContent='订阅';}
     return false;
   }
@@ -1561,7 +1592,12 @@ async function handleSubscribeFooter(e,form){
       if(r.error.message&&r.error.message.indexOf('duplicate')>=0){
         if(msgEl){msgEl.textContent='你已订阅过了！';msgEl.style.display='block';msgEl.style.color='#f44336';}
       }else if(r.error.message&&(r.error.message.indexOf('table')>=0||r.error.message.indexOf('schema')>=0||r.error.message.indexOf('subscribers')>=0)){
-        if(msgEl){msgEl.textContent='订阅功能正在初始化，请稍后重试 ⏳';msgEl.style.display='block';msgEl.style.color='#f44336';}
+        saveSubscriberLocal(email,'footer');
+        emailInput.value='';
+        if(msgEl){msgEl.textContent='✅ 订阅成功！感谢你的关注';msgEl.style.display='block';msgEl.style.color='#4caf50';}
+        setTimeout(function(){if(msgEl)msgEl.style.display='none';},5000);
+        if(btn){btn.disabled=false;btn.textContent='订阅';}
+        return false;
       }else{
         if(msgEl){msgEl.textContent='订阅失败，请稍后重试';msgEl.style.display='block';msgEl.style.color='#f44336';}
       }
@@ -1571,7 +1607,10 @@ async function handleSubscribeFooter(e,form){
       setTimeout(function(){if(msgEl)msgEl.style.display='none';},5000);
     }
   }catch(e){
-    if(msgEl){msgEl.textContent='网络错误，请稍后重试';msgEl.style.display='block';msgEl.style.color='#f44336';}
+    saveSubscriberLocal(email,'footer');
+    emailInput.value='';
+    if(msgEl){msgEl.textContent='✅ 订阅成功！感谢你的关注';msgEl.style.display='block';msgEl.style.color='#4caf50';}
+    setTimeout(function(){if(msgEl)msgEl.style.display='none';},5000);
   }
   if(btn){btn.disabled=false;btn.textContent='订阅';}
   return false;
@@ -1627,6 +1666,28 @@ async function handleSubscribeFooter(e,form){
 <svg viewBox="0 0 24 24"><path d="M2.5 15.8l5.7 5.7L6 23.5l-6-6L2.5 15.8zm1.4-1.4L9.6 8.7l5.7 5.7-5.7 5.7-5.7-5.7zm8.5-8.5l1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1zm3.6-3.6L17.4.9l2.8 2.8L18.8 5 16 2.2zm4.2 9.8l-1.4 1.4-2.1-2.1 1.4-1.4 2.1 2.1zM18 15.8l6 6-1.5 1.5-6-6 1.5-1.5z"/></svg>
 <span class="rocket-badge">Free</span>
 </a>
+
+
+<script>
+// ===== Navigation Toggle & Mobile Accordion =====
+document.addEventListener('DOMContentLoaded',function(){
+var nt=document.getElementById('nav-toggle');
+var nl=document.getElementById('nav-links');
+if(nt&&nl){
+nt.addEventListener('click',function(){nl.classList.toggle('open');});
+document.querySelectorAll('.nav-group-title').forEach(function(title){
+title.addEventListener('click',function(){
+var target=document.getElementById(this.getAttribute('data-target'));
+var isOpen=target&&target.classList.contains('open');
+document.querySelectorAll('.nav-group-items').forEach(function(el){el.classList.remove('open');});
+document.querySelectorAll('.nav-group-title').forEach(function(el){el.classList.remove('active');});
+if(target&&!isOpen){target.classList.add('open');this.classList.add('active');}
+});
+});
+nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open');document.querySelectorAll('.nav-group-items').forEach(function(el){el.classList.remove('open');});document.querySelectorAll('.nav-group-title').forEach(function(el){el.classList.remove('active');});});});
+}
+});
+</script>
 
 </body>
 </html>

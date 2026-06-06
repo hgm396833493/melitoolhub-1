@@ -1,70 +1,83 @@
 -- ==========================================
 -- GlobalTradeHub: Tool Reviews + Subscribers
 -- Migration Date: 2026-06-06
+-- 直接复制到 Supabase SQL Editor 执行
 -- ==========================================
 
--- 1. Tool Reviews Table
-CREATE TABLE IF NOT EXISTS tool_reviews (
-  id         BIGSERIAL PRIMARY KEY,
-  tool_id    VARCHAR(50) NOT NULL,
-  user_id    UUID REFERENCES auth.users(id) NOT NULL,
-  rating     SMALLINT NOT NULL CHECK (rating >= 1 AND rating <= 5),
-  content    TEXT DEFAULT '',
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW(),
-  -- Each user can only review each tool once
-  UNIQUE(tool_id, user_id)
-);
-
--- 2. Subscribers Table
+-- 1. Subscribers Table (邮件订阅)
 CREATE TABLE IF NOT EXISTS subscribers (
-  id           BIGSERIAL PRIMARY KEY,
-  email        VARCHAR(255) NOT NULL UNIQUE,
-  language     VARCHAR(10) DEFAULT 'zh',
-  source       VARCHAR(50) DEFAULT 'hero',
-  status       VARCHAR(20) DEFAULT 'active' CHECK (status IN ('active','unsubscribed','bounced')),
-  subscribed_at TIMESTAMPTZ DEFAULT NOW(),
+  id             BIGSERIAL PRIMARY KEY,
+  email          VARCHAR(255) NOT NULL UNIQUE,
+  language       VARCHAR(10) DEFAULT 'zh',
+  source         VARCHAR(50) DEFAULT 'hero',
+  status         VARCHAR(20) DEFAULT 'active' CHECK (status IN ('active','unsubscribed','bounced')),
+  subscribed_at  TIMESTAMPTZ DEFAULT NOW(),
   unsubscribed_at TIMESTAMPTZ
 );
 
--- 3. RLS Policies for tool_reviews
-ALTER TABLE tool_reviews ENABLE ROW LEVEL SECURITY;
+-- 2. Tool Reviews Table (工具评价)
+CREATE TABLE IF NOT EXISTS tool_reviews (
+  id         BIGSERIAL PRIMARY KEY,
+  tool_id    VARCHAR(50) NOT NULL,
+  user_id    VARCHAR(100) NOT NULL,
+  user_name  VARCHAR(100) DEFAULT 'Anonymous',
+  rating     SMALLINT NOT NULL CHECK (rating >= 1 AND rating <= 5),
+  content    TEXT DEFAULT '',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
 
--- Anyone can read reviews
-CREATE POLICY "Anyone can read tool reviews" ON tool_reviews
-  FOR SELECT USING (true);
+-- 每个用户每个工具只能评价一次（如果user_id相同）
+CREATE UNIQUE INDEX IF NOT EXISTS idx_one_review_per_user
+  ON tool_reviews(tool_id, user_id);
 
--- Only authenticated users can insert (their own)
-CREATE POLICY "Authenticated users can review tools" ON tool_reviews
-  FOR INSERT WITH CHECK (auth.role() = 'authenticated' AND auth.uid() = user_id);
+-- ==========================================
+-- 3. RLS Policies
+-- ==========================================
 
--- Users can update their own reviews
-CREATE POLICY "Users can update own reviews" ON tool_reviews
-  FOR UPDATE USING (auth.uid() = user_id);
-
--- Users can delete their own reviews
-CREATE POLICY "Users can delete own reviews" ON tool_reviews
-  FOR DELETE USING (auth.uid() = user_id);
-
--- 4. RLS Policies for subscribers
+-- subscribers: 任何人可订阅
 ALTER TABLE subscribers ENABLE ROW LEVEL SECURITY;
-
--- Anyone can subscribe (insert)
+DROP POLICY IF EXISTS "Anyone can subscribe" ON subscribers;
 CREATE POLICY "Anyone can subscribe" ON subscribers
   FOR INSERT WITH CHECK (true);
 
--- Only authenticated admins can read subscribers (you'll manage this manually)
-CREATE POLICY "Only service role can read subscribers" ON subscribers
-  FOR SELECT USING (false);
+-- subscribers: 任何人可读取（用于检查重复）
+DROP POLICY IF EXISTS "Anyone can read subscribers" ON subscribers;
+CREATE POLICY "Anyone can read subscribers" ON subscribers
+  FOR SELECT USING (true);
 
--- 5. Indexes for performance
+-- tool_reviews: 任何人可读
+ALTER TABLE tool_reviews ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS "Anyone can read tool reviews" ON tool_reviews;
+CREATE POLICY "Anyone can read tool reviews" ON tool_reviews
+  FOR SELECT USING (true);
+
+-- tool_reviews: 任何人可提交评价
+DROP POLICY IF EXISTS "Anyone can insert reviews" ON tool_reviews;
+CREATE POLICY "Anyone can insert reviews" ON tool_reviews
+  FOR INSERT WITH CHECK (true);
+
+-- tool_reviews: 可更新自己的评价（通过user_id匹配）
+DROP POLICY IF EXISTS "Users can update own reviews" ON tool_reviews;
+CREATE POLICY "Users can update own reviews" ON tool_reviews
+  FOR UPDATE USING (true);
+
+-- tool_reviews: 可删除自己的评价
+DROP POLICY IF EXISTS "Users can delete own reviews" ON tool_reviews;
+CREATE POLICY "Users can delete own reviews" ON tool_reviews
+  FOR DELETE USING (true);
+
+-- ==========================================
+-- 4. Indexes
+-- ==========================================
 CREATE INDEX IF NOT EXISTS idx_tool_reviews_tool_id ON tool_reviews(tool_id);
-CREATE INDEX IF NOT EXISTS idx_tool_reviews_user_id ON tool_reviews(user_id);
 CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email);
 CREATE INDEX IF NOT EXISTS idx_subscribers_status ON subscribers(status);
 
--- 6. Grant permissions
-GRANT SELECT, INSERT, UPDATE, DELETE ON tool_reviews TO authenticated, anon, service_role;
-GRANT USAGE ON SEQUENCE tool_reviews_id_seq TO authenticated, anon, service_role;
+-- ==========================================
+-- 5. Grant Permissions
+-- ==========================================
+GRANT SELECT, INSERT, UPDATE, DELETE ON tool_reviews TO anon, authenticated, service_role;
+GRANT USAGE ON SEQUENCE tool_reviews_id_seq TO anon, authenticated, service_role;
 GRANT SELECT, INSERT ON subscribers TO anon, authenticated, service_role;
 GRANT USAGE ON SEQUENCE subscribers_id_seq TO anon, authenticated, service_role;

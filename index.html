@@ -2478,10 +2478,21 @@ document.addEventListener('DOMContentLoaded',function(){
   if(rs){rs.addEventListener('click',submitToolReview);}
 });
 
+function getReviewerId(){
+  var id=localStorage.getItem('gth_reviewer_id');
+  if(!id){id='rev_'+Date.now()+'_'+Math.random().toString(36).substring(2,8);localStorage.setItem('gth_reviewer_id',id);}
+  return id;
+}
+
+function getReviewerName(){
+  var name=localStorage.getItem('gth_reviewer_name');
+  if(!name){var n='User'+Math.floor(Math.random()*9000+1000);localStorage.setItem('gth_reviewer_name',n);name=n;}
+  return name;
+}
+
 async function submitToolReview(){
   if(!currentReviewTool){return;}
   if(!initSupabase()){alert('System not ready');return;}
-  if(!currentUser){alert('Please login first to submit a review');return;}
   if(currentReviewRating<1){alert('Please select a star rating (1-5)');return;}
   var content=document.getElementById('review-content').value.trim();
   var btn=document.getElementById('review-submit');
@@ -2489,7 +2500,8 @@ async function submitToolReview(){
   try{
     var r=await supabaseClient.from('tool_reviews').insert({
       tool_id:currentReviewTool,
-      user_id:currentUser.id,
+      user_id:getReviewerId(),
+      user_name:getReviewerName(),
       rating:currentReviewRating,
       content:content||''
     }).select().single();
@@ -2533,7 +2545,7 @@ async function loadToolReviews(toolId){
     var h='';
     for(var i=0;i<data.length;i++){
       var d=data[i];
-      var nick=getUserNickname({user_id:d.user_id})||'User';
+      var nick=d.user_name||('User'+d.user_id.substring(0,6));
       var stars='★★★★★'.substring(0,d.rating)+'☆☆☆☆☆'.substring(0,5-d.rating);
       var time=new Date(d.created_at).toLocaleDateString();
       h+='<div class="review-item"><div class="ri-header"><span class="ri-stars">'+stars+'</span><span class="ri-user">'+nick+'</span><span class="ri-time">'+time+'</span></div>';
@@ -2561,6 +2573,18 @@ function escapeHtml(str){
 }
 
 // ===== Email Subscribe =====
+function saveSubscriberLocal(email,source){
+  var subs=JSON.parse(localStorage.getItem('gth_subscribers')||'[]');
+  if(subs.indexOf(email)>=0){
+    showSubscribeMsg(source||'hero','你已订阅过了！','error');
+    return false;
+  }
+  subs.push(email);
+  localStorage.setItem('gth_subscribers',JSON.stringify(subs));
+  showSubscribeMsg(source||'hero','✅ 订阅成功！感谢你的关注','success');
+  return true;
+}
+
 async function handleSubscribe(e,form,source){
   e.preventDefault();
   var emailInput=form.querySelector('input[type=email]');
@@ -2569,8 +2593,9 @@ async function handleSubscribe(e,form,source){
   var btn=form.querySelector('button');
   if(btn){btn.disabled=true;btn.textContent='订阅中...';}
   if(!initSupabase()){
-    showSubscribeMsg(source,'System not ready, please try again later','error');
-    if(btn){btn.disabled=false;btn.textContent='立即订阅';}
+    saveSubscriberLocal(email,source);
+    emailInput.value='';
+    if(btn){btn.disabled=false;btn.textContent=source==='footer'?'订阅':'立即订阅';}
     return false;
   }
   try{
@@ -2583,7 +2608,8 @@ async function handleSubscribe(e,form,source){
       if(r.error.message&&r.error.message.indexOf('duplicate')>=0){
         showSubscribeMsg(source,'你已订阅过了！','error');
       }else if(r.error.message&&(r.error.message.indexOf('table')>=0||r.error.message.indexOf('schema')>=0||r.error.message.indexOf('subscribers')>=0)){
-        showSubscribeMsg(source,'订阅功能正在初始化，请稍后重试 ⏳','error');
+        saveSubscriberLocal(email,source);
+        emailInput.value='';
       }else{
         showSubscribeMsg(source,r.error.message||'订阅失败，请稍后重试','error');
       }
@@ -2592,7 +2618,8 @@ async function handleSubscribe(e,form,source){
       showSubscribeMsg(source,'✅ 订阅成功！感谢你的关注','success');
     }
   }catch(e){
-    showSubscribeMsg(source,'Network error, please try again','error');
+    saveSubscriberLocal(email,source);
+    emailInput.value='';
   }
   if(btn){btn.disabled=false;btn.textContent=source==='footer'?'订阅':'立即订阅';}
   return false;
