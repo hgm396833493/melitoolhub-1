@@ -42,7 +42,7 @@
   <meta property="article:author" content="GlobalTradeHub">
   <meta property="article:section" content="合规指南">
 
-  <link rel="icon" type="image/x-icon" href="https://melitoolhub.com/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script>
@@ -676,10 +676,73 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 .nav-btn-register{padding:6px 14px;border-radius:6px;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;border:none;background:var(--a);color:var(--p)}
 .nav-user-info{display:flex;align-items:center;gap:8px;cursor:pointer;position:relative}
 .nav-user-avatar{width:32px;height:32px;border-radius:50%;background:var(--a);color:var(--p);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
-.nav-user-name{color:#fff;font-size:.82rem;font-weight:600;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+.nav-user-name{color:#fff;font-size:.82rem;font-weight:600;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.auth-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10001;display:none;align-items:center;justify-content:center}
+.auth-overlay.show{display:flex}
+@keyframes authSlideIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.auth-panel{background:var(--c);border-radius:14px;width:min(420px,92vw);box-shadow:0 20px 60px rgba(0,0,0,.35);overflow:hidden;animation:authSlideIn .25s ease}
+.auth-header{background:var(--p);color:#fff;padding:20px 24px;text-align:center;position:relative}
+.auth-header h3{font-size:1.1rem;font-weight:700;margin:0}
+.auth-header p{font-size:.78rem;opacity:.8;margin:4px 0 0}
+.auth-close{position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(255,255,255,.7);font-size:1.3rem;cursor:pointer;padding:4px;line-height:1}
+.auth-close:hover{color:#fff}
+.auth-body{padding:24px 24px 8px}
+.auth-body label{display:block;font-size:.8rem;font-weight:600;color:var(--p);margin-bottom:4px;margin-top:12px}
+.auth-body label:first-child{margin-top:0}
+.auth-body input{width:100%;padding:10px 12px;border:1px solid #d0d7e3;border-radius:8px;font-size:.9rem;outline:none;background:var(--bg);transition:.2s}
+.auth-body input:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+.auth-submit{width:100%;margin-top:18px;padding:11px;background:var(--p);color:#fff;border:none;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;transition:.2s}
+.auth-submit:hover{background:#2d6a9f}
+.auth-submit:disabled{opacity:.6;cursor:not-allowed}
+.auth-error{color:#e74c3c;font-size:.78rem;margin-top:8px;display:none;text-align:center}
+.auth-error.show{display:block}
+.auth-success{color:#27ae60;font-size:.78rem;margin-top:8px;display:none;text-align:center}
+.auth-success.show{display:block}
+.auth-footer{padding:0 24px 20px;text-align:center;font-size:.82rem;color:var(--s)}
+.auth-footer a{color:var(--p);font-weight:600;cursor:pointer;text-decoration:underline}
+.auth-footer a:hover{color:#2d6a9f}
+.auth-tabs{display:flex;border-bottom:1px solid var(--bdr)}
+.auth-tab{flex:1;text-align:center;padding:12px;font-size:.88rem;font-weight:600;color:var(--s);cursor:pointer;border:none;background:none;transition:.2s;border-bottom:2px solid transparent}
+.auth-tab.active{color:var(--p);border-bottom-color:var(--p)}
+.auth-tab:hover{color:var(--p);background:rgba(26,58,92,.03)}
+.community-section{max-width:820px;margin:40px auto 0;padding:0 24px}
+.community-section .sec-header{margin-bottom:20px}
+.comment-box{background:var(--c);border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--bdr);overflow:hidden}
+.comment-form-wrap{padding:20px 24px;border-bottom:1px solid var(--bdr);background:#fafbfc}
+.comment-form-wrap .login-prompt{text-align:center;padding:16px;font-size:.88rem;color:var(--s)}
+.comment-form-wrap .login-prompt a{color:var(--p);font-weight:600;cursor:pointer;text-decoration:underline}
+.comment-input{width:100%;min-height:80px;padding:12px;border:1px solid #d0d7e3;border-radius:8px;font-size:.9rem;outline:none;resize:vertical;font-family:inherit;background:#fff;transition:.2s}
+.comment-input:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+.comment-submit-row{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:10px}
+.comment-char-count{font-size:.75rem;color:var(--s)}
+.comment-submit-btn{padding:8px 20px;background:var(--p);color:#fff;border:none;border-radius:6px;font-size:.85rem;font-weight:600;cursor:pointer;transition:.2s}
+.comment-submit-btn:hover{background:#2d6a9f}
+.comment-submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.comment-list{padding:16px 24px}
+.comment-empty{text-align:center;padding:40px 20px;color:var(--s);font-size:.9rem}
+.comment-empty .icon{font-size:2.5rem;display:block;margin-bottom:10px}
+.comment-item{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #f0f1f3}
+.comment-item:last-child{border-bottom:none}
+.comment-avatar{width:36px;height:36px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0}
+.comment-body{flex:1;min-width:0}
+.comment-author{font-weight:600;font-size:.85rem;color:var(--p);margin-bottom:2px}
+.comment-time{font-size:.72rem;color:#aaa;margin-left:8px;font-weight:400}
+.comment-text{font-size:.88rem;color:var(--t);line-height:1.6;word-break:break-word}
+.comment-actions{display:flex;gap:14px;margin-top:8px;align-items:center}
+.comment-like,.comment-reply-btn,.comment-delete{background:none;border:none;font-size:.78rem;color:var(--s);cursor:pointer;padding:2px 4px;border-radius:4px;transition:.15s;display:flex;align-items:center;gap:4px}
+.comment-like:hover,.comment-reply-btn:hover{color:var(--p);background:rgba(26,58,92,.05)}
+.comment-delete:hover{color:#e74c3c;background:rgba(231,76,60,.05)}
+.comment-like.liked{color:#e74c3c}
+.comment-reply-form{padding:12px 0}
+.comment-reply-form textarea{width:100%;min-height:50px;padding:10px;border:1px solid #d0d7e3;border-radius:6px;font-size:.85rem;outline:none;resize:vertical;font-family:inherit;transition:.2s}
+.comment-reply-form textarea:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(26,58,92,.08)}
+.comment-reply-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:6px}
+.comment-cancel-btn{padding:6px 14px;background:none;border:1px solid #d0d7e3;border-radius:6px;font-size:.8rem;cursor:pointer;color:var(--s);transition:.2s}
+.comment-cancel-btn:hover{background:#f0f0f0}
+@media(max-width:768px){.community-section{padding:0 12px;margin:32px auto 0}}</style>
 
 
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -1177,7 +1240,7 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 
   <!-- 页脚 -->
   
--- ===== Community Discussion Section ===== -->
+<!-- ===== Community Discussion Section ===== -->
 <section class="community-section" id="community">
 <div class="sec-header">
 <h2><span data-i18n="community_title">💬 全球贸易商交流区</span></h2>
@@ -1188,7 +1251,7 @@ box-shadow:0 6px 16px rgba(0,0,0,.3)
 <div class="comment-form-wrap" id="comment-form-wrap">
 <!-- Filled by JS: either login prompt or comment form -->
 </div>
-<div class="comment-loading" id="comment-loading">⏳ <span data-i18n="comment_loading">加载评论中...</span></div>
+<!-- comment loading placeholder -->
 <div class="comment-list" id="comment-list"></div>
 <div class="comment-empty" id="comment-empty" style="display:none">
 <span class="icon">💬</span>
